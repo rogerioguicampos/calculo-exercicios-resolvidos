@@ -1,9 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 
-% --- Suporte para Português do Brasil (Formato moderno e seguro) ---
 \usepackage[brazil]{babel} 
 
-% --- Definição do Título ---
 \title{
     \Huge \textbf{Um Curso de Cálculo Volume 1} \\
     \vspace{0.3cm}
@@ -16,10 +14,20 @@
 \begin{document}
 
 \maketitle
-
 \newpage
 
-\section*{Capítulo 7}
-Aqui você começará a escrever as resoluções do Guidorizzi...
+\tableofcontents
+\newpage
+
+% --- Ajuste do Contador do Capítulo ---
+\setcounter{section}{6} % Define o capítulo como 7
+
+% --- Conteúdo ---
+\section{Derivadas} % O LaTeX exibirá: 7 Derivadas
+
+% --- Ajuste do Contador da Subseção ---
+\setcounter{subsection}{1} % Força a próxima subseção a começar em .2
+
+\subsection{Derivada de uma função} % O LaTeX exibirá: 7.2 Derivada de uma função
 
 \end{document}
