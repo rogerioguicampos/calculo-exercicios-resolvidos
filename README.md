@@ -8,3 +8,6 @@ Meu único intuito é que esse amontoado de código e exercícios ajude alguém 
 3. Não será linear, então não espere que eu inicie no volume 1 pelo capítulo 1, pelo exercício 1, mas na maioria das vezes será isso.
 4. Chegarei até tópicos mais avançados =).
 5. Fique à vontade para dar sugestões, apontar erros, mas seja educado, tenho baixa tolerância com gente babaca.
+
+## Por onde iniciarei
+Hoje, dia 23 de outubro de 2026, começarei pelo Guidorizzi Volume 1, mas pelo capítulo 7, que aborda derivadas.
