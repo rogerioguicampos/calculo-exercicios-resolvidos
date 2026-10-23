@@ -11,3 +11,8 @@ Meu único intuito é que esse amontoado de código e exercícios ajude alguém 
 
 ## Por onde iniciarei
 Hoje, dia 23 de outubro de 2026, começarei pelo Guidorizzi Volume 1, mas pelo capítulo 7, que aborda derivadas.
+
+## Objetivos
+- **Curto Prazo:** iniciar um repositório de referência para estudantes de ensino superior que tenham matérias de matemática
+- **Médio Prazo:** colaborações externas com outras matérias além de Cálculo e Análise
+- **Longo Prazo:** criar um programa que o aluno escolha alguns parâmetros (tamanho da prova, tempo da prova, dificuldade, assunto etc) e geramos uma prova automática. Penso que também seria bom criar uma automação para criar uma espécie de roteiro de estudos indicando o que estudar, em qual dia, por quanto tempo, e quais exercícios (re)fazer.
