@@ -1,6 +1,18 @@
+
 \documentclass[12pt,a4paper]{article}
 
-\usepackage[brazil]{babel} 
+\usepackage[brazilian]{babel} 
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{tocloft}
+\setlength{\cftsecnumwidth}{3.2cm}
+\setlength{\cftsubsecnumwidth}{1.5cm}
+\setlength{\cftsubsecnumwidth}{1.5cm}
+
+\renewcommand{\thesection}{Capítulo \arabic{section} -}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 
 \title{
     \Huge \textbf{Um Curso de Cálculo Volume 1} \\
@@ -19,15 +31,80 @@
 \tableofcontents
 \newpage
 
-% --- Ajuste do Contador do Capítulo ---
-\setcounter{section}{6} % Define o capítulo como 7
+\setcounter{section}{6}
 
-% --- Conteúdo ---
-\section{Derivadas} % O LaTeX exibirá: 7 Derivadas
+\section{Derivadas}
+\setcounter{subsection}{1}
+\subsection{Derivada de uma função}
 
-% --- Ajuste do Contador da Subseção ---
-\setcounter{subsection}{1} % Força a próxima subseção a começar em .2
+\vspace{0.5cm}
+\noindent\textbf{Exercício 1.} Seja $f(x) = x^2 + 1$. Calcule:
 
-\subsection{Derivada de uma função} % O LaTeX exibirá: 7.2 Derivada de uma função
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $f'(x)$
+    \item $f'(0)$
+    \item $f'(1)$
+\end{enumerate}
 
+\vspace{0.8cm} % Espaço em relação ao exercício anterior
+\noindent\textbf{Exercício 2.} Seja $f(x) = 2x$. Pensando geometricamente, qual o valor que você espera para $f'(p)$? Calcule $f'(p)$.
+
+\vspace{0.8cm}
+\noindent\textbf{Exercício 3.} Seja $f(x) = 3x + 2$. Calcule:
+
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $f'(2)$
+    \item $f'(0)$
+    \item $f'(x)$
+\end{enumerate}
+
+\vspace{0.8cm}
+\noindent\textbf{Exercício 4.} Calcule $f'(p)$, pela definição, sendo dados:
+
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $f(x) = x^2 + x$ e $p = 1$
+    \item $f(x) = \sqrt{x}$ e $p = 4$
+    \item $f(x) = 5x - 3$ e $p = -3$
+    \item $f(x) = \frac{1}{x}$ e $p = 1$
+    \item $f(x) = \sqrt{x}$ e $p = 3$
+    \item $f(x) = \frac{1}{\sqrt{x^2}}$ e $p = 2$
+    \item $f(x) = 2x^3 - x^2$ e $p = 1$
+    \item $f(x) = \sqrt[3]{x}$ e $p = 2$
+\end{enumerate}
+
+
+\vspace{0.8cm}
+\noindent\textbf{Exercício 5.} Determine a equação da reta tangente em $(p, f(p))$ sendo dados:
+
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $f(x) = x^2$ e $p = 2$
+    \item $f(x) = \frac{1}{x}$ e $p = 2$
+    \item $f(x) = \sqrt{x}$ e $p = 9$
+    \item $f(x) = x^2 - x$ e $p = 1$
+\end{enumerate}
+
+
+\vspace{0.8cm}
+\noindent\textbf{Exercício 6.} Calcule $f'(x)$, pela definição:
+
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $f(x) = x^2 + x$
+    \item $f(x) = 3x - 1$
+    \item $f(x) = x^3$
+    \item $f(x) = \frac{1}{x}$
+    \item $f(x) = 5x$
+    \item $f(x) = 10$
+    \item $f(x) = \frac{x}{x + 1}$
+    \item $f(x) = \frac{1}{x^2}$
+\end{enumerate}
 \end{document}
