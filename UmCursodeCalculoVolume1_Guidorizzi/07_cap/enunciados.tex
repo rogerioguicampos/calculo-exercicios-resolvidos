@@ -1413,5 +1413,407 @@ Determine $\beta$ para que $y = \beta x - 2$ seja tangente ao gráfico de $f(x) 
 Sabe-se que $r$ é uma reta tangente aos gráficos de $f(x) = -x^2$ e de $g(x) = \dfrac{1}{2} + x^2$. Determine $r$.
 
 \subsection{Exercícios do Capítulo}
+\vspace{0.5cm}
+\noindent\textbf{Exercício 1.} Calcule, pela definição, a derivada da função dada, no ponto dado.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $f(x) = \dfrac{1}{x + 1}$ em $p = 2$
+    \item $g(x) = \sqrt{2x + 1}$ em $p = 0$
+    \item $y = \operatorname{sen} \pi x$ em $p = 1$
+    \item $f(x) = e^{x^2}$ em $p = 0$
+    \item $g(x) = \begin{cases} x^{3/2} \operatorname{sen} \dfrac{1}{x^2} & \text{se } x \neq 0 \\ 0 & \text{se } x = 0 \end{cases}$ em $p = 0$
+    \item $g(x) = \sqrt{x^2 + x}$ em $p = 1$
+    \item $y = \cos x^2$ em $p = 0$
+    \item $y = \sqrt{1 + \sqrt{x}}$ em $p = 1$
+    \item $y = x^x$ em $p = 1$ (Sugestão: Veja Exemplo 3-6.3.)
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 2.} Calcule a derivada
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $y = \sqrt{1 + \sqrt{x}}$
+    \item $y = \ln(3x + \sqrt{1 + 9x^2})$
+    \item $y = x\,5^{x^2}$
+    \item $y = (2 + \operatorname{sen} x)^x$
+    \item $y = \ln\sqrt{\dfrac{1 + \operatorname{sen} x}{1 - \operatorname{sen} x}}$
+    \item $x = e^{t^2}\operatorname{sen} 3t$
+    \item $s = t\ln\dfrac{t^2 - 1}{t^2 + 1}$
+    \item $y = \dfrac{x^2 + 1}{\sqrt{x + 1}}$
+    \item $y = \dfrac{t^3}{(t^2 + 1)^2}$
+    \item $f(x) = \dfrac{x\operatorname{tg} 3x}{x^2 + 4}$
+    \item $y = \ln\dfrac{1 + \operatorname{tg}\dfrac{x}{2}}{1 - \operatorname{tg}\dfrac{x}{2}}$
+    \item $g(x) = \dfrac{e^{\sec\sqrt{x}}}{x}$
+    \item $y = e^{x^x}$
+    \item $y = \dfrac{1}{2}\operatorname{tg}^2 x + \ln\cos x$
+    \item $y = \ln\!\left[\dfrac{\sqrt{1 - x} + \sqrt{1 + x}}{\sqrt{1 - x} - \sqrt{1 + x}}\right] - \dfrac{\sqrt{1 - x^2}}{x}$
+    \item $y = \dfrac{2(4 + 3\sqrt[3]{x})(2 - \sqrt[3]{x})^2}{5}$
+    \item $s = \dfrac{2^{3t} - 2^{-3t}}{2^{3t} + 2^{-3t}}$
+    \item $f(x) = \ln\dfrac{\cos\sqrt{x}}{1 + \operatorname{sen}\sqrt{x}}$
+    \item $y = e^{-3x}(\cos 3x - \operatorname{sen} 3x)$
+    \item $y = \dfrac{1}{2}\operatorname{cotg}^2 5x + \ln\operatorname{sen} 5x$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 3.} Expresse $\dfrac{dy}{dx}$ em termos de $x$ e de $y$, em que $y = y(x)$ é uma função derivável, dada implicitamente pela equação dada.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $y^3 + \operatorname{sen} xy = 1$
+    \item $e^y + xy = x$
+    \item $y^x + x = y^2$
+    \item $x\cos y + y\cos x = 2$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 4.}
+Seja $y = f(x)$ definida e derivável num intervalo contendo 1 e suponha que $f$ seja dada implicitamente pela equação $y^3 + x^2 y = 130$. Determine as equações das retas tangente e normal ao gráfico de $f$, no ponto de abscissa 1.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 5.}
+Determine uma reta que seja paralela a $x + y = 1$ e que seja tangente à curva $x^2 + xy + y^2 = 3$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 6.}
+Determine uma reta que seja tangente à elipse $x^2 + 2y^2 = 9$ e que intercepta o eixo $y$ no ponto de ordenada $\dfrac{9}{4}$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 7.}
+Mostre que a reta $\dfrac{x}{x_0} + \dfrac{y}{y_0} = 2$ é tangente à curva $\left(\dfrac{x}{x_0}\right)^{\!3} + \left(\dfrac{y}{y_0}\right)^{\!3} = 2$ no ponto $(x_0, y_0)$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 8.}
+Determine uma reta paralela a $x + y = 1$ e tangente à curva $y^3 + xy + x^3 = 0$ em um ponto $(x_0, y_0)$, com $x_0 < 0$ e $y_0 < 0$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 9.}
+Os lados $x$ e $y$ de um retângulo estão variando a taxas constantes de $0{,}2\text{ m/s}$ e $0{,}1\text{ m/s}$, respectivamente. A que taxa estará variando a área do retângulo no instante em que $x = 1\text{ m}$ e $y = 2\text{ m}$?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 10.}
+A altura $h$ e o raio $r$ da base de um cone circular reto estão variando a taxas constantes de $0{,}1\text{ m/s}$ e $0{,}3\text{ m/s}$, respectivamente. A que taxa estará variando o volume do cone no instante em que $h = 0{,}5\text{ m}$ e $r = 0{,}2\text{ m}$?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 11.}
+O volume $V$ e o raio $r$ da base de um cone circular reto estão variando a taxas constantes de $0{,}1\,\pi\text{ m}^3\text{/s}$ e $0{,}2\text{ m/s}$, respectivamente. Expresse $\dfrac{dh}{dt}$ em termos de $r$ e $h$, em que $h$ é a altura do cone.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 12.}
+Num determinado instante, as arestas de um paralelepípedo medem $a$, $b$, $c$ (m) e, neste instante, estão variando com velocidades $v_a$, $v_b$ e $v_c$ (m/s), respectivamente. Mostre que neste instante o volume do paralelepípedo estará variando a uma taxa de $v_a bc + a v_b c + ab v_c$ ($\text{m}^3\text{/s}$).
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 13.}
+O raio $r$ e a altura $h$ de um cilindro circular reto estão variando de modo a manter constante o volume $V$. Num determinado instante $h = 3\text{ cm}$ e $r = 1\text{ cm}$ e, neste instante, a altura está variando a uma taxa de $0{,}2\text{ cm/s}$. A que taxa estará variando o raio neste instante?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 14.}
+Uma piscina tem $10\text{ m}$ de largura, $20\text{ m}$ de comprimento, $1\text{ m}$ de profundidade nas extremidades e $3\text{ m}$ no meio, de modo que o fundo seja formado por dois planos inclinados. Despeja-se água na piscina a uma taxa de $0{,}3\text{ m}^3\text{/min}$. Seja $h$ a altura da água em relação à parte mais profunda. Com que velocidade $h$ estará variando no instante em que $h = 1\text{ m}$?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9, >=latex]
+    % Contorno do perfil da piscina
+    \draw[line width=2.5pt, teal!50!black] 
+        (-4, 2) -- (4, 2) -- (4, 0.7) -- (0, -1.3) -- (-4, 0.7) -- cycle;
+
+    % Linha tracejada superior indicando o nível da água
+    \draw[dashed, thick] (-1.8, -0.4) -- (1.8, -0.4);
+
+    % Linha vertical central tracejada/fina
+    \draw[gray, thick] (0, -1.3) -- (0, -0.4);
+
+    % Linha tracejada horizontal de referência na parte mais profunda
+    \draw[dashed, thick] (-4.5, -1.3) -- (2.5, -1.3);
+
+    % Cota de 20 m (largura do topo)
+    \node[above=2pt] at (0, 2) {$20\text{ m}$};
+
+    % Cota de 1 m (lateral direita)
+    \node[right=4pt] at (4, 1.35) {$1\text{ m}$};
+
+    % Cota da profundidade total de 3 m (lado esquerdo)
+    \draw[dashed] (-4.6, 2) -- (-4, 2);
+    \draw[<->, thick] (-4.4, -1.3) -- (-4.4, 2);
+    \node[left=3pt] at (-4.4, 0.35) {$3\text{ m}$};
+
+    % Cota da altura da água h (lado direito)
+    \draw[<->, thick] (2.2, -1.3) -- (2.2, -0.4);
+    \node[right=2pt] at (2.2, -0.85) {$h$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 15.}
+Num determinado instante $\theta = \dfrac{\pi}{3}$ e está variando, neste instante, a uma taxa de $0{,}01\text{ radiano}$ por segundo (veja figura). A que taxa estará variando o ângulo $\alpha$ neste instante?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9, >=latex]
+    % Vértices do triângulo
+    \coordinate (O) at (0, 0);          % Vértice do ângulo theta
+    \coordinate (A) at (5, 0);          % Vértice do ângulo obtuso alpha
+    \coordinate (B) at (7.2, 3.8);      % Vértice superior
+
+    % Lados do triângulo
+    \draw[line width=2pt, teal!50!black] (O) -- (A) node[midway, below=3pt, text=black] {$2\text{ m}$};[cite: 39]
+    \draw[line width=2pt, teal!50!black] (O) -- (B) node[midway, above left=1pt, text=black] {$5\text{ m}$};[cite: 39]
+    \draw[line width=2pt, teal!50!black] (A) -- (B);[cite: 39]
+
+    % Arco e rótulo do ângulo theta (no vértice esquerdo)
+    \draw[<->, thick] (1.5, 0) arc (0:28:1.5);[cite: 39]
+    \node at (1.8, 0.4) {$\theta$};[cite: 39]
+
+    % Arco e rótulo do ângulo alpha (no vértice inferior direito)
+    \draw[<->, thick] (4, 0) arc (180:60:1);[cite: 39]
+    \node at (4.4, 0.9) {$\alpha$};[cite: 39]
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 16.}
+Com relação ao exercício anterior, supondo $\dfrac{\pi}{2} < \alpha < \pi$, expresse $\dfrac{d\alpha}{dt}$ em termos de $\theta$ e $\dfrac{d\theta}{dt}$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 17.}
+Considere as funções dadas por $y = ax^2$ e $y = -x^2 + 1$. Determine $a$ para que os gráficos se interceptem ortogonalmente. (Os gráficos se interceptam ortogonalmente em $(x_0, y_0)$ se as retas tangentes aos gráficos, neste ponto, forem perpendiculares.)
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 18.}
+Determine $a$ para que as circunferências $x^2 + y^2 = 1$ e $(x - a)^2 + y^2 = 1$ se interceptem ortogonalmente.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 19.}
+Mostre que, para todo $a$, as curvas $y = ax^2$ e $x^2 + 2y^2 = 1$ se interceptam ortogonalmente.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 20.} Seja $f\colon \mathbb{R} \to \mathbb{R}$ derivável e considere a função dada por $y = x^2 f(x^2 + 1)$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Verifique que $\dfrac{dy}{dx} = 2x f(x^2 + 1) + 2x^3 f'(x^2 + 1)$
+    \item Expresse $\left.\dfrac{dy}{dx}\right|_{x = 1}$ em termos de $f(2)$ e $f'(2)$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 21.} Seja $\phi$ a função dada por $\phi(x) = x^2 + 1$. Calcule.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $\phi'(\phi(x))$
+    \item $(\phi(\phi(x)))'$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 22.} Calcule $\phi'(\phi(x))$ sendo $\phi$ dada por
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $\phi(x) = \operatorname{sen} x$
+    \item $\phi(x) = \dfrac{1}{x}$
+    \item $\phi(x) = \ln(x^2 + 1)$
+    \item $\phi(x) = e^{x^2}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 23.}
+Para cada $\phi$ do exercício anterior, calcule $(\phi(\phi(x)))'$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 24.}
+Dê exemplos de funções $\phi$ que satisfazem a condição $\phi'(\phi(x)) = (\phi(\phi(x)))'$, para todo $x$ no domínio de $\phi$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 25.} Considere uma partícula que se desloca sobre o eixo $x$ com função de posição $x = \cos 3t$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Verifique que a aceleração é proporcional à posição.
+    \item Calcule a aceleração no instante em que a partícula se encontra na posição $x = -\dfrac{1}{2}$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 26.} Considere uma partícula que se desloca sobre o eixo $x$ com função de posição $x = \dfrac{1}{2t + 1}$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Verifique que a aceleração é proporcional ao cubo da posição.
+    \item Qual a aceleração no instante em que a partícula se encontra na posição $x = \sqrt[3]{7}$?
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 27.} Seja $f\colon \mathbb{R} \to \mathbb{R}$ derivável até a 2\textsuperscript{a} ordem e seja $h$ dada por $h(t) = f'(\cos 3t)$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Expresse $h''(t)$ em termos de $t$, $f'(\cos 3t)$ e de $f''(\cos 3t)$.
+    \item Calcule $h''\!\left(\dfrac{\pi}{9}\right)$ admitindo que $f'\!\left(\dfrac{1}{2}\right) = 4$ e $f''\!\left(\dfrac{1}{2}\right) = 3$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 28.} Suponha que $y = y(t)$ seja uma função derivável tal que para todo $t$ no seu domínio $\dfrac{dy}{dt} = ty^2$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Expresse $\dfrac{d^2 y}{dt^2}$ em termos de $t$ e de $y$.
+    \item Calcule $\left.\dfrac{d^2 y}{dt^2}\right|_{t = 1}$ supondo que $y(1) = 1$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 29.} Seja $y = y(x)$ definida e derivável num intervalo $I$ e tal que, para todo $x$ em $I$, $\dfrac{dy}{dx} = x + \operatorname{sen} y$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Expresse $\dfrac{d^3 y}{dx^3}$ em termos de $x$ e de $y$.
+    \item Calcule $\left.\dfrac{d^3 y}{dx^3}\right|_{x = 0}$ admitindo que $y(0) = \dfrac{\pi}{4}$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 30.}
+Seja $f\colon \mathbb{R} \to \mathbb{R}$ derivável até a 2\textsuperscript{a} ordem e tal que, para todo $x$,
+\[
+f''(x) + 4f(x) = 0.
+\]
+Mostre que, para todo $x$,
+\[
+\dfrac{d}{dx}[f'(x)\operatorname{sen} 2x - 2\cos 2x\,f(x)] = 0.
+\]
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 31.}
+Sejam $f\colon \mathbb{R} \to \mathbb{R}$ derivável até a 2\textsuperscript{a} ordem e $h$ dada por $h(x) = f(f(x))$. Verifique que, para todo $x$, $h''(x) = f''(f(x))(f'(x))^2 + f'(f(x))f''(x)$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 32.}
+Considere o polinômio
+\[
+P(x) = A_0 + A_1 (x - x_0) + A_2 (x - x_0)^2 + A_3 (x - x_0)^3
+\]
+em que $A_0$, $A_1$, $A_2$, $A_3$ e $x_0$ são números reais fixos. Mostre que
+\[
+P(x) = P(x_0) + P'(x_0)(x - x_0) + \dfrac{P''(x_0)}{2!}(x - x_0)^2 + \dfrac{P'''(x_0)}{3!}(x - x_0)^3.
+\]
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 33.} Considere o polinômio $P(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3$ em que $a_0$, $a_1$, $a_2$ e $a_3$ são reais fixos. Seja $x_0$ um real dado.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Mostre que existem constantes $A_0$, $A_1$, $A_2$ e $A_3$ tais que
+    \[
+    P(x) = A_0 + A_1 (x - x_0) + A_2 (x - x_0)^2 + A_3 (x - x_0)^3.
+    \]
+    (Sugestão: Faça $x = (x - x_0) + x_0$.)
+    \item Conclua que
+    \[
+    P(x) = P(x_0) + P'(x_0)(x - x_0) + \dfrac{P''(x_0)}{2!}(x - x_0)^2 + \dfrac{P'''(x_0)}{3!}(x - x_0)^3.
+    \]
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 34.}
+Determine o desenvolvimento de Taylor de $P(x) = x^3 + 2x + 3$, em potências de $(x - 1)$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 35.}
+Generalize o resultado do Exercício 33.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 36.} Determine o desenvolvimento de Taylor de $P(x) = x^4 - 3x^2 + x + 1$ em potências de
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $x - 2$
+    \item $x + 1$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 37.}
+Sejam $P(x)$ e $Q(x)$ polinômios tais que $P(x_0) = 0$, $Q(x_0) = 0$ e $Q'(x_0) \neq 0$. Mostre que
+\[
+\lim_{x \to x_0} \dfrac{P(x)}{Q(x)} = \dfrac{P'(x_0)}{Q'(x_0)}.
+\]
+(Sugestão: Desenvolva $P(x)$ e $Q(x)$ em potências de $x - x_0$ e simplifique.)
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 38.}
+Sejam $P(x)$ e $Q(x)$ polinômios tais que $P(x_0) = P'(x_0) = 0$, $Q(x_0) = Q'(x_0) = 0$ e $Q''(x_0) \neq 0$. Mostre que $\lim\limits_{x \to x_0} \dfrac{P(x)}{Q(x)} = \dfrac{P''(x_0)}{Q''(x_0)}$. Generalize.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 39.} Utilizando os Exercícios 37 e 38, calcule.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $\lim\limits_{x \to 1} \dfrac{x^{100} + x - 2}{x^{99} - x}$
+    \item $\lim\limits_{x \to 1} \dfrac{x^3 - x^2 - x + 1}{x^{10} - 9x^2 + 8x}$
+    \item $\lim\limits_{x \to -1} \dfrac{x^5 + 3x + 4}{x^{20} + 3x + 2}$
+    \item $\lim\limits_{x \to 1} \dfrac{x^4 - 2x^3 + 2x - 1}{x^8 - 6x^6 + 8x^5 - 3x^4}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 40.}
+Sejam $f$ e $g$ deriváveis em $p$ e tais que $f(p) = g(p) = 0$. Supondo $g'(p) \neq 0$, mostre que
+\[
+\lim_{x \to p} \dfrac{f(x)}{g(x)} = \dfrac{f'(p)}{g'(p)}.
+\]
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 41.} Utilizando o Exercício 40, calcule.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $\lim\limits_{x \to 0} \dfrac{\ln(x + 1)}{x^2 + \operatorname{sen} x}$
+    \item $\lim\limits_{x \to \frac{\pi}{2}} \dfrac{e^{2x - \pi} - 1}{2\operatorname{sen} x + \operatorname{sen} 6x - 2}$
+    \item $\lim\limits_{x \to -1} \dfrac{\sqrt[3]{x} + 1}{\operatorname{sen}\pi x^2}$
+    \item $\lim\limits_{x \to 0} \dfrac{x + \sqrt[3]{x^2} + \operatorname{sen} 3x}{\ln(x^2 + x + 1)}$
+    \item $\lim\limits_{x \to 0} \dfrac{e^{-x^2} + x - 1}{e^{4x} + x^5 - 1}$
+    \item $\lim\limits_{x \to 1} \dfrac{\operatorname{sen}(\operatorname{sen}\pi x)}{2 - \sqrt{x} - \sqrt[3]{x^2}}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 42.}
+Seja $f$ definida em $\mathbb{R}$ e derivável em $p$. Suponha $f'(p) > 0$. Prove que existe $r > 0$ tal que
+\[
+f(x) > f(p) \quad \text{em } {]p, p + r[}
+\]
+e
+\[
+f(x) < f(p) \quad \text{em } {]p - r, p[}.
+\]
+(Sugestão: Lembre-se da definição de derivada e utilize a conservação do sinal.)
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 43.}
+Seja $f$ definida e derivável em $\mathbb{R}$ e sejam $a$ e $b$ raízes consecutivas de $f$. Mostre que
+\[
+f'(a) \cdot f'(b) \le 0.
+\]
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 44.}
+Suponha $f$ derivável no intervalo $I$. Prove que se $f$ for estritamente crescente em $I$, então $f'(x) \ge 0$ em $I$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 45.}
+Suponha $f$ derivável em $[a, b]$ e tal que $f'(a) \cdot f'(b) < 0$. Prove que existe $p$ em ${]a, b[}$ tal que $f(x) \le f(p)$ para todo $x$ em $[a, b]$ ou $f(x) \ge f(p)$ para todo $x$ em $[a, b]$. Interprete geometricamente.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 46.}
+Suponha $f$ derivável em $[a, b]$ tal que $f'(a) \cdot f'(b) > 0$ e $f(a) = f(b)$. Prove que existem $x_1, x_2 \in {]a, b[}$ tais que, para todo $x \in [a, b]$, $f(x_1) \le f(x) \le f(x_2)$. Interprete geometricamente.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 47.}
+Seja $f\colon \mathbb{R} \to \mathbb{R}$ uma função tal que quaisquer que sejam $x$ e $t$
+\[
+|f(x) - f(t)| \le |x - t|^2.
+\]
+Calcule $f'(x)$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 48.}
+Sejam $f$ e $g$ definidas em $\mathbb{R}$, com $g$ contínua em 0, e tais que, para todo $x$, $f(x) = xg(x)$. Mostre que $f$ é derivável em 0.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 49.}
+Suponha $f$ definida em $\mathbb{R}$, derivável em 0 e $f(0) = 0$. Prove que existe $g$ definida em $\mathbb{R}$, contínua em 0, tal que $f(x) = xg(x)$ para todo $x$.
 
 \end{document}
