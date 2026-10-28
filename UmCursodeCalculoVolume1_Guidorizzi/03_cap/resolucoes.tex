@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[brazilian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{tocloft}
+\usepackage{tikz}
+
+\setlength{\cftsecnumwidth}{3.2cm}
+\setlength{\cftsubsecnumwidth}{1.5cm}
+
+\renewcommand{\thesection}{Capítulo \arabic{section} -}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\pretocmd{\subsection}{\clearpage}{}{}
+
+\title{
+    \Huge \textbf{Um Curso de Cálculo Volume 1} \\
+    \vspace{0.3cm}
+    \Large 6\textordfeminine{} Edição (Guidorizzi) \\
+    \vspace{0.5cm}
+    \large \textit{Resoluções Completas e Passo a Passo do Capítulo 3 Limite e Continuidade}
+}
+\author{Rogério Campos}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+
+\section{Limite e Continuidade}
+\subsection{Introdução}
+\subsection{Definição de Função Contínua}
+\subsection{Definição de Limite}
+\subsection{Limites Laterais}
+\subsection{Limite de Função Composta}
+\subsection{Teorema do Confronto}
+\subsection{Continuidade das Funções Trigonométricas}
+\subsection{O Limite Fundamental $\lim_{x \to 0} \frac{sen(x)}{x}$}
+\subsection{Propriedades Operatórias}
+
+\end{document}
