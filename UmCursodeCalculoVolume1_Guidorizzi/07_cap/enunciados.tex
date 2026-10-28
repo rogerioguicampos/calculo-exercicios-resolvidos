@@ -8,6 +8,7 @@
 \usepackage{enumitem}
 \usepackage{etoolbox}
 \usepackage{tocloft}
+\usepackage{tikz}
 
 \setlength{\cftsecnumwidth}{3.2cm}
 \setlength{\cftsubsecnumwidth}{1.5cm}
@@ -1033,8 +1034,312 @@ A reta tangente à curva $xy - x^2 = 1$ no ponto $(x_0, y_0)$, $x_0 > 0$, interc
 A função $y = f(x)$ é dada implicitamente pela equação $3y^2 + 2xy - x^2 = 3$. Sabe-se que, para todo $x \in D_f$, $f(x) > 0$ e que $f$ admite uma reta tangente $T$ paralela à reta $5y - x = 2$. Determine $T$.
 
 \subsection{Interpretação de $\frac{dy}{dx}$ como um Quociente Diferencial}
+\vspace{0.5cm}
+\noindent\textbf{Exercício 1.} Calcule a diferencial.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $y = x^3$
+    \item $y = x^2 - 2x$
+    \item $y = \dfrac{x}{x + 1}$
+    \item $y = \sqrt[3]{x}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 2.} Seja $A = l^2$, $l > 0$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Calcule a diferencial.
+    \item Interprete geometricamente o erro que se comete na aproximação de $\Delta A$ por $dA$. (Olhe para $A = l^2$ como a fórmula para o cálculo da área do quadrado de lado $l$.)
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 3.} Seja $V = \dfrac{4}{3}\pi r^3$, $r > 0$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Calcule a diferencial.
+    \item Interprete geometricamente $dV$. (Lembre-se de que $V$ é o volume da esfera de raio $r$ e que $4\pi r^2$ é a área da superfície esférica de raio $r$.)
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 4.} Seja $y = x^2 + 3x$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Calcule a diferencial.
+    \item Calcule o erro que se comete na aproximação de $\Delta y$ por $dy$. Interprete graficamente.
+\end{enumerate}
+
 \subsection{Velocidade e Aceleração. Taxa de Variação}
-\subsection{Problemas Envolvendo Reta Tangente e Reta Normal ao Gráfico de uma Função}
+\vspace{0.5cm}
+\noindent\textbf{Exercício 1.} Uma partícula desloca-se sobre o eixo $x$ com função de posição $x = 3 + 2t - t^2$, $t \ge 0$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Qual a velocidade no instante $t$?
+    \item Qual a aceleração no instante $t$?
+    \item Estude a variação do sinal de $v(t)$.
+    \item Esboce o gráfico da função de posição.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 2.} Uma partícula desloca-se sobre o eixo $x$ com função de posição $x = \dfrac{1}{2}t + 1$, $t \ge 0$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Determine a velocidade no instante $t$.
+    \item Qual a aceleração no instante $t$?
+    \item Esboce o gráfico da função de posição.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 3.} A posição de uma partícula que se desloca ao longo do eixo $x$ depende do tempo de acordo com a equação $x = -t^3 + 3t^2$, $t \ge 0$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Estude o sinal de $v(t)$.
+    \item Estude o sinal de $a(t)$.
+    \item Calcule $\lim\limits_{t \to +\infty} (-t^3 + 3t^2)$.
+    \item Esboce o gráfico da função $x = -t^3 + 3t^2$, $t \ge 0$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 4.}
+Seja $x = f(t)$, $t \ge 0$, tal que $f(0) = 1$, $\dfrac{dx}{dt} > 0$ e $\dfrac{d^2 x}{dt^2} > 0$ para $t \ge 0$. Como você acha que deve ser o gráfico de $f$? Por quê?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 5.}
+A função $x = f(t)$, $t \in I$, é derivável até a 2\textsuperscript{a} ordem no intervalo aberto $I$ e seu gráfico tem o seguinte aspecto
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9, >=latex]
+    % Eixos
+    \draw[->, thick] (-1,0) -- (4.5,0) node[below] {$t$};
+    \draw[->, thick] (0,-0.5) -- (0,3.5) node[left] {$x$};
+    \node[below left] at (0,0) {$0$};
+
+    % Curva f côncava para baixo
+    \draw[ultra thick] (0.5, 0.8) to[out=60, in=175] (3.5, 2.7) node[above right] {$f$};
+
+    % Linhas tracejadas
+    \draw[dashed] (0.5, 0) -- (0.5, 0.8);
+    \draw[dashed] (3.5, 0) -- (3.5, 2.7);
+
+    % Intervalo I no eixo t
+    \draw[ultra thick] (0.5, 0) -- (3.5, 0);
+    \node[below=4pt] at (2,0) {$I$};
+\end{tikzpicture}
+\end{center}
+
+\noindent O que é mais razoável esperar que ocorra: $f''(t) \le 0$ ou $f''(t) > 0$ em $I$? Por quê?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 6.}
+Seja $x = f(t)$, $t \ge 0$, tal que $f(0) = 1$ e $f(1) = 2$. Suponha, ainda, que $\dfrac{dx}{dt} > 0$ para $t \ge 0$, $\dfrac{d^2x}{dt^2} < 0$ para $0 < t < 1$ e $\dfrac{d^2x}{dt^2} > 0$ para $t > 1$. Como você acha que deve ser o gráfico de $f$? Por quê?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 7.} Seja $f(t) = t^3 + 3t^2$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Estude o sinal de $f'(t)$.
+    \item Estude o sinal de $f''(t)$.
+    \item Calcule $\lim\limits_{t \to +\infty} (t^3 + 3t^2)$ e $\lim\limits_{t \to -\infty} (t^3 + 3t^2)$.
+    \item Utilizando as informações acima, esboce o gráfico de $f$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 8.} Seja $f(t) = \dfrac{t}{t^2 + 4}$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Estude o sinal de $f'(t)$.
+    \item Estude o sinal de $f''(t)$.
+    \item Calcule $\lim\limits_{t \to +\infty} \dfrac{t}{t^2 + 4}$ e $\lim\limits_{t \to -\infty} \dfrac{t}{t^2 + 4}$.
+    \item Utilizando as informações acima, esboce o gráfico de $f$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 9.} A posição de uma partícula que se desloca ao longo do eixo $x$ varia com o tempo segundo a equação $x = \dfrac{v_0}{k}(1 - e^{-kt})$, $t \ge 0$, em que $v_0$ e $k$ são constantes estritamente positivas.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Qual a velocidade no instante $t$?
+    \item Com argumentos físicos, justifique a afirmação: ``a função é estritamente crescente.''
+    \item Qual a aceleração no instante $t$?
+    \item Com argumentos físicos, justifique a afirmação: ``o gráfico da função tem a concavidade voltada para baixo.''
+    \item Calcule $\lim\limits_{t \to +\infty} \dfrac{v_0}{k}(1 - e^{-kt})$.
+    \item Esboce o gráfico da função.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 10.} A equação do movimento de uma partícula que se desloca ao longo do eixo $x$ é $x = e^{-t}\operatorname{sen} t$, $t \ge 0$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Determine a velocidade e a aceleração no instante $t$.
+    \item Calcule $\lim\limits_{t \to +\infty} e^{-t}\operatorname{sen} t$.
+    \item Esboce o gráfico da função.
+    \item Interprete tal movimento.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 11.}
+Um ponto $P$ move-se sobre a parábola $y = 3x^2 - 2x$. Suponha que as coordenadas $x(t)$ e $y(t)$ de $P$ são deriváveis e que $\dfrac{dx}{dt} \neq 0$. Pergunta-se: em que ponto da parábola a velocidade da ordenada $y$ de $P$ é o triplo da velocidade da abscissa $x$ de $P$?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 12.}
+Um ponto $P$ move-se ao longo do gráfico de $y = \dfrac{1}{x^2 + 1}$ de tal modo que a sua abscissa $x$ varia a uma velocidade constante de $5\text{ (m/s)}$. Qual a velocidade de $y$ no instante em que $x = 10\text{ m}$?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 13.}
+Um ponto desloca-se sobre a hipérbole $xy = 4$ de tal modo que a velocidade de $y$ é $\dfrac{dy}{dt} = \beta$, $\beta$ constante. Mostre que a aceleração da abscissa $x$ é $\dfrac{d^2x}{dt^2} = \dfrac{\beta^2}{8}x^3$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 14.} Seja um ponto move-se ao longo da elipse $x^2 + 4y^2 = 1$. A abscissa $x$ está variando a uma velocidade $\dfrac{dx}{dt} = \operatorname{sen} 4t$. Mostre que
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $\dfrac{dy}{dt} = -\dfrac{x\operatorname{sen} 4t}{4y}$
+    \item $\dfrac{d^2y}{dt^2} = -\dfrac{\operatorname{sen}^2 4t + 16xy^2 \cos 4t}{16y^3}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 15.}
+Um ponto move-se sobre a semicircunferência $x^2 + y^2 = 5$, $y \ge 0$. Suponha $\dfrac{dx}{dt} > 0$. Determine o ponto da curva em que a velocidade de $y$ seja o dobro da de $x$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 16.}
+Uma escada de $8\text{ m}$ está encostada em uma parede. Se a extremidade inferior da escada for afastada do pé da parede a uma velocidade constante de $2\text{ (m/s)}$, com que velocidade a extremidade superior estará descendo no instante em que a inferior estiver a $3\text{ m}$ da parede?
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 17.}
+Suponha que os comprimentos dos segmentos $AB$ e $OB$ sejam, respectivamente, $5\text{ cm}$ e $3\text{ cm}$. Suponha, ainda, que $\theta$ esteja variando a uma taxa constante de $\dfrac{1}{2}\text{ rad/s}$. Determine a velocidade de $A$, quando $\theta = \dfrac{\pi}{2}\text{ rad}$.
+\begin{center}
+\begin{tikzpicture}[scale=0.9, >=latex]
+    % Eixos coordenados
+    \draw[->, thick] (-0.8, 0) -- (7.5, 0) node[below] {$x$};
+    \draw[->, thick] (0, -0.8) -- (0, 4.2) node[left] {$y$};
+    \node[below left] at (0, 0) {$O$};
+    
+    % Vértices
+    \coordinate (O) at (0, 0);
+    \coordinate (B) at (1.5, 2.6);
+    \coordinate (A) at (5.8, 0);
+    
+    % Segmentos do mecanismo/triângulo
+    \draw[line width=1.5pt, blue!60!black] (O) -- (B) node[midway, above left, text=black] {$3$};
+    \draw[line width=1.5pt, blue!60!black] (B) -- (A) node[midway, above right, text=black] {$5$};
+    
+    % Rótulos dos pontos
+    \node[above] at (B) {$B$};
+    \node[above right=1pt] at (A) {$A$};
+    \node[below=3pt] at (A) {$(x, 0)$};
+    
+    % Ângulo theta
+    \draw[->] (1.1, 0) arc (0:60:1.1);
+    \node at (1.4, 0.45) {$\theta$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 18.}
+Enche-se um reservatório, cuja forma é a de um cone circular reto, de água a uma taxa de $0{,}1\text{ m}^3\text{/s}$. O vértice está a $15\text{ m}$ do topo e o raio do topo é de $10\text{ m}$. Com que velocidade o nível $h$ da água está subindo no instante em que $h = 5\text{ m}$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.35]
+    % Elipse superior do cone
+    \draw[thick] (0,15) ellipse (10 and 2.5);
+    
+    % Paredes laterais do cone
+    \draw[thick] (-10,15) -- (0,0) -- (10,15);
+    
+    % Nível da água (h = 5, raio = 10/3 ~ 3.33)
+    \draw[thick, dashed] (0,5) ellipse (3.33 and 0.8);
+    \fill[gray!20, opacity=0.6] (-3.33,5) -- (0,0) -- (3.33,5) arc (0:-180:3.33 and 0.8) -- cycle;
+    \draw[thick] (-3.33,5) arc (-180:0:3.33 and 0.8);
+    
+    % Eixo central e cotas verticais
+    \draw[dashed] (0,15) -- (0,0);
+    \draw[<->] (-12,0) -- (-12,15) node[midway, fill=white, inner sep=2pt] {$15\text{ m}$};
+    \draw[<->] (5,0) -- (5,5) node[midway, right] {$h$};
+    \draw[<->] (0,15) -- (10,15) node[midway, above] {$10\text{ m}$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 19.}
+O ponto $P = (x, y)$ está fixo à roda de raio $1\text{ m}$, que rola, sem escorregamento, sobre o eixo $x$. O ângulo $\theta$ está variando a uma taxa constante de $1\text{ rad/s}$. Expresse as velocidades da abscissa e da ordenada de $P$ em função de $\theta$.
+\begin{center}
+\begin{tikzpicture}[scale=1.1, >=latex]
+    % Eixos coordenados
+    \draw[->, thick] (-0.8, 0) -- (5.5, 0) node[below] {$x$};
+    \draw[->, thick] (0, -0.6) -- (0, 3.8) node[left] {$y$};
+    
+    % Centro e círculo apoiado no eixo x
+    \coordinate (C) at (2.4, 1.6);
+    \draw[line width=2pt, blue!50!black] (C) circle (1.6);
+    \node[above=1pt] at (C) {$0$};
+    
+    % Ponto de tangência na base
+    \coordinate (T) at (2.4, 0);
+    
+    % Linha vertical tracejada do centro até a base
+    \draw[dashed, thick] (C) -- (T);
+    
+    % Ponto P na borda do círculo (coordenada polar pura, sem depender da lib calc)
+    \path (C) ++(210:1.6) coordinate (P);
+    
+    % Raio tracejado até o ponto P
+    \draw[dashed, thick] (C) -- (P);
+    \node[left=2pt] at (P) {$P$};
+    
+    % Arco e rótulo do ângulo teta medido em relação à vertical descendente
+    \draw[->] (2.4, 0.9) arc (-90:-150:0.7);
+    \node at (2.05, 0.65) {$\theta$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 20.}
+Um ponto $P$ move-se sobre a parábola $y^2 = x$, $x > 0$ e $y > 0$. A abscissa $x$ está variando com uma aceleração que, em cada instante, é o dobro do quadrado da velocidade da ordenada $y$. Mostre que a ordenada está variando com aceleração nula.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 21.}
+Dois pontos $P$ e $Q$ deslocam-se, respectivamente, nos eixos $x$ e $y$ de modo que a soma das distâncias de $P$ a $R$ e de $R$ a $Q$ mantém-se constante e igual a $e$ durante o movimento, em que $R = (0, h)$ é um ponto fixo. (Veja a figura a seguir.)
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9, >=latex]
+    % Eixos
+    \draw[->, thick] (-1,0) -- (5.5,0) node[below] {$x$};
+    \draw[->, thick] (0,-0.5) -- (0,3.5) node[left] {$y$};
+    \node[below left] at (0,0) {$0$};
+    
+    % Pontos
+    \coordinate (R) at (0,2.3);
+    \coordinate (Q) at (0,0.8);
+    \coordinate (P) at (4,0);
+    
+    % Segmentos da corda/haste
+    \draw[ultra thick] (Q) -- (R) -- (P);
+    
+    % Pontos marcados
+    \fill (R) circle (2pt) node[above right] {$R$};
+    \fill (Q) circle (2pt) node[left] {$Q$} node[right=4pt] {$y$};
+    \fill (P) circle (2pt) node[above right] {$P$} node[below=4pt] {$x$};
+    
+    % Linha tracejada da cota h
+    \draw[dashed] (-1.2, 2.3) -- (0, 2.3);
+    \draw[dashed] (-1.2, 0) -- (0, 0);
+    \draw[<->] (-1, 0) -- (-1, 2.3) node[midway, fill=white, inner sep=1pt] {$h$};
+\end{tikzpicture}
+\end{center}
+
+\noindent Relacione a velocidade $\dfrac{dy}{dt}$ de $Q$ com a velocidade $\dfrac{dx}{dt}$ de $P$.
+
+\subsection{Problemas Reta Tangente e Normal ao Gráfico de uma Função}
 \subsection{Exercícios do Capítulo}
 
 \end{document}
