@@ -1,0 +1,118 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[brazilian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{tocloft}
+\usepackage{tikz}
+
+\setlength{\cftsecnumwidth}{3.2cm}
+\setlength{\cftsubsecnumwidth}{1.5cm}
+
+\renewcommand{\thesection}{Capítulo \arabic{section} -}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\pretocmd{\subsection}{\clearpage}{}{}
+
+\title{
+    \Huge \textbf{Um Curso de Cálculo Volume 1} \\
+    \vspace{0.3cm}
+    \Large 6\textordfeminine{} Edição (Guidorizzi) \\
+    \vspace{0.5cm}
+    \large \textit{Enunciados Completos do Capítulo 5 Teoremas do Anulamento, Valor Intermediário e Weierstrass}
+}
+\author{Rogério Campos}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+
+\section{Teoremas do Anulamento, Valor Intermediário e Weierstrass}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 1.} Seja $f(x) = x^5 + x + 1$. Justifique a afirmação: $f$ tem pelo menos uma raiz no intervalo $[-1, 0]$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 2.} Prove que a equação $x^3 - 4x + 2 = 0$ admite três raízes reais distintas.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 3.} Seja $\alpha$ a menor raiz positiva da equação $x^3 - 4x + 2 = 0$. Determine intervalos de amplitudes $\dfrac{1}{2}$, $\dfrac{1}{4}$ e $\dfrac{1}{8}$ que contenham $\alpha$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 4.} Prove que a equação $x^3 - \dfrac{1}{1 + x^4} = 0$ admite ao menos uma raiz real.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 5.} Prove que cada um dos conjuntos abaixo admite máximo e mínimo.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $A = \left\{ \dfrac{x}{1 + x^2} \;\middle|\; -2 \le x \le 2 \right\}$
+    \item $A = \left\{ \dfrac{x^2 + x}{1 + x^2} \;\middle|\; -1 \le x \le 1 \right\}$
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 6.} Seja $f\colon [-1, 1] \to \mathbb{R}$ dada por $f(x) = \dfrac{x^2 + x}{1 + x^2}$.
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Prove que $f(1)$ é o valor máximo de $f$.
+    \item Prove que existe $x_1 \in {]-1, 0[}$ tal que $f(x_1)$ é o valor mínimo de $f$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 7.}
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Prove que todo polinômio de grau 3 admite pelo menos uma raiz real.
+    \item Prove que todo polinômio de grau ímpar admite pelo menos uma raiz real.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 8.} Seja $f\colon [a, b] \to \mathbb{R}$ uma função contínua e suponha que $f$ não seja constante em $[a, b]$. Prove que existem números reais $m$ e $M$, com $m < M$, tais que $\operatorname{Im} f = [m, M]$.
+
+\noindent(\textbf{Observação:} Imagem de $f = \operatorname{Im} f = \{f(x) \mid x \in [a, b]\}$.)
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 9.} Seja $f\colon I \to \mathbb{R}$ contínua, em que $I$ é um intervalo qualquer. Prove que a imagem de $f$ é um intervalo.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 10.} Suponha que $f\colon [0, 1] \to \mathbb{R}$ seja contínua, $f(0) = 1$ e que $f(x)$ é racional para todo $x \in [0, 1]$. Prove que $f(x) = 1$, para todo $x \in [0, 1]$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 11.} Seja $f\colon [0, 1] \to \mathbb{R}$ contínua e tal que, para todo $x \in [0, 1]$, $0 \le f(x) \le 1$. Prove que existe $c \in [0, 1]$ tal que $f(c) = c$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 12.} Seja $f$ contínua em $[a, b]$ e tal que $f(a) < f(b)$. Suponha que quaisquer que sejam $s$ e $t$ em $[a, b]$, $s \neq t \implies f(s) \neq f(t)$. Prove que $f$ é estritamente crescente em $[a, b]$.
+
+\noindent(\textbf{Observação:} $f$ estritamente crescente em $[a, b] \iff \forall s, t \in [a, b],\; s < t \implies f(s) < f(t)$.)
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 13.} Suponha $f$ contínua no intervalo $I$ e que $f$ admita neste intervalo uma única raiz $a$. Suponha, ainda, que existe $x_0 \in I$, com $x_0 > a$, tal que $f(x_0) > 0$. Prove que, para todo $x \in I$, com $x > a$, $f(x) > 0$.
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 14.} Considere a função $f$ dada por
+\[
+f(x) = 2x^3 - \sqrt{x^2 + 3x}.
+\]
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item Verifique que $f$ é contínua em $[0, +\infty[$.
+    \item Mostre que $1$ é a única raiz de $f$ em ${]0, +\infty[}$, que $f(2) > 0$ e que $f\!\left(\dfrac{1}{2}\right) < 0$.
+    \item Conclua que $f(x) > 0$ em ${]1, +\infty[}$ e que $f(x) < 0$ em ${]0, 1[}$.
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent\textbf{Exercício 15.} Suponha $f$ contínua em $I$ e sejam $a$ e $b$ pertencentes a $I$, com $a < b$, as únicas raízes de $f$ em $I$. Sejam $x_0, x_1 \text{ e } x_2$ em $I$ com $x_0 < a$, $a < x_1 < b$ e $b < x_2$. Estude o sinal de $f$ em $I$, a partir dos sinais de $f(x_0)$, $f(x_1)$ e $f(x_2)$. Justifique.
+
+\end{document}
