@@ -699,7 +699,182 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
 \end{enumerate}
 
 \vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
+\noindent\textbf{Exercício 5.} Determine a equação da reta tangente em $(p, f(p))$ sendo dados:
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    \item $f(x) = x^2$ e $p = 2$
+    \item $f(x) = \dfrac{1}{x}$ e $p = 2$
+    \item $f(x) = \sqrt{x}$ e $p = 9$
+    \item $f(x) = x^2 - x$ e $p = 1$
+\end{enumerate}
+\setcounter{equation}{0}
+
+\begin{recursosbox}[title=Estratégia Geral e Recursos Algébricos]
+\textbf{1. Definição Formal de Derivada no Ponto $p$:}
+\[
+f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+\]
+\textbf{2. Equação da Reta Tangente:}
+O valor $f'(p)$ corresponde geometricamente ao coeficiente angular ($m$) da reta tangente à curva $y = f(x)$ no ponto de tangência $(p, f(p))$. A equação da reta tangente é dada por:
+\[
+y - f(p) = f'(p)(x - p)
+\]
+\textbf{3. Roteiro de Resolução para Cada Item:}
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Passo 1:} Determinar o ponto de tangência calculando $f(p)$.
+    \item \textbf{Passo 2:} Calcular o coeficiente angular $f'(p)$ pela definição de limite.
+    \item \textbf{Passo 3:} Substituir $(p, f(p))$ e $f'(p)$ na equação da reta e simplificar para a forma reduzida $y = mx + b$.
+\end{itemize}
+\end{recursosbox}
+
+\vspace{0.4cm}
+\textbf{Resolução Passo a Passo:}
+
+\begin{enumerate}
+    \renewcommand{\theenumi}{\alph{enumi}}
+    \renewcommand{\labelenumi}{\theenumi)}
+    
+    % Item a
+    \item $f(x) = x^2$ e $p = 2$
+    
+    \textbf{Passo 1: Determinar o ponto de tangência.}
+    \[
+    f(2) = 2^2 = 4 \implies (p, f(p)) = (2, 4)
+    \]
+
+    \textbf{Passo 2: Calcular o coeficiente angular $f'(2)$ pela definição.}
+    Para $x \neq 2$:
+    \begin{align*}
+        \frac{f(x) - f(2)}{x - 2} &= \frac{x^2 - 4}{x - 2} \\[0.25cm]
+        &= \frac{(x - 2)(x + 2)}{x - 2} \\[0.25cm]
+        &= x + 2
+    \end{align*}
+    Passando ao limite quando $x \to 2$:
+    \[
+    f'(2) = \lim_{x \to 2} (x + 2) = 2 + 2 = 4
+    \]
+
+    \textbf{Passo 3: Equação da reta tangente.}
+
+    Substituindo $(p, f(p)) = (2, 4)$ e $f'(2) = 4$:
+    \begin{align*}
+        y - 4 &= 4(x - 2) \\[0.25cm]
+        y - 4 &= 4x - 8 \\[0.25cm]
+        y &= 4x - 4
+    \end{align*}
+
+    Portanto:
+    \begin{equation*}
+        y = 4x - 4 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+    \end{equation*}
+
+    % Item b
+    \item $f(x) = \dfrac{1}{x}$ e $p = 2$
+    
+    \textbf{Passo 1: Determinar o ponto de tangência.}
+    \[
+    f(2) = \frac{1}{2} \implies (p, f(p)) = \left(2, \frac{1}{2}\right)
+    \]
+
+    \textbf{Passo 2: Calcular o coeficiente angular $f'(2)$ pela definição.}
+
+    Para $x \neq 2$ e $x \neq 0$:
+    \begin{align*}
+        \frac{f(x) - f(2)}{x - 2} &= \frac{\dfrac{1}{x} - \dfrac{1}{2}}{x - 2} \\[0.25cm]
+        &= \frac{\dfrac{2 - x}{2x}}{x - 2} \\[0.25cm]
+        &= \frac{-(x - 2)}{2x(x - 2)} \\[0.25cm]
+        &= -\frac{1}{2x}
+    \end{align*}
+    Passando ao limite quando $x \to 2$:
+    \[
+    f'(2) = \lim_{x \to 2} \left(-\frac{1}{2x}\right) = -\frac{1}{2(2)} = -\frac{1}{4}
+    \]
+
+    \textbf{Passo 3: Equação da reta tangente.}
+
+    Substituindo $(p, f(p)) = \left(2, \dfrac{1}{2}\right)$ e $f'(2) = -\dfrac{1}{4}$:
+    \begin{align*}
+        y - \frac{1}{2} &= -\frac{1}{4}(x - 2) \\[0.25cm]
+        y - \frac{1}{2} &= -\frac{1}{4}x + \frac{1}{2} \\[0.25cm]
+        y &= -\frac{1}{4}x + 1
+    \end{align*}
+
+    Portanto:
+    \begin{equation*}
+        y = -\frac{1}{4}x + 1 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+    \end{equation*}
+
+    % Item c
+    \item $f(x) = \sqrt{x}$ e $p = 9$
+    
+    \textbf{Passo 1: Determinar o ponto de tangência.}
+    \[
+    f(9) = \sqrt{9} = 3 \implies (p, f(p)) = (9, 3)
+    \]
+
+    \textbf{Passo 2: Calcular o coeficiente angular $f'(9)$ pela definição.}
+
+    Para $x \neq 9$ com $x \ge 0$, multiplicamos pelo conjugado $(\sqrt{x} + 3)$:
+    \begin{align*}
+        \frac{f(x) - f(9)}{x - 9} &= \frac{\sqrt{x} - 3}{x - 9} \\[0.25cm]
+        &= \frac{(\sqrt{x} - 3)(\sqrt{x} + 3)}{(x - 9)(\sqrt{x} + 3)} \\[0.25cm]
+        &= \frac{x - 9}{(x - 9)(\sqrt{x} + 3)} \\[0.25cm]
+        &= \frac{1}{\sqrt{x} + 3}
+    \end{align*}
+    Passando ao limite quando $x \to 9$:
+    \[
+    f'(9) = \lim_{x \to 9} \frac{1}{\sqrt{x} + 3} = \frac{1}{\sqrt{9} + 3} = \frac{1}{6}
+    \]
+
+    \textbf{Passo 3: Equação da reta tangente.}
+
+    Substituindo $(p, f(p)) = (9, 3)$ e $f'(9) = \dfrac{1}{6}$:
+    \begin{align*}
+        y - 3 &= \frac{1}{6}(x - 9) \\[0.25cm]
+        y - 3 &= \frac{1}{6}x - \frac{3}{2} \\[0.25cm]
+        y &= \frac{1}{6}x + \frac{3}{2}
+    \end{align*}
+
+    Portanto:
+    \begin{equation*}
+        y = \frac{1}{6}x + \frac{3}{2} \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+    \end{equation*}
+
+    % Item d
+    \item $f(x) = x^2 - x$ e $p = 1$
+    
+    \textbf{Passo 1: Determinar o ponto de tangência.}
+    \[
+    f(1) = 1^2 - 1 = 0 \implies (p, f(p)) = (1, 0)
+    \]
+
+    \textbf{Passo 2: Calcular o coeficiente angular $f'(1)$ pela definição.}
+
+    Para $x \neq 1$:
+    \begin{align*}
+        \frac{f(x) - f(1)}{x - 1} &= \frac{(x^2 - x) - 0}{x - 1} \\[0.25cm]
+        &= \frac{x(x - 1)}{x - 1} \\[0.25cm]
+        &= x
+    \end{align*}
+    Passando ao limite quando $x \to 1$:
+    \[
+    f'(1) = \lim_{x \to 1} x = 1
+    \]
+
+    \textbf{Passo 3: Equação da reta tangente.}
+
+    Substituindo $(p, f(p)) = (1, 0)$ e $f'(1) = 1$:
+    \begin{align*}
+        y - 0 &= 1(x - 1) \\[0.25cm]
+        y &= x - 1
+    \end{align*}
+
+    Portanto:
+    \begin{equation*}
+        y = x - 1 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+    \end{equation*}
+\end{enumerate}
 
 \vspace{0.5cm}
 \noindent\textbf{Exercício 6.}
