@@ -19,9 +19,10 @@
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \pretocmd{\subsection}{\clearpage}{}{}
 
-% Cria o comando \qedsymbolcolorido com um quadrado de 1.8ex x 1.8ex
-% Você pode ajustar a cor (ex: blue!70!black, teal, black, etc.)
-\newcommand{\fimresolucao}{\hfill\textcolor{blue!70!black}{\rule{1.8ex}{1.8ex}}}
+\AtBeginEnvironment{enumerate}{\pretocmd{\item}{\setcounter{equation}{0}}{}{}}
+
+% Marcador Q.E.D. / Fim de Resolução em equações em display
+\newcommand{\qedsymbolmath}{\tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}}
 
 % Caixa para ferramentas e recursos teóricos
 \newtcolorbox{recursosbox}[1][]{
@@ -56,7 +57,7 @@
     \vspace{0.3cm}
     \Large 6\textordfeminine{} Edição (Guidorizzi) \\
     \vspace{0.5cm}
-    \large \textit{Resoluções Completas e Passo a Passo do Capítulo 8 Derivadas}
+    \large \textit{Resoluções Completas e Passo a Passo do Capítulo 7 Derivadas}
 }
 \author{Rogério Campos}
 
@@ -111,9 +112,6 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
 \end{itemize}
 \end{recursosbox}
 
-% ==========================================================
-% ATENÇÃO AOS DETALHES E DICAS PRÁTICAS
-% ==========================================================
 \begin{dicasbox}
 \textbf{Dificuldades Frequentes e Estratégias de Resolução:}
 \begin{itemize}[noitemsep, topsep=2pt]
@@ -174,12 +172,10 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
     \[
     f'(x) = \lim_{h \to 0} (2x + h) = 2x
     \]
-
     Portanto:
-    \[
-    f'(x) = 2x 
-    \]
-    \fimresolucao
+    \begin{equation*}
+        f'(x) = 2x \qedsymbolmath
+    \end{equation*}
 
     \item $f'(0)$
     \setcounter{equation}{0}
@@ -219,10 +215,9 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
     \]
 
     Portanto:
-    \[
-    f'(0) = 0
-    \]
-    \fimresolucao
+    \begin{equation*}
+        f'(0) = 0 \qedsymbolmath
+    \end{equation*}
 
     \item $f'(1)$
     \setcounter{equation}{0}
@@ -266,10 +261,9 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
     f'(1) = \lim_{x \to 1} (x + 1) = 1 + 1 = 2
     \]
     Portanto:
-    \[
-    f'(1) = 2
-    \]
-    \fimresolucao
+    \begin{equation}
+        f'(1) = 2 \qedsymbolmath
+    \end{equation}
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -318,7 +312,7 @@ f'(p) = \lim_{x \to p} 2 = 2
 
 Portanto:
 \begin{equation*}
-    f'(p) = 2
+    f'(p) = 2 \qedsymbolmath
 \end{equation*}
 
 \vspace{0.3cm}
@@ -382,7 +376,6 @@ Graficamente, isso expressa uma propriedade fundamental das funções afins: a m
     \node[right, blue!50!black] at (1.8, 3.1) {\footnotesize Reta Tangente: $y = 2x$};
 \end{tikzpicture}
 \end{center}
-\fimresolucao
 
 \vspace{0.5cm}
 \noindent\textbf{Exercício 3.} Seja $f(x) = 3x + 2$. Calcule:
@@ -449,21 +442,21 @@ Como $p$ é um elemento arbitrário do domínio $\mathbb{R}$, concluímos que a 
     
     Fazendo $p = 2$ no resultado geral \eqref{eq:resultado_geral_ex3}:
     \begin{equation*}
-        f'(2) = 3 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(2) = 3 \qedsymbolmath
     \end{equation*}
 
     \item $f'(0)$
     
     Fazendo $p = 0$ no resultado geral \eqref{eq:resultado_geral_ex3}:
     \begin{equation*}
-        f'(0) = 3 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(0) = 3 \qedsymbolmath
     \end{equation*}
 
     \item $f'(x)$
     
     Sendo a variável independente indicada por $x$, a função derivada associa a cada ponto $x \in \mathbb{R}$ o valor de sua derivada obtido em \eqref{eq:resultado_geral_ex3}:
     \begin{equation*}
-        f'(x) = 3 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(x) = 3 \qedsymbolmath
     \end{equation*}
 \end{enumerate}
 
@@ -534,7 +527,7 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     f'(1) = \lim_{x \to 1} (x + 2) = 1 + 2 = 3
     \]
     \begin{equation*}
-        f'(1) = 3 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(1) = 3 \qedsymbolmath
     \end{equation*}
 
     % Item b
@@ -556,7 +549,7 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     f'(4) = \lim_{x \to 4} \frac{1}{\sqrt{x} + 2} = \frac{1}{\sqrt{4} + 2} = \frac{1}{4}
     \]
     \begin{equation*}
-        f'(4) = \frac{1}{4} \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(4) = \frac{1}{4} \qedsymbolmath
     \end{equation*}
 
     % Item c
@@ -577,7 +570,7 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     f'(-3) = \lim_{x \to -3} 5 = 5
     \]
     \begin{equation*}
-        f'(-3) = 5 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(-3) = 5 \qedsymbolmath
     \end{equation*}
 
     % Item d
@@ -599,7 +592,7 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     f'(1) = \lim_{x \to 1} \left(-\frac{1}{x}\right) = -1
     \]
     \begin{equation*}
-        f'(1) = -1 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(1) = -1 \qedsymbolmath
     \end{equation*}
 
     % Item e
@@ -621,7 +614,7 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     f'(3) = \lim_{x \to 3} \frac{1}{\sqrt{x} + \sqrt{3}} = \frac{1}{\sqrt{3} + \sqrt{3}} = \frac{1}{2\sqrt{3}} = \frac{\sqrt{3}}{6}
     \]
     \begin{equation*}
-        f'(3) = \frac{\sqrt{3}}{6} \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(3) = \frac{\sqrt{3}}{6} \qedsymbolmath
     \end{equation*}
 
     % Item f
@@ -643,7 +636,7 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     f'(2) = \lim_{x \to 2} \left(-\frac{x + 2}{4x^2}\right) = -\frac{2 + 2}{4(2^2)} = -\frac{4}{16} = -\frac{1}{4}
     \]
     \begin{equation*}
-        f'(2) = -\frac{1}{4} \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(2) = -\frac{1}{4} \qedsymbolmath
     \end{equation*}
 
     % Item g
@@ -670,7 +663,7 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     f'(1) = \lim_{x \to 1} (2x^2 + x + 1) = 2(1)^2 + 1 + 1 = 4
     \]
     \begin{equation*}
-        f'(1) = 4 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(1) = 4 \qedsymbolmath
     \end{equation*}
 
     % Item h
@@ -694,7 +687,7 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     f'(2) = \lim_{x \to 2} \frac{1}{\sqrt[3]{x^2} + \sqrt[3]{2x} + \sqrt[3]{4}} = \frac{1}{\sqrt[3]{4} + \sqrt[3]{4} + \sqrt[3]{4}} = \frac{1}{3\sqrt[3]{4}} = \frac{\sqrt[3]{2}}{6}
     \]
     \begin{equation*}
-        f'(2) = \frac{\sqrt[3]{2}}{6} \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        f'(2) = \frac{\sqrt[3]{2}}{6} \qedsymbolmath
     \end{equation*}
 \end{enumerate}
 
@@ -766,7 +759,7 @@ y - f(p) = f'(p)(x - p)
 
     Portanto:
     \begin{equation*}
-        y = 4x - 4 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        y = 4x - 4 \qedsymbolmath
     \end{equation*}
 
     % Item b
@@ -802,7 +795,7 @@ y - f(p) = f'(p)(x - p)
 
     Portanto:
     \begin{equation*}
-        y = -\frac{1}{4}x + 1 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        y = -\frac{1}{4}x + 1 \qedsymbolmath
     \end{equation*}
 
     % Item c
@@ -838,7 +831,7 @@ y - f(p) = f'(p)(x - p)
 
     Portanto:
     \begin{equation*}
-        y = \frac{1}{6}x + \frac{3}{2} \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        y = \frac{1}{6}x + \frac{3}{2} \qedsymbolmath
     \end{equation*}
 
     % Item d
@@ -872,7 +865,7 @@ y - f(p) = f'(p)(x - p)
 
     Portanto:
     \begin{equation*}
-        y = x - 1 \tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}
+        y = x - 1 \qedsymbolmath
     \end{equation*}
 \end{enumerate}
 
