@@ -1,0 +1,26 @@
+% Ambiente visual para Exercícios
+\newtcolorbox{exercicio}[1][]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=gray!30,
+    coltitle=black,
+    fonttitle=\bfseries,
+    title=Exercício #1,
+    boxrule=0.6pt,
+    arc=2pt,
+    top=6pt, bottom=6pt, left=8pt, right=8pt,
+    before skip=10pt, after skip=10pt
+}
+
+% Ambiente visual para Resoluções
+\newtcolorbox{resolucao}[1][]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=blue!40!black,
+    fonttitle=\bfseries,
+    title=Resolução do Exercício #1,
+    boxrule=0.8pt,
+    top=6pt, bottom=6pt, left=8pt, right=8pt
+}

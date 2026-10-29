@@ -1,0 +1,60 @@
+\documentclass[12pt,a4paper]{article}
+
+% Inclusão dos módulos centralizados (sem repetição de código)
+\input{config/pacotes.tex}
+\input{config/macros.tex}
+\input{config/ambientes.tex}
+
+% Configurações de metadados do documento
+\title{\textbf{Um Curso de Cálculo -- Vol. 1}\\[0.5em] \Large Hamilton Luiz Guidorizzi}
+\author{\textbf{Rogério Campos Jr.}}
+\date{\today}
+
+\begin{document}
+
+% ==============================================================================
+% PÁGINA DE TÍTULO / CAPA DO CAPÍTULO
+% ==============================================================================
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge \bfseries Um Curso de Cálculo}\\[0.5em]
+    {\LARGE Volume 1 -- 6\textordfeminine{} Edição}\\[1.5cm]
+    
+    {\Large Hamilton Luiz Guidorizzi}\\[2.5cm]
+    
+    \rule{\linewidth}{0.5mm}\\[0.4cm]
+    {\huge \bfseries Caderno de Exercícios}\\[0.2cm]
+    {\Large \textbf{Capítulo 7: Derivadas}}\\[0.4cm]
+    \rule{\linewidth}{0.5mm}\\[3cm]
+    
+    \vfill
+    
+    {\large Rogério Campos Jr.}\\[1.5cm]
+    
+    {\large \today}
+\end{titlepage}
+
+% ==============================================================================
+% SUMÁRIO E QUEBRA DE PÁGINA
+% ==============================================================================
+\clearpage
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+
+% ==============================================================================
+% CORPO DO CAPÍTULO
+% ==============================================================================
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Alterne aqui o arquivo que deseja compilar no momento:
+\input{07_cap/enunciados.tex}
+
+% Caso queira anexar as resoluções logo em seguida, basta descomentar:
+% \clearpage
+% \input{capitulos/cap07/capitulo_07_resolucoes.tex}
+
+\end{document}
