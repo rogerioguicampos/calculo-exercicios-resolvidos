@@ -1,49 +1,16 @@
-\documentclass[12pt,a4paper]{article}
-
-\usepackage[brazilian]{babel}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{enumitem}
-\usepackage{etoolbox}
-\usepackage{tocloft}
-\usepackage{tikz}
-
-\setlength{\cftsecnumwidth}{3.2cm}
-\setlength{\cftsubsecnumwidth}{1.5cm}
-\setlength{\cftsubsecnumwidth}{1.5cm}
-
-\renewcommand{\thesection}{Capítulo \arabic{section} -}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-\pretocmd{\subsection}{\clearpage}{}{}
-
-\title{
-    \Huge \textbf{Um Curso de Cálculo Volume 1} \\
-    \vspace{0.3cm}
-    \Large 6\textordfeminine{} Edição (Guidorizzi) \\
-    \vspace{0.5cm}
-    \large \textit{Enunciados Completos do Capítulo 3 Limite e Continuidade}
-}
-\author{Rogério Campos}
-
-\begin{document}
-
-\maketitle
-\newpage
-
-\tableofcontents
-\newpage
-
 \setcounter{section}{2}
 \setcounter{subsection}{1}
 
 \section{Limite e Continuidade}
+
+% ==============================================================================
+% 3.1. INTRODUÇÃO
+% ==============================================================================
 \subsection{Introdução}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Esboce o gráfico da função dada e, utilizando a ideia intuitiva de função contínua, determine os pontos em que a função deverá ser contínua.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Esboce o gráfico da função dada e, utilizando a ideia intuitiva de função contínua, determine os pontos em que a função deverá ser contínua.
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = 2$
     \item $f(x) = x + 1$
     \item $f(x) = x^2$
@@ -51,12 +18,11 @@
     \item $f(x) = \begin{cases} \dfrac{1}{x^2} & \text{se } |x| \ge 1 \\ 2 & \text{se } |x| < 1 \end{cases}$
     \item $f(x) = x^2 + 2$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.} Utilizando a ideia intuitiva de limite, calcule
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[2]
+Utilizando a ideia intuitiva de limite, calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to 1} (x + 2)$
     \item $\lim\limits_{x \to 1} (2x + 1)$
     \item $\lim\limits_{x \to 0} (3x + 1)$
@@ -66,30 +32,34 @@
     \item $\lim\limits_{x \to 2} \sqrt[3]{x}$
     \item $\lim\limits_{x \to 0} (\sqrt{x} + x)$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
+\begin{exercicio}[3]
 Esboce o gráfico de $f(x) = \dfrac{4x^2 - 1}{2x - 1}$. Utilizando a ideia intuitiva de limite, calcule $\lim\limits_{x \to 1/2} \dfrac{4x^2 - 1}{2x - 1}$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.} Utilizando a ideia intuitiva de limite, calcule
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[4]
+Utilizando a ideia intuitiva de limite, calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to 2} \dfrac{x^2 - 4}{x - 2}$
     \item $\lim\limits_{x \to 0} \dfrac{x^2 + x}{x}$
     \item $\lim\limits_{x \to 1} \dfrac{\sqrt{x} - 1}{x - 1}$
     \item $\lim\limits_{x \to 2} \dfrac{x^2 - 4x + 4}{x - 2}$
     \item $\lim\limits_{x \to -1} \dfrac{x^2 - 1}{x + 1}$
-    \item $\lim\limits_{x \to 0} \operatorname{sen} x$
+    \item $\lim\limits_{x \to 0} \sen x$
 \end{enumerate}
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 3.2. DEFINIÇÃO DE FUNÇÃO CONTÍNUA
+% ==============================================================================
 \subsection{Definição de Função Contínua}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Prove, pela definição, que a função dada é contínua no ponto dado.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Prove, pela definição, que a função dada é contínua no ponto dado.
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = 4x - 3$ em $p = 2$
     \item $f(x) = x + 1$ em $p = 2$
     \item $f(x) = -3x$ em $p = 1$
@@ -99,64 +69,61 @@ Esboce o gráfico de $f(x) = \dfrac{4x^2 - 1}{2x - 1}$. Utilizando a ideia intui
     \item $f(x) = \sqrt{x}$ em $p = 0$
     \item $f(x) = \sqrt[3]{x}$ em $p = 1$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
+\begin{exercicio}[2]
 Prove que $f(x) = \dfrac{1}{x}$ é contínua em todo $p \neq 0$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
+\begin{exercicio}[3]
 Seja $n > 0$ um natural. Prove que $f(x) = x^n$ é contínua.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
+\begin{exercicio}[4]
 Prove que $f(x) = \sqrt[n]{x}$ é contínua.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
+\begin{exercicio}[5]
 $f(x) = \begin{cases} 2x & \text{se } x \le 1 \\ 1 & \text{se } x > 1 \end{cases}$ é contínua em $1$? Justifique.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-Dê exemplo de uma função definida em $\mathbb{R}$ e que seja contínua em todos os pontos, exceto em $-1$, $0$, $1$.
+\begin{exercicio}[6]
+Dê exemplo de uma função definida em $\R$ e que seja contínua em todos os pontos, exceto em $-1$, $0$, $1$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-Dê exemplo de uma função definida em $\mathbb{R}$ e que seja contínua em todos os pontos exceto nos inteiros.
+\begin{exercicio}[7]
+Dê exemplo de uma função definida em $\R$ e que seja contínua em todos os pontos exceto nos inteiros.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-Seja $f$ dada por $f(x) = \begin{cases} 1 & \text{se } x \in \mathbb{Q} \\ -1 & \text{se } x \notin \mathbb{Q} \end{cases}$. Mostre que $f$ é descontínua em todo $p$ real.
+\begin{exercicio}[8]
+Seja $f$ dada por $f(x) = \begin{cases} 1 & \text{se } x \in \Q \\ -1 & \text{se } x \notin \Q \end{cases}$. Mostre que $f$ é descontínua em todo $p$ real.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.} Determine o conjunto dos pontos em que a função dada é contínua.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item $f(x) = [\![x]\!]$ em que $[\![x]\!] = \max\{n \in \mathbb{Z} \mid n \le x\}$ (Função maior inteiro.)
+\begin{exercicio}[9]
+Determine o conjunto dos pontos em que a função dada é contínua.
+\begin{enumerate}[label=\alph*)]
+    \item $f(x) = [\![x]\!]$ em que $[\![x]\!] = \max\{n \in \Z \mid n \le x\}$ (Função maior inteiro.)
     \item $f(x) = x - [\![x]\!]$
-    \item $f(x) = \begin{cases} x & \text{se } x \in \mathbb{Q} \\ -x & \text{se } x \notin \mathbb{Q} \end{cases}$
-    \item $f(x) = \begin{cases} x^2 - 1 & \text{se } x \in \mathbb{Q} \\ -x^2 + 1 & \text{se } x \notin \mathbb{Q} \end{cases}$
+    \item $f(x) = \begin{cases} x & \text{se } x \in \Q \\ -x & \text{se } x \notin \Q \end{cases}$
+    \item $f(x) = \begin{cases} x^2 - 1 & \text{se } x \in \Q \\ -x^2 + 1 & \text{se } x \notin \Q \end{cases}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-Dê exemplo de uma função definida em $\mathbb{R}$ e que seja contínua apenas em $-1$, $0$, $1$.
+\begin{exercicio}[10]
+Dê exemplo de uma função definida em $\R$ e que seja contínua apenas em $-1$, $0$, $1$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.} Determine $L$ para que a função dada seja contínua no ponto dado. Justifique.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[11]
+Determine $L$ para que a função dada seja contínua no ponto dado. Justifique.
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = \begin{cases} \dfrac{x^2 - 4}{x - 2} & \text{se } x \neq 2 \\ L & \text{se } x = 2 \end{cases} \quad \text{em } p = 2$
     \item $f(x) = \begin{cases} \dfrac{x^2 - x}{x} & \text{se } x \neq 0 \\ L & \text{se } x = 0 \end{cases} \quad \text{em } p = 0$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.} Dê o valor (caso exista) que a função dada deveria ter no ponto dado para ser contínua neste ponto. Justifique.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[12]
+Dê o valor (caso exista) que a função dada deveria ter no ponto dado para ser contínua neste ponto. Justifique.
+\begin{enumerate}[label=\alph*)]
     \item $g(x) = \dfrac{x^2 - 4}{x - 2} \quad \text{em } p = 2$
     \item $f(x) = \dfrac{x^2 - x}{x} \quad \text{em } p = 0$
     \item $f(x) = \dfrac{|x|}{x} \quad \text{em } p = 0$
@@ -164,95 +131,97 @@ Dê exemplo de uma função definida em $\mathbb{R}$ e que seja contínua apenas
     \item $g(x) = \begin{cases} x & \text{se } x < 1 \\ \dfrac{1}{x} & \text{se } x > 1 \end{cases} \quad \text{em } p = 1$
     \item $f(x) = \dfrac{|x - 2|}{x - 2} \quad \text{em } p = 2$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
-Sabe-se que $f$ é contínua em $2$ e que $f(2) = 8$. Mostre que existe $\delta > 0$ tal que para todo $x \in D_f$
+\begin{exercicio}[13]
+Sabe-se que $f$ é contínua em $2$ e que $f(2) = 8$. Mostre que existe $\delta > 0$ tal que para todo $x \in D_f$:
 \[
 2 - \delta < x < 2 + \delta \implies f(x) > 7.
 \]
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
-Sabe-se que $f$ é contínua em $1$ e que $f(1) = 2$. Prove que existe $r > 0$ tal que para todo $x \in D_f$
+\begin{exercicio}[14]
+Sabe-se que $f$ é contínua em $1$ e que $f(1) = 2$. Prove que existe $r > 0$ tal que para todo $x \in D_f$:
 \[
 1 - r < x < 1 + r \implies \dfrac{3}{2} < f(x) < \dfrac{5}{2}.
 \]
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 15.}
-Seja $f$ uma função definida em $\mathbb{R}$ e suponha que existe $M > 0$ tal que $|f(x) - f(p)| \le M|x - p|$ para todo $x$. Prove que $f$ é contínua em $p$.
+\begin{exercicio}[15]
+Seja $f$ uma função definida em $\R$ e suponha que existe $M > 0$ tal que $|f(x) - f(p)| \le M|x - p|$ para todo $x$. Prove que $f$ é contínua em $p$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 16.}
+\begin{exercicio}[16]
 Suponha que $|f(x) - f(1)| \le (x - 1)^2$ para todo $x$. Prove que $f$ é contínua em $1$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 17.}
+\begin{exercicio}[17]
 Suponha que $|f(x)| \le x^2$ para todo $x$. Prove que $f$ é contínua em $0$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 18.}
-Prove que a função $f(x) = \begin{cases} x & \text{se } x \in \mathbb{Q} \\ -x & \text{se } x \notin \mathbb{Q} \end{cases}$ é contínua em $0$.
+\begin{exercicio}[18]
+Prove que a função $f(x) = \begin{cases} x & \text{se } x \in \Q \\ -x & \text{se } x \notin \Q \end{cases}$ é contínua em $0$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 19.}
-Sejam $f$ e $g$ definidas em $\mathbb{R}$ e suponha que existe $M > 0$ tal que $|f(x) - f(p)| \le M|g(x) - g(p)|$ para todo $x$. Prove que se $g$ for contínua em $p$, então $f$ também será contínua em $p$.
+\begin{exercicio}[19]
+Sejam $f$ e $g$ definidas em $\R$ e suponha que existe $M > 0$ tal que $|f(x) - f(p)| \le M|g(x) - g(p)|$ para todo $x$. Prove que se $g$ for contínua em $p$, então $f$ também será contínua em $p$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 20.}
-Suponha $f$ definida e contínua em $\mathbb{R}$ e que $f(x) = 0$ para todo $x$ racional. Prove que $f(x) = 0$ para todo $x$ real.
+\begin{exercicio}[20]
+Suponha $f$ definida e contínua em $\R$ e que $f(x) = 0$ para todo $x$ racional. Prove que $f(x) = 0$ para todo $x$ real.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 21.}
-Sejam $f$ e $g$ contínuas em $\mathbb{R}$ e tais que $f(x) = g(x)$ para todo $x$ racional. Prove que $f(x) = g(x)$ para todo $x$ real.
+\begin{exercicio}[21]
+Sejam $f$ e $g$ contínuas em $\R$ e tais que $f(x) = g(x)$ para todo $x$ racional. Prove que $f(x) = g(x)$ para todo $x$ real.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 22.}
-Suponha que $f$ e $g$ são contínuas em $\mathbb{R}$ e que exista $a > 0$, $a \neq 1$, tal que para todo $r$ racional, $f(r) = a^r$ e $g(r) = a^r$. Prove que $f(x) = g(x)$ em $\mathbb{R}$.
+\begin{exercicio}[22]
+Suponha que $f$ e $g$ são contínuas em $\R$ e que exista $a > 0$, $a \neq 1$, tal que para todo $r$ racional, $f(r) = a^r$ e $g(r) = a^r$. Prove que $f(x) = g(x)$ em $\R$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 23.} Seja $f(x) = x + \dfrac{1}{x}$. Prove
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[23]
+Seja $f(x) = x + \dfrac{1}{x}$. Prove:
+\begin{enumerate}[label=\alph*)]
     \item $|f(x) - f(1)| \le \left(1 + \dfrac{1}{x}\right)|x - 1|$ para $x > 0$
     \item $|f(x) - f(1)| \le 3|x - 1|$ para $x > \dfrac{1}{2}$
     \item $f$ é contínua em $p = 1$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 24.} Seja $f(x) = x^3 + x$. Prove que
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[24]
+Seja $f(x) = x^3 + x$. Prove que:
+\begin{enumerate}[label=\alph*)]
     \item $|f(x) - f(2)| \le 20|x - 2|$ para $0 \le x \le 3$
     \item $f$ é contínua em $2$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 25.}
+\begin{exercicio}[25]
 Prove que $f(x) = x + \dfrac{1}{x^2}$ é contínua em $1$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 26.}
+\begin{exercicio}[26]
 Prove que $f(x) = x + \dfrac{1}{x}$ é contínua em todo $p > 0$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 27.} Sejam $f(x) = x^3$ e $p \neq 0$.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[27]
+Sejam $f(x) = x^3$ e $p \neq 0$.
+\begin{enumerate}[label=\alph*)]
     \item Verifique que $|x^3 - p^3| \le 7\,p^2|x - p|$ para $|x| \le 2|p|$
     \item Conclua de (a) que $f$ é contínua em $p$
 \end{enumerate}
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 3.3. DEFINIÇÃO DE LIMITE
+% ==============================================================================
 \subsection{Definição de Limite}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Calcule e justifique.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Calcule e justifique:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to 2} x^2$
     \item $\lim\limits_{x \to 1} (3x + 1)$
     \item $\lim\limits_{x \to -2} (4x + 1)$
@@ -274,26 +243,24 @@ Prove que $f(x) = x + \dfrac{1}{x}$ é contínua em todo $p > 0$.
     \item $\lim\limits_{x \to 0} \dfrac{x^2 + 3x - 1}{x^2 + 2}$
     \item $\lim\limits_{x \to 1} \dfrac{\sqrt{x} - 1}{\sqrt{2x + 3} - \sqrt{5}}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.} Determine $L$ para que a função dada seja contínua no ponto dado. Justifique.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[2]
+Determine $L$ para que a função dada seja contínua no ponto dado. Justifique.
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = \begin{cases} \dfrac{x^3 - 8}{x - 2} & \text{se } x \neq 2 \\ L & \text{se } x = 2 \end{cases} \quad \text{em } p = 2$
     \item $f(x) = \begin{cases} \dfrac{\sqrt{x} - \sqrt{3}}{x - 3} & \text{se } x \neq 3 \\ L & \text{se } x = 3 \end{cases} \quad \text{em } p = 3$
     \item $f(x) = \begin{cases} \dfrac{\sqrt{x} - \sqrt{5}}{\sqrt{x + 5} - \sqrt{10}} & \text{se } x \neq 5 \\ L & \text{se } x = 5 \end{cases} \quad \text{em } p = 5$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
+\begin{exercicio}[3]
 $f(x) = \begin{cases} \dfrac{x^2 + x}{x + 1} & \text{se } x \neq -1 \\ 2 & \text{se } x = -1 \end{cases}$ é contínua em $-1$? E em $0$? Por quê?
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.} Calcule $\lim\limits_{h \to 0} \dfrac{f(x + h) - f(x)}{h}$ sendo $f$ dada por
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[4]
+Calcule $\lim\limits_{h \to 0} \dfrac{f(x + h) - f(x)}{h}$ sendo $f$ dada por:
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = x^2$
     \item $f(x) = 2x^2 + x$
     \item $f(x) = 5$
@@ -301,12 +268,11 @@ $f(x) = \begin{cases} \dfrac{x^2 + x}{x + 1} & \text{se } x \neq -1 \\ 2 & \text
     \item $f(x) = \dfrac{1}{x}$
     \item $f(x) = 3x + 1$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[5]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to -1} \dfrac{x^3 + 1}{x^2 - 1}$
     \item $\lim\limits_{x \to 0} \dfrac{x^3 + x^2}{3x^3 + x^4 + x}$
     \item $\lim\limits_{h \to 0} (x^2 + 3xh)$
@@ -326,69 +292,74 @@ $f(x) = \begin{cases} \dfrac{x^2 + x}{x + 1} & \text{se } x \neq -1 \\ 2 & \text
     \item $\lim\limits_{x \to p} \dfrac{g(x) - g(p)}{x - p}$ em que $g(x) = \dfrac{1}{x^2}$
     \item $\lim\limits_{h \to 0} \dfrac{f(x + h) - f(x)}{h}$ em que $f(x) = x^2 - 3x$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-Prove que existe $\delta > 0$ tal que
+\begin{exercicio}[6]
+Prove que existe $\delta > 0$ tal que:
 \[
 1 - \delta < x < 1 + \delta \implies 2 - \dfrac{1}{3} < x^2 + x < 2 + \dfrac{1}{3}.
 \]
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-Prove que existe $\delta > 0$ tal que
+\begin{exercicio}[7]
+Prove que existe $\delta > 0$ tal que:
 \[
 1 - \delta < x < 1 + \delta \implies 2 - \dfrac{1}{2} < \dfrac{x^5 + 3x}{x^2 + 1} < 2 + \dfrac{1}{2}.
 \]
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-Sejam $f$ e $g$ definidas em $\mathbb{R}$ com $g(x) \neq 0$ para todo $x$. Suponha que $\lim\limits_{x \to p} \dfrac{f(x)}{g(x)} = 0$. Prove que existe $\delta > 0$ tal que
+\begin{exercicio}[8]
+Sejam $f$ e $g$ definidas em $\R$ com $g(x) \neq 0$ para todo $x$. Suponha que $\lim\limits_{x \to p} \dfrac{f(x)}{g(x)} = 0$. Prove que existe $\delta > 0$ tal que:
 \[
 0 < |x - p| < \delta \implies |f(x)| < |g(x)|.
 \]
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-Suponha que $\lim\limits_{x \to p} f(x) = L$. Prove que existem $r > 0$, $\alpha$ e $\beta$ tais que, para todo $x \in D_f$,
+\begin{exercicio}[9]
+Suponha que $\lim\limits_{x \to p} f(x) = L$. Prove que existem $r > 0$, $\alpha$ e $\beta$ tais que, para todo $x \in D_f$:
 \[
 0 < |x - p| < r \implies \alpha < f(x) < \beta.
 \]
 Interprete graficamente.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-Suponha que $\lim\limits_{x \to p} f(x) = L$. Prove que existem $r > 0$ e $M > 0$ tais que, para todo $x \in D_f$,
+\begin{exercicio}[10]
+Suponha que $\lim\limits_{x \to p} f(x) = L$. Prove que existem $r > 0$ e $M > 0$ tais que, para todo $x \in D_f$:
 \[
 0 < |x - p| < r \implies |f(x)| \le M.
 \]
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
+\begin{exercicio}[11]
 Prove: $\lim\limits_{x \to p} f(x) = L \iff \lim\limits_{x \to p} [f(x) - L] = 0$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
+\begin{exercicio}[12]
 Prove: $\lim\limits_{x \to p} f(x) = L \iff \lim\limits_{x \to p} |f(x) - L| = 0$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
+\begin{exercicio}[13]
 Prove: $\lim\limits_{x \to p} \dfrac{f(x)}{x - p} = 0 \iff \lim\limits_{x \to p} \dfrac{f(x)}{|x - p|} = 0$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
+\begin{exercicio}[14]
 Suponha que existe $r > 0$ tal que $f(x) \ge 0$ para $0 < |x - p| < r$ e que $\lim\limits_{x \to p} f(x) = L$. Prove que $L \ge 0$. (Sugestão: Suponha $L < 0$ e use a conservação do sinal.)
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 15.}
-Suponha $f$ contínua em $\mathbb{R}$ e $f(x) \ge 0$ para todo $x$ racional. Prove que $f(x) \ge 0$ para todo $x$.
+\begin{exercicio}[15]
+Suponha $f$ contínua em $\R$ e $f(x) \ge 0$ para todo $x$ racional. Prove que $f(x) \ge 0$ para todo $x$.
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 3.4. LIMITES LATERAIS
+% ==============================================================================
 \subsection{Limites Laterais}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Calcule, caso exista. Se não existir, justifique.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Calcule, caso exista. Se não existir, justifique.
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to 1^+} \dfrac{|x - 1|}{x - 1}$
     \item $\lim\limits_{x \to 1^-} \dfrac{|x - 1|}{x - 1}$
     \item $\lim\limits_{x \to 1^+} \dfrac{f(x) - f(1)}{x - 1}$ em que $f(x) = \begin{cases} x + 1 & \text{se } x \ge 1 \\ 2x & \text{se } x < 1 \end{cases}$
@@ -402,188 +373,203 @@ Suponha $f$ contínua em $\mathbb{R}$ e $f(x) \ge 0$ para todo $x$ racional. Pro
     \item $\lim\limits_{x \to 2^+} \dfrac{g(x) - g(2)}{x - 2}$ sendo $g$ a função do item (j)
     \item $\lim\limits_{x \to 2} \dfrac{g(x) - g(2)}{x - 2}$ em que $g$ é a função do item (j)
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
+\begin{exercicio}[2]
 A afirmação ``$\lim\limits_{x \to p^+} f(x) = \lim\limits_{x \to p^-} f(x) \implies f \text{ contínua em } p$'' é falsa ou verdadeira? Justifique.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
+\begin{exercicio}[3]
 Dada a função $f(x) = \dfrac{x^2 - 3x + 2}{x - 1}$, verifique que $\lim\limits_{x \to 1^+} f(x) = \lim\limits_{x \to 1^-} f(x)$. Pergunta-se: $f$ é contínua em $1$? Por quê?
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-Dê exemplo de uma função definida em $\mathbb{R}$, que não seja contínua em $2$, mas que $\lim\limits_{x \to 2^+} f(x) = \lim\limits_{x \to 2^-} f(x)$.
+\begin{exercicio}[4]
+Dê exemplo de uma função definida em $\R$, que não seja contínua em $2$, mas que $\lim\limits_{x \to 2^+} f(x) = \lim\limits_{x \to 2^-} f(x)$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
+\begin{exercicio}[5]
 Suponha que exista $r > 0$ tal que $f(x) \ge 0$ para $p < x < p + r$. Prove que $\lim\limits_{x \to p^+} f(x) \ge 0$ desde que o limite exista.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-Sejam $f$ uma função definida em um intervalo aberto $I$ e $p \in I$. Suponha que $f(x) \le f(p)$ para todo $x \in I$. Prove que $\lim\limits_{x \to p} \dfrac{f(x) - f(p)}{x - p} = 0$ desde que o limite exista.
-(Sugestão: Estude os sinais de $\lim\limits_{x \to p^+} \dfrac{f(x) - f(p)}{x - 1}$ e de $\lim\limits_{x \to p^-} \dfrac{f(x) - f(p)}{x - 1}$.)
+\begin{exercicio}[6]
+Sejam $f$ uma função definida em um intervalo aberto $I$ e $p \in I$. Suponha que $f(x) \le f(p)$ para todo $x \in I$. Prove que $\lim\limits_{x \to p} \dfrac{f(x) - f(p)}{x - p} = 0$ desde que o limite exista.\\
+(Sugestão: Estude os sinais de $\lim\limits_{x \to p^+} \dfrac{f(x) - f(p)}{x - p}$ e de $\lim\limits_{x \to p^-} \dfrac{f(x) - f(p)}{x - p}$.)
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 3.5. LIMITE DE FUNÇÃO COMPOSTA
+% ==============================================================================
 \subsection{Limite de Função Composta}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Calcule
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to -1} \sqrt[3]{\dfrac{x^3 + 1}{x + 1}}$
     \item $\lim\limits_{x \to 1} \dfrac{\sqrt{x^2 + 3} - 2}{x^2 - 1}$
     \item $\lim\limits_{x \to 1} \dfrac{\sqrt[3]{x + 7} - 2}{x - 1}$
     \item $\lim\limits_{x \to 1} \dfrac{\sqrt[3]{3x + 5} - 2}{x^2 - 1}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.} Seja $f$ definida em $\mathbb{R}$. Suponha que $\lim\limits_{x \to 0} \dfrac{f(x)}{x} = 1$. Calcule
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[2]
+Seja $f$ definida em $\R$. Suponha que $\lim\limits_{x \to 0} \dfrac{f(x)}{x} = 1$. Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to 0} \dfrac{f(3x)}{x}$
     \item $\lim\limits_{x \to 0} \dfrac{f(x^2)}{x}$
     \item $\lim\limits_{x \to 1} \dfrac{f(x^2 - 1)}{x - 1}$
     \item $\lim\limits_{x \to 0} \dfrac{f(7x)}{3x}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.} Seja $f$ definida em $\mathbb{R}$ e seja $p$ um real dado. Suponha que $\lim\limits_{x \to p} \dfrac{f(x) - f(p)}{x - p} = L$. Calcule
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[3]
+Seja $f$ definida em $\R$ e seja $p$ um real dado. Suponha que $\lim\limits_{x \to p} \dfrac{f(x) - f(p)}{x - p} = L$. Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{h \to 0} \dfrac{f(p + h) - f(p)}{h}$
     \item $\lim\limits_{h \to 0} \dfrac{f(p + 3h) - f(p)}{h}$
     \item $\lim\limits_{h \to 0} \dfrac{f(p + h) - f(p - h)}{h}$
     \item $\lim\limits_{h \to 0} \dfrac{f(p - h) - f(p)}{h}$
 \end{enumerate}
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 3.6. TEOREMA DO CONFRONTO
+% ==============================================================================
 \subsection{Teorema do Confronto}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-Seja $f$ uma função definida em $\mathbb{R}$ tal que, para todo $x \neq 1$, $-x^2 + 3x \le f(x) < \dfrac{x^2 - 1}{x - 1}$. Calcule $\lim\limits_{x \to 1} f(x)$ e justifique.
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-Seja $f$ definida em $\mathbb{R}$ e tal que, para todo $x$, $|f(x) - 3| \le 2|x - 1|$. Calcule $\lim\limits_{x \to 1} f(x)$ e justifique.
+\begin{exercicio}[1]
+Seja $f$ uma função definida em $\R$ tal que, para todo $x \neq 1$, $-x^2 + 3x \le f(x) < \dfrac{x^2 - 1}{x - 1}$. Calcule $\lim\limits_{x \to 1} f(x)$ e justifique.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
+\begin{exercicio}[2]
+Seja $f$ definida em $\R$ e tal que, para todo $x$, $|f(x) - 3| \le 2|x - 1|$. Calcule $\lim\limits_{x \to 1} f(x)$ e justifique.
+\end{exercicio}
+
+\begin{exercicio}[3]
 Suponha que, para todo $x$, $|g(x)| \le x^4$. Calcule $\lim\limits_{x \to 0} \dfrac{g(x)}{x}$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item Verifique que $\lim\limits_{x \to 0} \operatorname{sen}\dfrac{1}{x}$ não existe.
-    \item Calcule, caso exista, $\lim\limits_{x \to 0} x\operatorname{sen}\dfrac{1}{x}$. (Justifique.)
+\begin{exercicio}[4]
+\begin{enumerate}[label=\alph*)]
+    \item Verifique que $\lim\limits_{x \to 0} \sen\dfrac{1}{x}$ não existe.
+    \item Calcule, caso exista, $\lim\limits_{x \to 0} x\sen\dfrac{1}{x}$. (Justifique.)
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.} Calcule, caso exista, $\lim\limits_{x \to 0} \dfrac{f(x) - f(0)}{x - 0}$ em que $f$ é dada por
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item $f(x) = \begin{cases} x^2 \operatorname{sen}\dfrac{1}{x} & \text{se } x \neq 0 \\ 0 & \text{se } x = 0 \end{cases}$
-    \item $f(x) = \begin{cases} x \operatorname{sen}\dfrac{1}{x} & \text{se } x \neq 0 \\ 0 & \text{se } x = 0 \end{cases}$
+\begin{exercicio}[5]
+Calcule, caso exista, $\lim\limits_{x \to 0} \dfrac{f(x) - f(0)}{x - 0}$ em que $f$ é dada por:
+\begin{enumerate}[label=\alph*)]
+    \item $f(x) = \begin{cases} x^2 \sen\dfrac{1}{x} & \text{se } x \neq 0 \\ 0 & \text{se } x = 0 \end{cases}$
+    \item $f(x) = \begin{cases} x \sen\dfrac{1}{x} & \text{se } x \neq 0 \\ 0 & \text{se } x = 0 \end{cases}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.} Sejam $f$ e $g$ duas funções definidas em $\mathbb{R}$ e tais que, para todo $x$, $[g(x)]^4 + [f(x)]^4 = 4$. Calcule e justifique.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[6]
+Sejam $f$ e $g$ duas funções definidas em $\R$ e tais que, para todo $x$, $[g(x)]^4 + [f(x)]^4 = 4$. Calcule e justifique:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to 0} x^3 g(x)$
     \item $\lim\limits_{x \to 3} f(x)\sqrt[3]{x^2 - 9}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.} Seja $f$ definida em $\mathbb{R}$ e suponha que existe $M > 0$ tal que, para todo $x$, $|f(x) - f(p)| \le M|x - p|^2$.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[7]
+Seja $f$ definida em $\R$ e suponha que existe $M > 0$ tal que, para todo $x$, $|f(x) - f(p)| \le M|x - p|^2$.
+\begin{enumerate}[label=\alph*)]
     \item Mostre que $f$ é contínua em $p$.
     \item Calcule, caso exista, $\lim\limits_{x \to p} \dfrac{f(x) - f(p)}{x - p}$.
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
+\begin{exercicio}[8]
 Sejam $a$, $b$, $c$ reais fixos e suponha que, para todo $x$, $|a + bx + cx^2| \le |x|^3$. Prove que $a = b = c = 0$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
+\begin{exercicio}[9]
 Prove: $\lim\limits_{x \to p} f(x) = L \implies \lim\limits_{x \to p} |f(x)| = |L|$.\\
 (Sugestão: verifique que $\big||f(x)| - |L|\big| \le |f(x) - L|$ e aplique o teorema do confronto.)
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
+\begin{exercicio}[10]
 A afirmação
 \[
 \text{``}\lim_{x \to p} |f(x)| = |L| \implies \lim_{x \to p} f(x) = L\text{''}
 \]
 é falsa ou verdadeira? Por quê?
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
+\begin{exercicio}[11]
 Dê exemplo de uma função $f$ tal que $\lim\limits_{x \to p} |f(x)|$ existe, mas $\lim\limits_{x \to p} f(x)$ não exista.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
+\begin{exercicio}[12]
 Prove: $\lim\limits_{h \to 0} \dfrac{f(h)}{h} = 0 \iff \lim\limits_{h \to 0} \dfrac{f(h)}{|h|} = 0$.
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 3.7. CONTINUIDADE DAS FUNÇÕES TRIGONOMÉTRICAS
+% ==============================================================================
 \subsection{Continuidade das Funções Trigonométricas}
-Esta subseção não possui exercícios
+\textit{Esta subseção não possui exercícios.}
 
-\subsection{O Limite Fundamental $\lim_{x \to 0} \frac{sen(x)}{x}$}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item $\lim\limits_{x \to 0} \dfrac{\operatorname{tg} x}{x}$
-    \item $\lim\limits_{x \to 0} \dfrac{x}{\operatorname{sen} x}$
-    \item $\lim\limits_{x \to 0} \dfrac{\operatorname{sen} 3x}{x}$
-    \item $\lim\limits_{x \to \pi} \dfrac{\operatorname{sen} x}{x - \pi}$
-    \item $\lim\limits_{x \to 0} \dfrac{x^2}{\operatorname{sen} x}$
-    \item $\lim\limits_{x \to 0} \dfrac{3x^2}{\operatorname{tg} x \operatorname{sen} x}$
-    \item $\lim\limits_{x \to 0} \dfrac{\operatorname{tg} 3x}{\operatorname{sen} 4x}$
+\clearpage
+
+% ==============================================================================
+% 3.8. O LIMITE FUNDAMENTAL \lim_{x \to 0} \frac{\sen x}{x}
+% ==============================================================================
+\subsection{O Limite Fundamental $\lim\limits_{x \to 0} \frac{\sen x}{x}$}
+
+\begin{exercicio}[1]
+Calcule:
+\begin{enumerate}[label=\alph*)]
+    \item $\lim\limits_{x \to 0} \dfrac{\tg x}{x}$
+    \item $\lim\limits_{x \to 0} \dfrac{x}{\sen x}$
+    \item $\lim\limits_{x \to 0} \dfrac{\sen 3x}{x}$
+    \item $\lim\limits_{x \to \pi} \dfrac{\sen x}{x - \pi}$
+    \item $\lim\limits_{x \to 0} \dfrac{x^2}{\sen x}$
+    \item $\lim\limits_{x \to 0} \dfrac{3x^2}{\tg x \sen x}$
+    \item $\lim\limits_{x \to 0} \dfrac{\tg 3x}{\sen 4x}$
     \item $\lim\limits_{x \to 0} \dfrac{1 - \cos x}{x}$
-    \item $\lim\limits_{x \to \frac{\pi}{2}} \dfrac{1 - \operatorname{sen} x}{2x - \pi}$
-    \item $\lim\limits_{x \to 0} x \operatorname{sen}\dfrac{1}{x}$
-    \item $\lim\limits_{x \to p} \dfrac{\operatorname{tg}(x - p)}{x^2 - p^2}$, $p \neq 0$
-    \item $\lim\limits_{x \to p} \dfrac{\operatorname{sen}(x^2 - p^2)}{x - p}$
-    \item $\lim\limits_{x \to 0} \dfrac{\operatorname{sen}\!\left(x^2 + \dfrac{1}{x}\right) - \operatorname{sen}\dfrac{1}{x}}{x}$
-    \item $\lim\limits_{x \to 0} \dfrac{x + \operatorname{sen} x}{x^2 - \operatorname{sen} x}$
-    \item $\lim\limits_{x \to 0} \dfrac{x - \operatorname{tg} x}{x + \operatorname{tg} x}$
-    \item $\lim\limits_{x \to 1} \dfrac{\operatorname{sen}\pi x}{x - 1}$
+    \item $\lim\limits_{x \to \frac{\pi}{2}} \dfrac{1 - \sen x}{2x - \pi}$
+    \item $\lim\limits_{x \to 0} x \sen\dfrac{1}{x}$
+    \item $\lim\limits_{x \to p} \dfrac{\tg(x - p)}{x^2 - p^2}$, $p \neq 0$
+    \item $\lim\limits_{x \to p} \dfrac{\sen(x^2 - p^2)}{x - p}$
+    \item $\lim\limits_{x \to 0} \dfrac{\sen\!\left(x^2 + \dfrac{1}{x}\right) - \sen\dfrac{1}{x}}{x}$
+    \item $\lim\limits_{x \to 0} \dfrac{x + \sen x}{x^2 - \sen x}$
+    \item $\lim\limits_{x \to 0} \dfrac{x - \tg x}{x + \tg x}$
+    \item $\lim\limits_{x \to 1} \dfrac{\sen\pi x}{x - 1}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[2]
+\begin{enumerate}[label=\alph*)]
     \item Prove que existe $r > 0$ tal que
     \[
-    \cos x - 1 < \dfrac{\operatorname{sen} x}{x} - 1 < 0
+    \cos x - 1 < \dfrac{\sen x}{x} - 1 < 0
     \]
     para $0 < |x| < r$.
-    \item Calcule $\lim\limits_{x \to 0} \dfrac{x - \operatorname{sen} x}{x^2}$.
+    \item Calcule $\lim\limits_{x \to 0} \dfrac{x - \sen x}{x^2}$.
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item $\lim\limits_{x \to p} \dfrac{\operatorname{sen} x - \operatorname{sen} p}{x - p}$
+\begin{exercicio}[3]
+Calcule:
+\begin{enumerate}[label=\alph*)]
+    \item $\lim\limits_{x \to p} \dfrac{\sen x - \sen p}{x - p}$
     \item $\lim\limits_{x \to p} \dfrac{\cos x - \cos p}{x - p}$
-    \item $\lim\limits_{x \to p} \dfrac{\operatorname{tg} x - \operatorname{tg} p}{x - p}$
+    \item $\lim\limits_{x \to p} \dfrac{\tg x - \tg p}{x - p}$
     \item $\lim\limits_{x \to p} \dfrac{\sec x - \sec p}{x - p}$
 \end{enumerate}
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 3.9. PROPRIEDADES OPERATÓRIAS
+% ==============================================================================
 \subsection{Propriedades Operatórias}
-Esta subseção não possui exercícios
-
-\end{document}
+\textit{Esta subseção não possui exercícios.}
