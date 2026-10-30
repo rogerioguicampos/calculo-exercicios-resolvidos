@@ -36,3 +36,23 @@
     \end{flushright}
     \vspace{0.2cm}
 }
+
+% 1. Estratégia Geral
+\newcommand{\estrategia}[1]{%
+    \noindent\textbf{Estratégia Geral:} #1\par\vspace{0.2cm}%
+}
+
+% 2. Definições (Aceita qualquer título e qualquer fórmula)
+% Uso: \definicao{Título da Definição}{Fórmula ou Texto}
+\newcommand{\definicao}[2]{%
+    \noindent\textbf{#1:} #2\par\vspace{0.2cm}%
+}
+
+% 3. Ambiente para as Ferramentas Algébricas
+\newenvironment{ferramentas}{%
+  \noindent\textbf{Ferramentas Algébricas e Geométricas:}
+    \vspace{-0.1cm}
+    \begin{itemize}[noitemsep, topsep=2pt]
+}{%
+    \end{itemize}
+}

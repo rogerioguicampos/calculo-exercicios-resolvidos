@@ -2247,25 +2247,28 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 \linkenunciado{7.2.1}
 
 \begin{enumerate}[label=\alph*)]
+
     \begin{recursosbox}[title=Estratégias e Recursos Utilizados]
 
-    \textbf{Estratégia Geral:} utilizaremos uma das duas definições abaixo e depois manipularemos o quociente incremental.
+        \estrategia{Utilizaremos uma das duas definições abaixo e depois manipularemos o quociente incremental.}
 
-    \textbf{Definição de derivada por acréscimo:}
-    \[
-    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
-    \]
+        \definicao{Definição de derivada por acréscimo}{
+            \[
+            f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+            \]
+        }
 
-    \textbf{Definição de derivada no ponto $p$:}
-    \[
-    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-    \]
+        \definicao{Definição de derivada no ponto $p$}{
+            \[
+            f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+            \]
+        }
 
-    \textbf{Ferramentas Algébricas:}
-    \begin{itemize}[noitemsep, topsep=2pt]
-        \item Expansão de binômio: $(x + h)^2 = x^2 + 2hx + h^2$.
-        \item Fatoração do quociente incremental para simplificar o fator comum $h$.
-    \end{itemize}
+        \begin{ferramentas}
+            \item Expansão de binômio: $(x + h)^2 = x^2 + 2hx + h^2$.
+            \item Fatoração do quociente incremental para simplificar o fator comum $h$.
+        \end{ferramentas}
+
     \end{recursosbox}
 
     \item $f'(x)$
@@ -2378,32 +2381,31 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 \linkenunciado{7.2.2}
 \setcounter{equation}{0}
 
-\begin{recursosbox}[title= Estratégias e Recursos Utilizados]
+\begin{recursosbox}[title=Estratégias e Recursos Utilizados]
 
-  \textbf{Estratégia Geral:}
-  \begin{itemize}[noitemsep, topsep=2pt]
-      \item Achar a derivada de $f$ no ponto $p$
-      \item Achar a equação da reta tangente ao gráfico de $f$ no ponto $(p, f(p))$
-  \end{itemize}
+    \estrategia{
+        \begin{itemize}[noitemsep, topsep=2pt]
+            \item Achar a derivada de $f$ no ponto $p$.
+            \item Achar a equação da reta tangente ao gráfico de $f$ no ponto $(p, f(p))$.
+        \end{itemize}
+    }
 
-  \vspace{0.2cm}
-  \textbf{Definição de derivada no ponto $p$:}
-  \[
-  f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-  \]
+    \definicao{Definição de derivada no ponto $p$}{
+        \[
+        f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+        \]
+    }
 
-  \vspace{0.2cm}
-  \textbf{Equação da reta tangente ao gráfico de $f$ no ponto de abscissa $p$:}
-  \[
-  y - f(p) = f'(p)(x - p)
-  \]
+    \definicao{Equação da reta tangente ao gráfico de $f$ no ponto de abscissa $p$}{
+        \[
+        y - f(p) = f'(p)(x - p)
+        \]
+    }
 
-  \vspace{0.2cm}
-  \textbf{Ferramentas Algébricas e Geométricas:}
-  \begin{itemize}[noitemsep, topsep=2pt]
-      \item Fatoração por termo comum: $2x - 2p = 2(x - p)$.
-      \item Interpretação geométrica: $f(x) = 2x$ representa uma reta com inclinação constante $m = 2$.
-  \end{itemize}
+    \begin{ferramentas}
+        \item Fatoração por termo comum: $2x - 2p = 2(x - p)$.
+        \item Interpretação geométrica: $f(x) = 2x$ representa uma reta com inclinação constante $m = 2$.
+    \end{ferramentas}
 
 \end{recursosbox}
 
@@ -2497,20 +2499,18 @@ Graficamente, isso expressa uma propriedade fundamental das funções afins: a m
 
 \begin{recursosbox}[title=Estratégias e Recursos Utilizados]
 
-  \textbf{Estratégia Geral:} Em vez de calcular o limite da definição separadamente para cada ponto numérico, determinaremos primeiramente a derivada $f'(p)$ em um ponto genérico $p \in D_f$ (ou a função derivada $f'(x)$). Em seguida, utilizaremos essa expressão geral para avaliar diretamente os itens pontuais por substituição simples.
+    \estrategia{Em vez de calcular o limite da definição separadamente para cada ponto numérico, determinaremos primeiramente a derivada $f'(p)$ em um ponto genérico $p \in D_f$ (ou a função derivada $f'(x)$). Em seguida, utilizaremos essa expressão geral para avaliar diretamente os itens pontuais por substituição simples.}
 
-  \vspace{0.2cm}
-  \textbf{Definição Formal de Derivada em $p$:}
-  \[
-  f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-  \]
+    \definicao{Definição Formal de Derivada em $p$}{
+        \[
+        f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+        \]
+    }
 
-  \vspace{0.2cm}
-  \textbf{Ferramentas Algébricas:}
-  \begin{itemize}[noitemsep, topsep=2pt]
-      \item Fatoração por termo comum: $3x - 3p = 3(x - p)$.
-      \item Cancelamento do fator indeterminante $(x - p)$ para $x \neq p$.
-  \end{itemize}
+    \begin{ferramentas}
+        \item Fatoração por termo comum: $3x - 3p = 3(x - p)$.
+        \item Cancelamento do fator indeterminante $(x - p)$ para $x \neq p$.
+    \end{ferramentas}
 
 \end{recursosbox}
 
