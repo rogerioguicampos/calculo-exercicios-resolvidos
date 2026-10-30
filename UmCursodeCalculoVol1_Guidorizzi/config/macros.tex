@@ -62,34 +62,24 @@
 % ==============================================================================
 \newcommand{\defderivadaformal}[1][]{%
     \begin{teoriabox}[title=Definição Formal de Derivada num Ponto, #1]
-        Sejam $f$ uma função e $p$ um ponto de seu domínio. O limite
+        Sejam $f$ uma função real de variável real $x$ definida num certo intervalo $\mathcal{I}$ tal que $y=f(x)$. Consideremos um ponto qualquer $p\in\mathcal{I}$. Dizemos que $f$ é \textbf{derivável} em relação à variável $x$ no ponto $p$ se existir o limite do quociente
         \[
-        \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+        \frac{\Delta y}{\Delta x} = \frac{f(p + h) - f(p)}{h} = \frac{f(x) - f(p)}{x - p}
         \]
-        quando existe e é finito, denomina-se \textbf{derivada de $f$ em $p$} e indica-se por $f'(p)$. Se $f$ admite derivada em $p$, dizemos que $f$ é \textbf{derivável} (ou diferenciável) em $p$.
-    \end{teoriabox}%
-}
-
-\newcommand{\obsdefderivada}[1][]{%
-    \begin{observacaoteoriabox}[title=Equivalência das Formas de Cálculo, #1]
-        A definição por aproximação pontual e a definição por acréscimo são equivalentes mediante a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$):
+        quando $h \to 0$ ou $x \to p$, onde $h = x - p \neq 0$. No caso afirmativo, tal limite chama-se a \textbf{derivada} de $f$ no ponto $p$ e é representado por $f'(p)$. Assim:
         \[
         f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p} = \lim_{h \to 0} \frac{f(p + h) - f(p)}{h}
         \]
-        \textbf{Critério de Escolha Operacional:}
-        \begin{itemize}[noitemsep, topsep=2pt]
-            \item \textbf{Forma pontual ($x \to p$):} Indicada quando $p$ é um número fixo, pois simplifica o cancelamento do fator $(x - p)$ por fatoração direta ou conjugados.
-            \item \textbf{Forma por acréscimo ($h \to 0$):} Indicada para determinar a função derivada geral $f'(x)$, expandindo binômios e simplificando o fator comum $h$.
-        \end{itemize}
-    \end{observacaoteoriabox}%
+    \end{teoriabox}%
 }
 
 \newcommand{\defretatangente}[1][]{%
-  \begin{teoriabox}[title=Reta Tangente ao Gráfico de $f$ no ponto $(p, f(p))$, #1]
+  \begin{teoriabox}[title={Significado Geométrico da Derivada $f$ no Ponto $(p, f(p))$}, #1]
         \noindent
         \begin{minipage}[c]{0.56\textwidth}
-            A derivada de $f$, em $p$, é o coeficiente angular da reta tangente ao gráfico de $f$ no ponto de abscissa $p$.
-            
+            Seja a curva $\mathrm{C}$ o gráfico da função $f$ e $p$ um ponto qualquer do seu domínio.
+            A derivada de $f$ em $p$ representa o coeficiente angular da reta tangente à curva $\mathrm{C}$ no ponto $(p, f(p))$.
+
             \vspace{0.2cm}
             A equação da reta tangente ao gráfico de $f$ em $(p, f(p))$ é dada por:
             \[
@@ -102,31 +92,38 @@
                 % Eixos cartesianos
                 \draw[->, thick, gray!70] (-0.3, 0) -- (3.3, 0) node[below, black] {\scriptsize $x$};
                 \draw[->, thick, gray!70] (0, -0.3) -- (0, 2.7) node[left, black] {\scriptsize $y$};
-                
+
                 % Ponto de Tangência P = (p, f(p)) em x = 1.45
                 \coordinate (P) at (1.45, 0.95);
-                
+
                 % Curva f(x)
                 \draw[thick, teal!70!black, smooth, domain=0.5:2.65] 
                     plot (\x, {0.35*(\x)^2 - 0.2*\x + 0.5});
                 \node[above, teal!70!black] at (2.4, 2.25) {\scriptsize $y = f(x)$};
-                
+
                 % Reta Tangente
                 \draw[line width=1pt, blue!70!black, domain=0.25:2.55] 
                     plot (\x, {0.815*(\x - 1.45) + 0.95});
                 \node[right, blue!70!black] at (2.4, 1.45) {\scriptsize $T$};
-                
+
                 % Projeções pontilhadas nos eixos
                 \draw[densely dashed, gray!60] (1.45, 0) node[below, black] {\scriptsize $p$} -- (P);
                 \draw[densely dashed, gray!60] (0, 0.95) node[left, black] {\scriptsize $f(p)$} -- (P);
-                
+
                 % Ponto de tangência
                 \fill[teal!70!black] (P) circle (1.3pt);
-                
+
                 % Rótulo do ponto: posicionado acima da curva à esquerda, sem tocar o eixo y
                 \node[above, xshift=-10pt, yshift=2pt, teal!80!black] at (P) {\scriptsize $(p, f(p))$};
             \end{tikzpicture}
         \end{minipage}
+    \end{teoriabox}%
+}
+
+\newcommand{\deffuncaoderivavel}[1][]{%
+    \begin{teoriabox}[title=Definição Função Derivável, #1]
+      Dizemos que uma função $f$ é derivável num intervalo $\mathcal{I}$ se existe a derivada de $f$ em todos os pontos de $\mathcal{I}$.
+      Quando $f$ é derivável, considera-se portanto a \textit{função derivada} $f':\mathcal{I}\to \mathbb{R}$, que associa a cada $x \in \mathcal{I}$ a derivada $f'(x)$.
     \end{teoriabox}%
 }
 % ==============================================================================
@@ -135,6 +132,18 @@
 \newcommand{\equdefderivada}{
     \[
     f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p} = \lim_{h \to 0} \frac{f(p + h) - f(p)}{h}
+    \]
+}
+
+\newcommand{\eququoefincre1}{
+    \[
+    \frac{\Delta y}{\Delta x} = \frac{f(p + h) - f(p)}{h}
+    \]
+}
+
+\newcommand{\eququoefincre2}{
+    \[
+    \frac{\Delta y}{\Delta x} = \frac{f(x) - f(p)}{x - p}
     \]
 }
 
