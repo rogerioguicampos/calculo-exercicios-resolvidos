@@ -19,3 +19,20 @@
 
 % Derivada parcial: \pderiv{y}{x} -> \partial y / \partial x
 \newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+%
+% Link do Enunciado apontando para a Resolução
+\newcommand{\linkresolucao}[1]{%
+    \tcblower
+    \begin{flushright}
+        \hyperref[res:#1]{\small\sffamily\color{blue!70!black} Ver resolução $\rightarrow$}
+    \end{flushright}
+}
+
+% Link da Resolução apontando de volta para o Enunciado
+\newcommand{\linkenunciado}[1]{%
+    \vspace{-0.2cm}
+    \begin{flushright}
+        \hyperref[ex:#1]{\small\sffamily\color{gray} $\leftarrow$ Voltar ao enunciado}
+    \end{flushright}
+    \vspace{0.2cm}
+}
