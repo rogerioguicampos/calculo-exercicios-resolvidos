@@ -1,7 +1,0 @@
-\babel@toc {brazilian}{}\relax 
-\contentsline {section}{\numberline {4}Extensões do Conceito de Limite}{1}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Limites no Infinito}{1}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Limites Infinitos}{3}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Sequência e Limite de Sequência}{6}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Limite de Função e Sequências}{9}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}O Número $e$}{10}{subsection.4.5}%
