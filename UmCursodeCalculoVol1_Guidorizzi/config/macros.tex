@@ -56,3 +56,28 @@
 }{%
     \end{itemize}
 }
+
+% Definições prontas para uso direto dentro de recursosbox
+\newcommand{\defderivadaacrescimo}{%
+    \noindent\textbf{Definição de Derivada por Acréscimo:}
+    \[
+    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+    \]
+    \vspace{0.1cm}%
+}
+
+\newcommand{\defderivadadirponto}{%
+    \noindent\textbf{Definição de Derivada no Ponto $p$:}
+    \[
+    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+    \]
+    \vspace{0.1cm}%
+}
+
+\newcommand{\retatangente}{%
+  \noindent\textbf{Equação da Reta Tangente ao gráfico de $f$ em $(p, f(p))$:}
+    \[
+    y - f(p) = f'(p)(x - p)
+    \]
+    \vspace{0.1cm}%
+}
