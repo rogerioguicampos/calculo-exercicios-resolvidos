@@ -20,38 +20,9 @@
 % ------------------------------------------------------------------------------
 \subsection{Derivada de uma Função}
 
-\begin{recursosbox}
-\textbf{Definição Formal de Derivada num Ponto:}
-Sejam $f$ uma função e $p$ um ponto de seu domínio. O limite
-\[
-\lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-\]
-quando existe e é finito, denomina-se \textbf{derivada de $f$ em $p$} e indica-se por $f'(p)$. Se $f$ admite derivada em $p$, dizemos que $f$ é \textbf{derivável} (ou diferenciável) em $p$.
-
-\vspace{0.2cm}
-\textbf{Formas Equivalentes de Cálculo:}
-Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obtém-se a forma alternativa clássica por acréscimo:
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Forma por aproximação pontual:}
-    \[
-    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-    \]
-    \item \textbf{Forma por acréscimo ($h = \Delta x$):}
-    \[
-    f'(p) = \lim_{h \to 0} \frac{f(p + h) - f(p)}{h}
-    \]
-\end{itemize}
-
-\vspace{0.2cm}
-\textbf{Interpretação Geométrica e Reta Tangente:}
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item $f'(p)$ representa geometricamente o \textbf{coeficiente angular} ($m$) da reta tangente ao gráfico de $f$ no ponto $(p, f(p))$.
-    \item A equação da reta tangente ao gráfico de $f$ em $(p, f(p))$ é dada por:
-    \[
-    y - f(p) = f'(p)(x - p)
-    \]
-\end{itemize}
-\end{recursosbox}
+\defderivadaformal
+\obsdefderivada
+\defretatangente
 
 \begin{exercicio}[1]
 \label{ex:7.2.1}
@@ -2251,9 +2222,6 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
     \begin{recursosbox}[title=Estratégias e Recursos Utilizados]
 
         \estrategia{Utilizaremos uma das duas definições abaixo e depois manipularemos o quociente incremental.}
-
-        \defderivadaacrescimo
-        \defderivadadirponto
 
         \begin{ferramentas}
             \item Expansão de binômio: $(x + h)^2 = x^2 + 2hx + h^2$.
