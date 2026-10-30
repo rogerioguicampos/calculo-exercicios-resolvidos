@@ -21,8 +21,8 @@
 \subsection{Derivada de uma Função}
 
 \defderivadaformal
-\obsdefderivada
 \defretatangente
+\deffuncaoderivavel
 
 \begin{exercicio}[1]
 \label{ex:7.2.1}
@@ -2198,20 +2198,6 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 % ==============================================================================
 \subsection*{7.2. Derivada de uma função}
 
-\begin{dicasbox}
-\textbf{Dificuldades Frequentes e Estratégias de Resolução:}
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Escolha da forma do limite:} Para pontos numéricos fixos (ex.: $p = 2$), a forma $\frac{f(x) - f(p)}{x - p}$ frequentemente simplifica fatorações polinomiais mais rápido. Já para encontrar a função derivada geral $f'(x)$, a forma por acréscimo com $h \to 0$ costuma ser mais direta.
-    \item \textbf{Cuidado com o quociente indeterminante:} O limite da derivada sempre produz a forma $\left[\frac{0}{0}\right]$. Você \textbf{deve} manipular algebricamente a expressão (fatorando, racionalizando ou cancelando termos) até eliminar o fator $(x - p)$ ou o denominador $h$ antes de avaliar o limite.
-    \item \textbf{Funções por várias sentenças ou módulos:} Para verificar derivabilidade em pontos de transição (ex.: em $x = 0$ para $f(x) = |x|$), é obrigatório calcular os \textbf{limites laterais} do quociente de Newton:
-    \[
-    f'_+(p) = \lim_{x \to p^+} \frac{f(x) - f(p)}{x - p} \quad \text{e} \quad f'_-(p) = \lim_{x \to p^-} \frac{f(x) - f(p)}{x - p}
-    \]
-    $f'(p)$ existirá se, e somente se, $f'_+(p) = f'_-(p)$ e ambos forem finitos.
-    \item \textbf{Derivabilidade implica Continuidade:} Se $f$ é derivável em $p$, então $f$ é automaticamente contínua em $p$. Se a função apresentar descontinuidade em $p$, a derivada em $p$ não existirá imediatamente (sem necessidade de calcular o limite).
-\end{itemize}
-\end{dicasbox}
-
 \vspace{0.6cm}
 \noindent\textbf{Resolução do Exercício 1.}
 \label{res:7.2.1}
@@ -2219,27 +2205,16 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 
 \begin{enumerate}[label=\alph*)]
 
-    \begin{recursosbox}[title=Estratégias e Recursos Utilizados]
-
-        \estrategia{Utilizaremos uma das duas definições abaixo e depois manipularemos o quociente incremental.}
-
-        \begin{ferramentas}
-            \item Expansão de binômio: $(x + h)^2 = x^2 + 2hx + h^2$.
-            \item Fatoração do quociente incremental para simplificar o fator comum $h$.
-        \end{ferramentas}
-
-    \end{recursosbox}
-
     \item $f'(x)$
 
     Sabemos pela definição formal que:
     \begin{equation}
-        f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:def_derivada}
+        \equdefderivadaI \label{eq:def_derivada}
     \end{equation}
 
     Primeiro, manipulamos o quociente incremental:
     \begin{equation}
-        \frac{f(x + h) - f(x)}{h} \label{eq:quociente}
+        \eququoefincreI \label{eq:quociente}
     \end{equation}
 
     Como foi dado $f(x) = x^2 + 1$, temos:

@@ -126,29 +126,30 @@
       Quando $f$ é derivável, considera-se portanto a \textit{função derivada} $f':\mathcal{I}\to \mathbb{R}$, que associa a cada $x \in \mathcal{I}$ a derivada $f'(x)$.
     \end{teoriabox}%
 }
+
 % ==============================================================================
 % Definições matemáticas solta
 % ==============================================================================
-\newcommand{\equdefderivada}{
-    \[
-    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p} = \lim_{h \to 0} \frac{f(p + h) - f(p)}{h}
-    \]
+\newcommand{\equdefderivada}{%
+    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p} = \lim_{h \to 0} \frac{f(p + h) - f(p)}{h}%
 }
 
-\newcommand{\eququoefincre1}{
-    \[
-    \frac{\Delta y}{\Delta x} = \frac{f(p + h) - f(p)}{h}
-    \]
+\newcommand{\equdefderivadaI}{%
+    f'(p) = \lim_{h \to 0} \frac{f(p + h) - f(p)}{h}%
 }
 
-\newcommand{\eququoefincre2}{
-    \[
-    \frac{\Delta y}{\Delta x} = \frac{f(x) - f(p)}{x - p}
-    \]
+\newcommand{\equdefderivadaII}{%
+    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}%
 }
 
-\newcommand{\equdefretatangente}{
-    \[
-    y - f(p) = f'(p)(x - p)
-    \]
+\newcommand{\eququoefincreI}{%
+    \frac{\Delta y}{\Delta x} = \frac{f(p + h) - f(p)}{h}%
+}
+
+\newcommand{\eququoefincreII}{%
+    \frac{\Delta y}{\Delta x} = \frac{f(x) - f(p)}{x - p}%
+}
+
+\newcommand{\equdefretatangente}{%
+    y - f(p) = f'(p)(x - p)%
 }
