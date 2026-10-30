@@ -12,15 +12,38 @@
     top=6pt, bottom=6pt, left=8pt, right=8pt,
     before skip=10pt, after skip=10pt
 }
+% Marcador visual universal Q.E.D.
+\newcommand{\qedsymbolmath}{\tag*{\textcolor{blue!70!black}{\rule{1.4ex}{1.4ex}}}}
+\newcommand{\qedinline}{\hfill\textcolor{blue!70!black}{\rule{1.4ex}{1.4ex}}}
 
-% Ambiente visual para Resoluções
-\newtcolorbox{resolucao}[1][]{
+% Caixa para ferramentas e recursos teóricos
+\newtcolorbox{recursosbox}[1][]{
     enhanced,
     breakable,
-    colback=white,
-    colframe=blue!40!black,
+    colback=blue!3!white,
+    colframe=blue!60!black,
+    coltitle=white,
     fonttitle=\bfseries,
-    title=Resolução do Exercício #1,
+    title=Ferramentas e Recursos da Seção,
+    arc=2mm,
     boxrule=0.8pt,
-    top=6pt, bottom=6pt, left=8pt, right=8pt
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    before skip=8pt, after skip=8pt,
+    #1
+}
+
+% Caixa para alertas de erros frequentes e dicas práticas
+\newtcolorbox{dicasbox}[1][]{
+    enhanced,
+    breakable,
+    colback=orange!4!white,
+    colframe=orange!80!black,
+    coltitle=white,
+    fonttitle=\bfseries,
+    title=Atenção aos Detalhes e Dicas de Resolução,
+    arc=2mm,
+    boxrule=0.8pt,
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    before skip=8pt, after skip=8pt,
+    #1
 }

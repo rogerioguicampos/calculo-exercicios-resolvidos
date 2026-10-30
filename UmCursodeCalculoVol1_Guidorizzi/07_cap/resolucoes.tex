@@ -1,74 +1,3 @@
-\documentclass[12pt,a4paper]{article}
-
-\usepackage[brazilian]{babel}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{enumitem}
-\usepackage{etoolbox}
-\usepackage{tocloft}
-\usepackage{tikz}
-\usepackage[most]{tcolorbox}
-\usepackage{xcolor}
-\usetikzlibrary{decorations.pathmorphing}
-
-\setlength{\cftsecnumwidth}{3.2cm}
-\setlength{\cftsubsecnumwidth}{1.5cm}
-
-\renewcommand{\thesection}{Capítulo \arabic{section} -}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-\pretocmd{\subsection}{\clearpage}{}{}
-
-\AtBeginEnvironment{enumerate}{\pretocmd{\item}{\setcounter{equation}{0}}{}{}}
-
-% Marcador Q.E.D. / Fim de Resolução em equações em display
-\newcommand{\qedsymbolmath}{\tag*{\textcolor{blue!70!black}{\rule{1.6ex}{1.6ex}}}}
-
-% Caixa para ferramentas e recursos teóricos
-\newtcolorbox{recursosbox}[1][]{
-    enhanced,
-    colback=blue!3!white,
-    colframe=blue!60!black,
-    coltitle=white,
-    fonttitle=\bfseries,
-    title=Ferramentas e Recursos da Seção,
-    arc=2mm,
-    boxrule=0.8pt,
-    left=6pt, right=6pt, top=6pt, bottom=6pt,
-    #1
-}
-
-% Caixa para alertas de erros frequentes e dicas práticas
-\newtcolorbox{dicasbox}[1][]{
-    enhanced,
-    colback=orange!4!white,
-    colframe=orange!80!black,
-    coltitle=white,
-    fonttitle=\bfseries,
-    title=Atenção aos Detalhes e Dicas de Resolução,
-    arc=2mm,
-    boxrule=0.8pt,
-    left=6pt, right=6pt, top=6pt, bottom=6pt,
-    #1
-}
-
-\title{
-    \Huge \textbf{Um Curso de Cálculo Volume 1} \\
-    \vspace{0.3cm}
-    \Large 6\textordfeminine{} Edição (Guidorizzi) \\
-    \vspace{0.5cm}
-    \large \textit{Resoluções Completas e Passo a Passo do Capítulo 7 Derivadas}
-}
-\author{Rogério Campos}
-
-\begin{document}
-
-\maketitle
-\newpage
-
-\tableofcontents
-\newpage
-
 \setcounter{section}{6}
 \setcounter{subsection}{0}
 
@@ -125,14 +54,11 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
     \item \textbf{Derivabilidade implica Continuidade:} Se $f$ é derivável em $p$, então $f$ é automaticamente contínua em $p$. Se a função apresentar descontinuidade em $p$, a derivada em $p$ não existirá imediatamente (sem necessidade de calcular o limite).
 \end{itemize}
 \end{dicasbox}
-\vspace{0.5cm}
 
-\vspace{0.5cm}
+\vspace{0.6cm}
 \noindent\textbf{Exercício 1.} Seja $f(x) = x^2 + 1$. Calcule:
 
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{enumerate}[label=\alph*)]
     \item $f'(x)$
     \begin{recursosbox}[title=Recursos Utilizados]
     Utilizaremos a definição de derivada por acréscimo:
@@ -173,9 +99,9 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
     f'(x) = \lim_{h \to 0} (2x + h) = 2x
     \]
     Portanto:
-    \begin{equation*}
-        f'(x) = 2x \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(x) = 2x \qedsymbolmath
+    \]
 
     \item $f'(0)$
     \setcounter{equation}{0}
@@ -215,9 +141,9 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
     \]
 
     Portanto:
-    \begin{equation*}
-        f'(0) = 0 \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(0) = 0 \qedsymbolmath
+    \]
 
     \item $f'(1)$
     \setcounter{equation}{0}
@@ -261,12 +187,12 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
     f'(1) = \lim_{x \to 1} (x + 1) = 1 + 1 = 2
     \]
     Portanto:
-    \begin{equation}
-        f'(1) = 2 \qedsymbolmath
-    \end{equation}
+    \[
+    f'(1) = 2 \qedsymbolmath
+    \]
 \end{enumerate}
 
-\vspace{0.5cm}
+\vspace{0.6cm}
 \noindent\textbf{Exercício 2.} Seja $f(x) = 2x$. Pensando geometricamente, qual o valor que você espera para $f'(p)$? Calcule $f'(p)$.
 \setcounter{equation}{0}
 
@@ -311,9 +237,9 @@ f'(p) = \lim_{x \to p} 2 = 2
 \]
 
 Portanto:
-\begin{equation*}
-    f'(p) = 2 \qedsymbolmath
-\end{equation*}
+\[
+f'(p) = 2 \qedsymbolmath
+\]
 
 \vspace{0.3cm}
 \textbf{Passo 2: Discussão geométrica do resultado.}
@@ -322,7 +248,7 @@ Geometricamente, a derivada $f'(p)$ representa a taxa de variação instantânea
 
 Como $f(x) = 2x$ já é uma função linear cujo gráfico é uma reta de equação $y = 2x$, a sua inclinação é constante em todos os pontos e igual a $2$. Consequentemente:
 \begin{itemize}[noitemsep, topsep=2pt]
-    \item Espera-se geometricamente que $f'(p) = 2$ para qualquer $p \in \mathbb{R}$.
+    \item Espera-se geometricamente que $f'(p) = 2$ para qualquer $p \in \R$.
 \end{itemize}
 
 \vspace{0.3cm}
@@ -349,39 +275,28 @@ Graficamente, isso expressa uma propriedade fundamental das funções afins: a m
 
 \begin{center}
 \begin{tikzpicture}[>=latex, scale=0.95]
-    % Eixos coordenados
     \draw[->, thick] (-2.2, 0) -- (3.2, 0) node[below] {$x$};
     \draw[->, thick] (0, -2.5) -- (0, 4.2) node[left] {$y$};
     \node[below left=2pt] at (0, 0) {$0$};
 
-    % Reta tangente coincidente
     \draw[line width=3pt, blue!20] (-1.2, -2.4) -- (2.0, 4.0);
-
-    % Gráfico de f(x) = 2x
     \draw[line width=1.2pt, blue!70!black] (-1.2, -2.4) -- (2.0, 4.0);
 
-    % Ponto genérico (p, 2p)
     \coordinate (P) at (1.2, 2.4);
-
-    % Linhas tracejadas de projeção
     \draw[dashed, gray!80] (1.2, 0) node[below, black] {$p$} -- (P);
     \draw[dashed, gray!80] (0, 2.4) node[left, black] {$f(p) = 2p$} -- (P);
 
-    % Marcação do ponto
     \fill[blue!70!black] (P) circle (3pt);
     \node[above left=3pt] at (P) {$(p, 2p)$};
 
-    % Rótulos explicativos
     \node[right, blue!70!black] at (1.8, 3.6) {$f(x) = 2x$};
     \node[right, blue!50!black] at (1.8, 3.1) {\footnotesize Reta Tangente: $y = 2x$};
 \end{tikzpicture}
 \end{center}
 
-\vspace{0.5cm}
+\vspace{0.6cm}
 \noindent\textbf{Exercício 3.} Seja $f(x) = 3x + 2$. Calcule:
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{enumerate}[label=\alph*)]
     \item $f'(2)$
     \item $f'(0)$
     \item $f'(x)$
@@ -389,7 +304,7 @@ Graficamente, isso expressa uma propriedade fundamental das funções afins: a m
 \setcounter{equation}{0}
 
 \begin{recursosbox}[title=Estratégia e Recursos Utilizados]
-\textbf{Estratégia Geral:} Em vez de calcular o limite da definição separadamente para cada ponto numérico, determinaremos primeiramente a derivada $f'(p)$ em um ponto genérico $p \in \operatorname{D}_f$ (ou a função derivada $f'(x)$). Em seguida, utilizaremos essa expressão geral para avaliar diretamente os itens pontuais por substituição simples.
+\textbf{Estratégia Geral:} Em vez de calcular o limite da definição separadamente para cada ponto numérico, determinaremos primeiramente a derivada $f'(p)$ em um ponto genérico $p \in D_f$ (ou a função derivada $f'(x)$). Em seguida, utilizaremos essa expressão geral para avaliar diretamente os itens pontuais por substituição simples.
 
 \vspace{0.2cm}
 \textbf{Definição Formal de Derivada em $p$:}
@@ -403,7 +318,7 @@ f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
 \end{itemize}
 \end{recursosbox}
 
-\textbf{Determinação da Derivada Geral em um Ponto $p \in \mathbb{R}$:}
+\textbf{Determinação da Derivada Geral em um Ponto $p \in \R$:}
 
 Pela definição formal de derivada num ponto arbitrário $p$:
 \begin{equation}
@@ -427,40 +342,38 @@ Aplicando o limite em \eqref{eq:def_ex3} quando $x \to p$:
 \[
 f'(p) = \lim_{x \to p} 3 = 3
 \]
-Como $p$ é um elemento arbitrário do domínio $\mathbb{R}$, concluímos que a derivada é constante e independe do ponto escolhido:
+Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada é constante e independe do ponto escolhido:
 \begin{equation}
-    f'(p) = 3 \quad \forall p \in \mathbb{R} \label{eq:resultado_geral_ex3}
+    f'(p) = 3 \quad \forall p \in \R \label{eq:resultado_geral_ex3}
 \end{equation}
 
 \vspace{0.3cm}
 \textbf{Resolução dos Itens por Substituição Direta:}
 
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{enumerate}[label=\alph*)]
     \item $f'(2)$
     
     Fazendo $p = 2$ no resultado geral \eqref{eq:resultado_geral_ex3}:
-    \begin{equation*}
-        f'(2) = 3 \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(2) = 3 \qedsymbolmath
+    \]
 
     \item $f'(0)$
     
     Fazendo $p = 0$ no resultado geral \eqref{eq:resultado_geral_ex3}:
-    \begin{equation*}
-        f'(0) = 3 \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(0) = 3 \qedsymbolmath
+    \]
 
     \item $f'(x)$
     
-    Sendo a variável independente indicada por $x$, a função derivada associa a cada ponto $x \in \mathbb{R}$ o valor de sua derivada obtido em \eqref{eq:resultado_geral_ex3}:
-    \begin{equation*}
-        f'(x) = 3 \qedsymbolmath
-    \end{equation*}
+    Sendo a variável independente indicada por $x$, a função derivada associa a cada ponto $x \in \R$ o valor de sua derivada obtido em \eqref{eq:resultado_geral_ex3}:
+    \[
+    f'(x) = 3 \qedsymbolmath
+    \]
 \end{enumerate}
 
-\vspace{0.5cm}
+\vspace{0.6cm}
 \noindent\textbf{Exercício 4.} Calcule $f'(p)$, pela definição, sendo dados:
 \begin{enumerate}[label=\alph*)]
     \item $f(x) = x^2 + x$ e $p = 1$
@@ -526,9 +439,9 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     \[
     f'(1) = \lim_{x \to 1} (x + 2) = 1 + 2 = 3
     \]
-    \begin{equation*}
-        f'(1) = 3 \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(1) = 3 \qedsymbolmath
+    \]
 
     % Item b
     \item $f(x) = \sqrt{x}$ e $p = 4$
@@ -548,9 +461,9 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     \[
     f'(4) = \lim_{x \to 4} \frac{1}{\sqrt{x} + 2} = \frac{1}{\sqrt{4} + 2} = \frac{1}{4}
     \]
-    \begin{equation*}
-        f'(4) = \frac{1}{4} \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(4) = \frac{1}{4} \qedsymbolmath
+    \]
 
     % Item c
     \item $f(x) = 5x - 3$ e $p = -3$
@@ -569,9 +482,9 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     \[
     f'(-3) = \lim_{x \to -3} 5 = 5
     \]
-    \begin{equation*}
-        f'(-3) = 5 \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(-3) = 5 \qedsymbolmath
+    \]
 
     % Item d
     \item $f(x) = \dfrac{1}{x}$ e $p = 1$
@@ -591,9 +504,9 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     \[
     f'(1) = \lim_{x \to 1} \left(-\frac{1}{x}\right) = -1
     \]
-    \begin{equation*}
-        f'(1) = -1 \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(1) = -1 \qedsymbolmath
+    \]
 
     % Item e
     \item $f(x) = \sqrt{x}$ e $p = 3$
@@ -613,9 +526,9 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     \[
     f'(3) = \lim_{x \to 3} \frac{1}{\sqrt{x} + \sqrt{3}} = \frac{1}{\sqrt{3} + \sqrt{3}} = \frac{1}{2\sqrt{3}} = \frac{\sqrt{3}}{6}
     \]
-    \begin{equation*}
-        f'(3) = \frac{\sqrt{3}}{6} \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(3) = \frac{\sqrt{3}}{6} \qedsymbolmath
+    \]
 
     % Item f
     \item $f(x) = \dfrac{1}{x^2}$ e $p = 2$
@@ -635,9 +548,9 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     \[
     f'(2) = \lim_{x \to 2} \left(-\frac{x + 2}{4x^2}\right) = -\frac{2 + 2}{4(2^2)} = -\frac{4}{16} = -\frac{1}{4}
     \]
-    \begin{equation*}
-        f'(2) = -\frac{1}{4} \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(2) = -\frac{1}{4} \qedsymbolmath
+    \]
 
     % Item g
     \item $f(x) = 2x^3 - x^2$ e $p = 1$
@@ -662,9 +575,9 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     \[
     f'(1) = \lim_{x \to 1} (2x^2 + x + 1) = 2(1)^2 + 1 + 1 = 4
     \]
-    \begin{equation*}
-        f'(1) = 4 \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(1) = 4 \qedsymbolmath
+    \]
 
     % Item h
     \item $f(x) = \sqrt[3]{x}$ e $p = 2$
@@ -686,16 +599,14 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
     \[
     f'(2) = \lim_{x \to 2} \frac{1}{\sqrt[3]{x^2} + \sqrt[3]{2x} + \sqrt[3]{4}} = \frac{1}{\sqrt[3]{4} + \sqrt[3]{4} + \sqrt[3]{4}} = \frac{1}{3\sqrt[3]{4}} = \frac{\sqrt[3]{2}}{6}
     \]
-    \begin{equation*}
-        f'(2) = \frac{\sqrt[3]{2}}{6} \qedsymbolmath
-    \end{equation*}
+    \[
+    f'(2) = \frac{\sqrt[3]{2}}{6} \qedsymbolmath
+    \]
 \end{enumerate}
 
-\vspace{0.5cm}
+\vspace{0.6cm}
 \noindent\textbf{Exercício 5.} Determine a equação da reta tangente em $(p, f(p))$ sendo dados:
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = x^2$ e $p = 2$
     \item $f(x) = \dfrac{1}{x}$ e $p = 2$
     \item $f(x) = \sqrt{x}$ e $p = 9$
@@ -724,10 +635,7 @@ y - f(p) = f'(p)(x - p)
 \vspace{0.4cm}
 \textbf{Resolução Passo a Passo:}
 
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    
+\begin{enumerate}[label=\alph*)]
     % Item a
     \item $f(x) = x^2$ e $p = 2$
     
@@ -758,9 +666,9 @@ y - f(p) = f'(p)(x - p)
     \end{align*}
 
     Portanto:
-    \begin{equation*}
-        y = 4x - 4 \qedsymbolmath
-    \end{equation*}
+    \[
+    y = 4x - 4 \qedsymbolmath
+    \]
 
     % Item b
     \item $f(x) = \dfrac{1}{x}$ e $p = 2$
@@ -794,9 +702,9 @@ y - f(p) = f'(p)(x - p)
     \end{align*}
 
     Portanto:
-    \begin{equation*}
-        y = -\frac{1}{4}x + 1 \qedsymbolmath
-    \end{equation*}
+    \[
+    y = -\frac{1}{4}x + 1 \qedsymbolmath
+    \]
 
     % Item c
     \item $f(x) = \sqrt{x}$ e $p = 9$
@@ -830,9 +738,9 @@ y - f(p) = f'(p)(x - p)
     \end{align*}
 
     Portanto:
-    \begin{equation*}
-        y = \frac{1}{6}x + \frac{3}{2} \qedsymbolmath
-    \end{equation*}
+    \[
+    y = \frac{1}{6}x + \frac{3}{2} \qedsymbolmath
+    \]
 
     % Item d
     \item $f(x) = x^2 - x$ e $p = 1$
@@ -864,1355 +772,23 @@ y - f(p) = f'(p)(x - p)
     \end{align*}
 
     Portanto:
-    \begin{equation*}
-        y = x - 1 \qedsymbolmath
-    \end{equation*}
+    \[
+    y = x - 1 \qedsymbolmath
+    \]
 \end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 15.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 16.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 17.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 18.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 19.}
 
 \subsection{Derivadas de $x^n$ e $\sqrt[n]{x}$}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-
 \subsection{Derivadas de $e^x$ e $\ln(x)$}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
 \subsection{Derivadas de Funções Trigonométricas}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
 \subsection{Derivabilidade e Continuidade}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
 \subsection{Regras de Derivação}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
 \subsection{Função Derivada e Derivadas de Ordem Superior}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
 \subsection{Notações para a Derivada}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 15.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 16.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
 \subsection{Regra da Cadeia para Derivação de Função Composta}
-Esta subseção não possui exercícios
-
 \subsection{Aplicações da Regra da Cadeia}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 15.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 16.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 17.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 18.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 19.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 20.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 21.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 22.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 23.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 24.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 25.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 26.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 27.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 28.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 29.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 30.}
-
 \subsection{Derivada de $f(x)^{g(x)}$}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
 \subsection{Derivação da Função Dada Implicitamente}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
-
-\subsection{Interpretação de $\frac{dy}{dx}$ como um Quociente Diferencial}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
+\subsection{Interpretação de $\frac{\diff y}{\diff x}$ como um Quociente Diferencial}
 \subsection{Velocidade e Aceleração. Taxa de Variação}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 15.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 16.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 17.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 18.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 19.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 20.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 21.}
-
 \subsection{Problemas Reta Tangente e Normal ao Gráfico de uma Função}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 15.}
-
 \subsection{Exercícios do Capítulo}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 15.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 16.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 17.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 18.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 19.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 20.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 21.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 22.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 23.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 24.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 25.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 26.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 27.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 28.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 29.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 30.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 31.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 32.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 33.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 34.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 35.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 36.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 37.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 38.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 39.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 40.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 41.}
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-    \item 
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 42.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 43.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 44.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 45.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 46.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 47.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 48.}
-
-\vspace{0.5cm}
-\noindent\textbf{Exercício 49.}
-
-\end{document}
