@@ -2227,39 +2227,6 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 % ==============================================================================
 \subsection*{7.2. Derivada de uma função}
 
-\begin{recursosbox}
-\textbf{Definição Formal de Derivada num Ponto:}
-Sejam $f$ uma função e $p$ um ponto de seu domínio. O limite
-\[
-\lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-\]
-quando existe e é finito, denomina-se \textbf{derivada de $f$ em $p$} e indica-se por $f'(p)$. Se $f$ admite derivada em $p$, dizemos que $f$ é \textbf{derivável} (ou diferenciável) em $p$.
-
-\vspace{0.2cm}
-\textbf{Formas Equivalentes de Cálculo:}
-Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obtém-se a forma alternativa clássica por acréscimo:
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Forma por aproximação pontual:}
-    \[
-    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-    \]
-    \item \textbf{Forma por acréscimo ($h = \Delta x$):}
-    \[
-    f'(p) = \lim_{h \to 0} \frac{f(p + h) - f(p)}{h}
-    \]
-\end{itemize}
-
-\vspace{0.2cm}
-\textbf{Interpretação Geométrica e Reta Tangente:}
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item $f'(p)$ representa geometricamente o \textbf{coeficiente angular} ($m$) da reta tangente ao gráfico de $f$ no ponto $(p, f(p))$.
-    \item A equação da reta tangente ao gráfico de $f$ em $(p, f(p))$ é dada por:
-    \[
-    y - f(p) = f'(p)(x - p)
-    \]
-\end{itemize}
-\end{recursosbox}
-
 \begin{dicasbox}
 \textbf{Dificuldades Frequentes e Estratégias de Resolução:}
 \begin{itemize}[noitemsep, topsep=2pt]
@@ -2279,21 +2246,29 @@ Fazendo a mudança de variável $x = p + h$ (onde $x \to p \iff h \to 0$), obté
 \label{res:7.2.1}
 \linkenunciado{7.2.1}
 
-Seja $f(x) = x^2 + 1$. Calcule:
-
 \begin{enumerate}[label=\alph*)]
-    \item $f'(x)$
-    \begin{recursosbox}[title=Recursos Utilizados]
-    Utilizaremos a definição de derivada por acréscimo:
+    \begin{recursosbox}[title=Estratégias e Recursos Utilizados]
+
+    \textbf{Estratégia Geral:} utilizaremos uma das duas definições abaixo e depois manipularemos o quociente incremental.
+
+    \textbf{Definição de derivada por acréscimo:}
     \[
     f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
     \]
+
+    \textbf{Definição de derivada no ponto $p$:}
+    \[
+    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+    \]
+
     \textbf{Ferramentas Algébricas:}
     \begin{itemize}[noitemsep, topsep=2pt]
         \item Expansão de binômio: $(x + h)^2 = x^2 + 2hx + h^2$.
         \item Fatoração do quociente incremental para simplificar o fator comum $h$.
     \end{itemize}
     \end{recursosbox}
+
+    \item $f'(x)$
 
     Sabemos pela definição formal que:
     \begin{equation}
@@ -2329,13 +2304,6 @@ Seja $f(x) = x^2 + 1$. Calcule:
     \item $f'(0)$
     \setcounter{equation}{0}
 
-    \begin{recursosbox}[title=Recursos Utilizados]
-    Utilizaremos a definição formal de derivada no ponto $p = 0$:
-    \[
-    f'(0) = \lim_{x \to 0} \frac{f(x) - f(0)}{x - 0}
-    \]
-    \end{recursosbox}
-
     Pela definição formal de derivada no ponto $p = 0$, temos:
     \begin{equation}
         f'(0) = \lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} \label{eq:def_derivada_ponto0}
@@ -2370,17 +2338,6 @@ Seja $f(x) = x^2 + 1$. Calcule:
 
     \item $f'(1)$
     \setcounter{equation}{0}
-
-    \begin{recursosbox}[title=Recursos Utilizados]
-    Utilizaremos a definição formal de derivada no ponto $p = 1$:
-    \[
-    f'(1) = \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1}
-    \]
-    \textbf{Ferramentas Algébricas:}
-    \begin{itemize}[noitemsep, topsep=2pt]
-        \item Fatoração por diferença de dois quadrados: $x^2 - 1 = (x - 1)(x + 1)$.
-    \end{itemize}
-    \end{recursosbox}
 
     Pela definição formal de derivada no ponto $p = 1$, temos:
     \begin{equation}
@@ -2421,22 +2378,33 @@ Seja $f(x) = x^2 + 1$. Calcule:
 \linkenunciado{7.2.2}
 \setcounter{equation}{0}
 
-Seja $f(x) = 2x$. Pensando geometricamente, qual o valor que você espera para $f'(p)$? Calcule $f'(p)$.
+\begin{recursosbox}[title= Estratégias e Recursos Utilizados]
 
-\begin{recursosbox}[title=Recursos Utilizados]
-Utilizaremos a definição formal de derivada no ponto $p$:
-\[
-f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-\]
-e a equação da reta tangente ao gráfico de $f$ em $(p, f(p))$:
-\[
-y - f(p) = f'(p)(x - p)
-\]
-\textbf{Ferramentas Algébricas e Geométricas:}
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item Fatoração por termo comum: $2x - 2p = 2(x - p)$.
-    \item Interpretação geométrica: $f(x) = 2x$ representa uma reta com inclinação constante $m = 2$.
-\end{itemize}
+  \textbf{Estratégia Geral:}
+  \begin{itemize}[noitemsep, topsep=2pt]
+      \item Achar a derivada de $f$ no ponto $p$
+      \item Achar a equação da reta tangente ao gráfico de $f$ no ponto $(p, f(p))$
+  \end{itemize}
+
+  \vspace{0.2cm}
+  \textbf{Definição de derivada no ponto $p$:}
+  \[
+  f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+  \]
+
+  \vspace{0.2cm}
+  \textbf{Equação da reta tangente ao gráfico de $f$ no ponto de abscissa $p$:}
+  \[
+  y - f(p) = f'(p)(x - p)
+  \]
+
+  \vspace{0.2cm}
+  \textbf{Ferramentas Algébricas e Geométricas:}
+  \begin{itemize}[noitemsep, topsep=2pt]
+      \item Fatoração por termo comum: $2x - 2p = 2(x - p)$.
+      \item Interpretação geométrica: $f(x) = 2x$ representa uma reta com inclinação constante $m = 2$.
+  \end{itemize}
+
 \end{recursosbox}
 
 \textbf{Passo 1: Cálculo de $f'(p)$ pela definição formal.}
@@ -2527,27 +2495,31 @@ Graficamente, isso expressa uma propriedade fundamental das funções afins: a m
 \linkenunciado{7.2.3}
 \setcounter{equation}{0}
 
-Seja $f(x) = 3x + 2$. Calcule:
+\begin{recursosbox}[title=Estratégias e Recursos Utilizados]
+
+  \textbf{Estratégia Geral:} Em vez de calcular o limite da definição separadamente para cada ponto numérico, determinaremos primeiramente a derivada $f'(p)$ em um ponto genérico $p \in D_f$ (ou a função derivada $f'(x)$). Em seguida, utilizaremos essa expressão geral para avaliar diretamente os itens pontuais por substituição simples.
+
+  \vspace{0.2cm}
+  \textbf{Definição Formal de Derivada em $p$:}
+  \[
+  f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+  \]
+
+  \vspace{0.2cm}
+  \textbf{Ferramentas Algébricas:}
+  \begin{itemize}[noitemsep, topsep=2pt]
+      \item Fatoração por termo comum: $3x - 3p = 3(x - p)$.
+      \item Cancelamento do fator indeterminante $(x - p)$ para $x \neq p$.
+  \end{itemize}
+
+\end{recursosbox}
+
 \begin{enumerate}[label=\alph*)]
     \item $f'(2)$
     \item $f'(0)$
     \item $f'(x)$
 \end{enumerate}
 
-\begin{recursosbox}[title=Estratégia e Recursos Utilizados]
-\textbf{Estratégia Geral:} Em vez de calcular o limite da definição separadamente para cada ponto numérico, determinaremos primeiramente a derivada $f'(p)$ em um ponto genérico $p \in D_f$ (ou a função derivada $f'(x)$). Em seguida, utilizaremos essa expressão geral para avaliar diretamente os itens pontuais por substituição simples.
-
-\vspace{0.2cm}
-\textbf{Definição Formal de Derivada em $p$:}
-\[
-f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-\]
-\textbf{Ferramentas Algébricas:}
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item Fatoração por termo comum: $3x - 3p = 3(x - p)$.
-    \item Cancelamento do fator indeterminante $(x - p)$ para $x \neq p$.
-\end{itemize}
-\end{recursosbox}
 
 \textbf{Determinação da Derivada Geral em um Ponto $p \in \R$:}
 
@@ -2610,37 +2582,45 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
 \linkenunciado{7.2.4}
 \setcounter{equation}{0}
 
-Calcule $f'(p)$, pela definição, sendo dados:
+\begin{recursosbox}[title=Estratégias e Recursos Algébricos]
 
-\begin{recursosbox}[title=Estratégia Geral e Recursos Algébricos]
-\textbf{Definição Formal de Derivada no Ponto $p$:}
-\[
-f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-\]
-Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left[\frac{0}{0}\right]$, o objetivo central é manipular algebricamente o quociente incremental $\dfrac{f(x) - f(p)}{x - p}$ de modo a simplificar o fator $(x - p)$ para $x \neq p$:
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Polinômios:} Fatoração direta por agrupamento ou raízes para evidenciar o fator $(x - p)$.
-    \item \textbf{Funções Racionais:} Operação com frações (denominador comum) e simplificação direta de termos semelhantes.
-    \item \textbf{Raízes Quadradas:} Multiplicação pelo conjugado utilizando a diferença de quadrados:
-    \[
-    (\sqrt{A} - \sqrt{B})(\sqrt{A} + \sqrt{B}) = A - B
-    \]
-    \item \textbf{Raízes Cúbicas:} Utilização do produto notável da diferença de cubos:
-    \[
-    A - B = (\sqrt[3]{A} - \sqrt[3]{B})\left(\sqrt[3]{A^2} + \sqrt[3]{AB} + \sqrt[3]{B^2}\right)
-    \]
-    \item \textbf{Racionalização do Resultado Final (Radicais no Denominador):} Para simplificar respostas numéricas finais com frações irredutíveis:
-    \begin{itemize}[noitemsep, topsep=1pt]
-        \item \textit{Raiz quadrada:} Multiplica-se numerador e denominador por $\sqrt{a}$:
-        \[
-        \frac{1}{k\sqrt{a}} = \frac{\sqrt{a}}{k \cdot a} \quad \left(\text{ex.: } \frac{1}{2\sqrt{3}} = \frac{\sqrt{3}}{6}\right)
-        \]
-        \item \textit{Raiz de ordem $n$ ($\sqrt[n]{a^m}$ com $m < n$):} Multiplica-se por $\sqrt[n]{a^{n - m}}$ para completar a potência inteira $a^n$:
-        \[
-        \frac{1}{k\sqrt[n]{a^m}} = \frac{\sqrt[n]{a^{n - m}}}{k \cdot a} \quad \left(\text{ex.: } \frac{1}{3\sqrt[3]{4}} = \frac{1}{3\sqrt[3]{2^2}} = \frac{\sqrt[3]{2}}{3 \cdot 2} = \frac{\sqrt[3]{2}}{6}\right)
-        \]
-    \end{itemize}
-\end{itemize}
+  \textbf{Estratégia Geral:}
+  \begin{itemize}[noitemsep, topsep=2pt]
+      \item Achar a derivada de $f$ no ponto $p$
+      \item   Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left[\frac{0}{0}\right]$, o objetivo central é manipular algebricamente o quociente incremental $\dfrac{f(x) - f(p)}{x - p}$ de modo a simplificar o fator $(x - p)$ para $x \neq p$
+  \end{itemize}
+
+  \vspace{0.2cm}
+  \textbf{Definição derivada no ponto $p$:}
+  \[
+    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+  \]
+
+  \vspace{0.2cm}
+  \textbf{Ferramentas Algébricas e Geométricas:}
+  \begin{itemize}[noitemsep, topsep=2pt]
+      \item \textbf{Polinômios:} Fatoração direta por agrupamento ou raízes para evidenciar o fator $(x - p)$.
+      \item \textbf{Funções Racionais:} Operação com frações (denominador comum) e simplificação direta de termos semelhantes.
+      \item \textbf{Raízes Quadradas:} Multiplicação pelo conjugado utilizando a diferença de quadrados:
+      \[
+      (\sqrt{A} - \sqrt{B})(\sqrt{A} + \sqrt{B}) = A - B
+      \]
+      \item \textbf{Raízes Cúbicas:} Utilização do produto notável da diferença de cubos:
+      \[
+      A - B = (\sqrt[3]{A} - \sqrt[3]{B})\left(\sqrt[3]{A^2} + \sqrt[3]{AB} + \sqrt[3]{B^2}\right)
+      \]
+      \item \textbf{Racionalização do Resultado Final (Radicais no Denominador):} Para simplificar respostas numéricas finais com frações irredutíveis:
+      \begin{itemize}[noitemsep, topsep=1pt]
+          \item \textit{Raiz quadrada:} Multiplica-se numerador e denominador por $\sqrt{a}$:
+          \[
+          \frac{1}{k\sqrt{a}} = \frac{\sqrt{a}}{k \cdot a} \quad \left(\text{ex.: } \frac{1}{2\sqrt{3}} = \frac{\sqrt{3}}{6}\right)
+          \]
+          \item \textit{Raiz de ordem $n$ ($\sqrt[n]{a^m}$ com $m < n$):} Multiplica-se por $\sqrt[n]{a^{n - m}}$ para completar a potência inteira $a^n$:
+          \[
+          \frac{1}{k\sqrt[n]{a^m}} = \frac{\sqrt[n]{a^{n - m}}}{k \cdot a} \quad \left(\text{ex.: } \frac{1}{3\sqrt[3]{4}} = \frac{1}{3\sqrt[3]{2^2}} = \frac{\sqrt[3]{2}}{3 \cdot 2} = \frac{\sqrt[3]{2}}{6}\right)
+          \]
+      \end{itemize}
+  \end{itemize}
 \end{recursosbox}
 
 \vspace{0.4cm}
@@ -2835,29 +2815,25 @@ Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left
 \linkenunciado{7.2.5}
 \setcounter{equation}{0}
 
-Determine a equação da reta tangente em $(p, f(p))$ sendo dados:
-
 \begin{recursosbox}[title=Estratégia Geral e Recursos Algébricos]
-\textbf{1. Definição Formal de Derivada no Ponto $p$:}
-\[
-f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-\]
-\textbf{2. Equação da Reta Tangente:}
-O valor $f'(p)$ corresponde geometricamente ao coeficiente angular ($m$) da reta tangente à curva $y = f(x)$ no ponto de tangência $(p, f(p))$. A equação da reta tangente é dada por:
-\[
-y - f(p) = f'(p)(x - p)
-\]
-\textbf{3. Roteiro de Resolução para Cada Item:}
-\begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Passo 1:} Determinar o ponto de tangência calculando $f(p)$.
-    \item \textbf{Passo 2:} Calcular o coeficiente angular $f'(p)$ pela definição de limite.
-    \item \textbf{Passo 3:} Substituir $(p, f(p))$ e $f'(p)$ na equação da reta e simplificar para a forma reduzida $y = mx + b$.
-\end{itemize}
+  \textbf{1. Definição Formal de Derivada no Ponto $p$:}
+  \[
+  f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
+  \]
+  \textbf{2. Equação da Reta Tangente:}
+  O valor $f'(p)$ corresponde geometricamente ao coeficiente angular ($m$) da reta tangente à curva $y = f(x)$ no ponto de tangência $(p, f(p))$. A equação da reta tangente é dada por:
+  \[
+  y - f(p) = f'(p)(x - p)
+  \]
+  \textbf{3. Roteiro de Resolução para Cada Item:}
+  \begin{itemize}[noitemsep, topsep=2pt]
+      \item \textbf{Passo 1:} Determinar o ponto de tangência calculando $f(p)$.
+      \item \textbf{Passo 2:} Calcular o coeficiente angular $f'(p)$ pela definição de limite.
+      \item \textbf{Passo 3:} Substituir $(p, f(p))$ e $f'(p)$ na equação da reta e simplificar para a forma reduzida $y = mx + b$.
+  \end{itemize}
 \end{recursosbox}
 
 \vspace{0.4cm}
-\textbf{Resolução Passo a Passo:}
-
 \begin{enumerate}[label=\alph*)]
     % Item a
     \item $f(x) = x^2$ e $p = 2$
