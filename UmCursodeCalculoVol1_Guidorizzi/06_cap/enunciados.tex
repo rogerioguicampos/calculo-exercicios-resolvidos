@@ -1,49 +1,16 @@
-\documentclass[12pt,a4paper]{article}
-
-\usepackage[brazilian]{babel}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{enumitem}
-\usepackage{etoolbox}
-\usepackage{tocloft}
-\usepackage{tikz}
-
-\setlength{\cftsecnumwidth}{3.2cm}
-\setlength{\cftsubsecnumwidth}{1.5cm}
-
-\renewcommand{\thesection}{Capítulo \arabic{section} -}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-\pretocmd{\subsection}{\clearpage}{}{}
-
-\title{
-    \Huge \textbf{Um Curso de Cálculo Volume 1} \\
-    \vspace{0.3cm}
-    \Large 6\textordfeminine{} Edição (Guidorizzi) \\
-    \vspace{0.5cm}
-    \large \textit{Enunciados Completos do Capítulo 6 Funções Exponencial e Logarítmica}
-}
-\author{Rogério Campos}
-
-\begin{document}
-
-\maketitle
-\newpage
-
-\tableofcontents
-\newpage
-
 \setcounter{section}{5}
 \setcounter{subsection}{0}
 
 \section{Funções Exponencial e Logarítmica}
 
+% ==============================================================================
+% 6.1. POTÊNCIA COM EXPOENTE REAL
+% ==============================================================================
 \subsection{Potência com Expoente Real}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to +\infty} 3^x$
     \item $\lim\limits_{x \to -\infty} 5^x$
     \item $\lim\limits_{x \to -\infty} e^x$
@@ -55,12 +22,11 @@
     \item $\lim\limits_{x \to -\infty} 2^{-x}$
     \item $\lim\limits_{x \to -\infty} [2^x + 2^{-x}]$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.} Esboce o gráfico.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[2]
+Esboce o gráfico:
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = 3^x$
     \item $g(x) = (0{,}12)^x$
     \item $f(x) = e^{-x}$
@@ -68,17 +34,22 @@
     \item $f(x) = -e^{-x}$
     \item $g(x) = 1 - e^{-x}$
     \item $f(x) = e^x + e^{-x}$
-    \item $g(x) = e^{-x}\operatorname{sen} x$
+    \item $g(x) = e^{-x}\sen x$
     \item $f(x) = e^{1/x}$
     \item $g(x) = e^{-x^2}$
 \end{enumerate}
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 6.2. LOGARITMO
+% ==============================================================================
 \subsection{Logaritmo}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\log_{10} 100$
     \item $\log_{\frac{1}{2}} 16$
     \item $\log_{\frac{1}{2}} \sqrt{2}$
@@ -88,12 +59,11 @@
     \item $\log_a 1$ ($a > 0$ e $a \neq 1$)
     \item $\log_3 243$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.} Determine o domínio.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[2]
+Determine o domínio:
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = \log_2 (x + 1)$
     \item $g(x) = \ln(x^2 - 1)$
     \item $g(x) = \ln(-x)$
@@ -101,12 +71,11 @@
     \item $f(x) = \ln\dfrac{x + 1}{x - 1}$
     \item $g(x) = \log_x 3$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.} Ache o domínio e esboce o gráfico.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[3]
+Ache o domínio e esboce o gráfico:
+\begin{enumerate}[label=\alph*)]
     \item $f(x) = \log_3 x$
     \item $g(x) = \ln x$
     \item $f(x) = \log_{\frac{1}{3}} x$
@@ -116,12 +85,11 @@
     \item $f(x) = |\ln x|$
     \item $g(x) = |\ln |x||$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[4]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to +\infty} \log_3 x$
     \item $\lim\limits_{x \to 0^+} \log_{\frac{1}{3}} x$
     \item $\lim\limits_{x \to 0^+} \ln x$
@@ -130,13 +98,18 @@
     \item $\lim\limits_{x \to 1} \ln\dfrac{x^2 - 1}{x - 1}$
     \item $\lim\limits_{x \to +\infty} [x\ln 2 - \ln(3^x + 1)]$
 \end{enumerate}
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 6.3. O LIMITE \lim_{x \to +\infty} (1 + 1/x)^x
+% ==============================================================================
 \subsection{O Limite $\lim\limits_{x \to +\infty} \left(1 + \frac{1}{x}\right)^x$}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to +\infty} \left(1 + \dfrac{2}{x}\right)^{\!x}$
     \item $\lim\limits_{x \to +\infty} \left(1 + \dfrac{1}{x}\right)^{\!x+2}$
     \item $\lim\limits_{x \to +\infty} \left(1 + \dfrac{1}{2x}\right)^{\!x}$
@@ -146,22 +119,21 @@
     \item $\lim\limits_{x \to 0} (1 + 2x)^{\frac{1}{x}}$
     \item $\lim\limits_{x \to +\infty} \left(1 + \dfrac{1}{x}\right)^{\!2x}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.} Seja $a > 0$, $a \neq 1$. Mostre que
+\begin{exercicio}[2]
+Seja $a > 0$, $a \neq 1$. Mostre que:
 \[
 \lim_{h \to 0} \dfrac{a^h - 1}{h} = \ln a.
 \]
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[3]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\lim\limits_{x \to 0} \dfrac{e^{2x} - 1}{x}$
     \item $\lim\limits_{x \to 0} \dfrac{e^{x^2} - 1}{x}$
     \item $\lim\limits_{x \to 0} \dfrac{5^x - 1}{x}$
     \item $\lim\limits_{x \to 0^+} \dfrac{3^x - 1}{x^2}$
 \end{enumerate}
-
-\end{document}
+\end{exercicio}

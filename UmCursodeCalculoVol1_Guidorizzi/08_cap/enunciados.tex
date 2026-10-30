@@ -1,49 +1,16 @@
-\documentclass[12pt,a4paper]{article}
-
-\usepackage[brazilian]{babel}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{enumitem}
-\usepackage{etoolbox}
-\usepackage{tocloft}
-\usepackage{tikz}
-
-\setlength{\cftsecnumwidth}{3.2cm}
-\setlength{\cftsubsecnumwidth}{1.5cm}
-\setlength{\cftsubsecnumwidth}{1.5cm}
-
-\renewcommand{\thesection}{Capítulo \arabic{section} -}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-\pretocmd{\subsection}{\clearpage}{}{}
-
-\title{
-    \Huge \textbf{Um Curso de Cálculo Volume 1} \\
-    \vspace{0.3cm}
-    \Large 6\textordfeminine{} Edição (Guidorizzi) \\
-    \vspace{0.5cm}
-    \large \textit{Enunciados Completos do Capítulo 8 Funções Inversas}
-}
-\author{Rogério Campos}
-
-\begin{document}
-
-\maketitle
-\newpage
-
-\tableofcontents
-\newpage
-
 \setcounter{section}{7}
-\setcounter{subsection}{1}
+\setcounter{subsection}{0}
 
 \section{Funções Inversas}
+
+% ==============================================================================
+% 8.1. FUNÇÃO INVERSA
+% ==============================================================================
 \subsection{Função Inversa}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\operatorname{arcsen} 1$
     \item $\operatorname{arcsen} \dfrac{1}{2}$
     \item $\operatorname{arcsen} \dfrac{\sqrt{3}}{2}$
@@ -57,104 +24,103 @@
     \item $\operatorname{arctg} \dfrac{\sqrt{3}}{3}$
     \item $\operatorname{arctg} \left(-\dfrac{\sqrt{3}}{3}\right)$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.} Verifique que
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[2]
+Verifique que:
+\begin{enumerate}[label=\alph*)]
     \item $\cos (\operatorname{arcsen} x) = \sqrt{1 - x^2}$
     \item $\sec (\operatorname{arctg} x) = \sqrt{1 + x^2}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.} Calcule.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[3]
+Calcule:
+\begin{enumerate}[label=\alph*)]
     \item $\cos \left(\operatorname{arcsen} \dfrac{1}{2}\right)$
     \item $\cos \left(\operatorname{arcsen} \dfrac{\sqrt{3}}{2}\right)$
     \item $\cos \left(\operatorname{arcsen} \left(-\dfrac{\sqrt{3}}{2}\right)\right)$
     \item $\sec (\operatorname{arctg} 1)$
-    \item $\operatorname{arcsen} (\operatorname{sen} x)$, em que $-\dfrac{\pi}{2} \le x \le \dfrac{\pi}{2}$
-    \item $\operatorname{arctg} (\operatorname{tg} x)$, em que $-\dfrac{\pi}{2} < x < \dfrac{\pi}{2}$
-    \item $\operatorname{arcsen} \left(\operatorname{sen} \dfrac{2\pi}{3}\right)$ (Cuidado!)
-    \item $\operatorname{arcsen} (\operatorname{sen} 3\pi)$
-    \item $\operatorname{arcsen} \left(\operatorname{sen} \dfrac{5\pi}{3}\right)$
-    \item $\operatorname{arcsen} (\operatorname{sen} x)$, em que $x = 2k\pi + \bar{x}$, $k$ inteiro e $\bar{x} \in \left[-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right]$
+    \item $\operatorname{arcsen} (\sen x)$, em que $-\dfrac{\pi}{2} \le x \le \dfrac{\pi}{2}$
+    \item $\operatorname{arctg} (\tg x)$, em que $-\dfrac{\pi}{2} < x < \dfrac{\pi}{2}$
+    \item $\operatorname{arcsen} \left(\sen \dfrac{2\pi}{3}\right)$ (Cuidado!)
+    \item $\operatorname{arcsen} (\sen 3\pi)$
+    \item $\operatorname{arcsen} \left(\sen \dfrac{5\pi}{3}\right)$
+    \item $\operatorname{arcsen} (\sen x)$, em que $x = 2k\pi + \bar{x}$, $k$ inteiro e $\bar{x} \in \left[-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right]$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.} Seja $f$ uma função inversível com inversa $g$. Mostre que
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[4]
+Seja $f$ uma função inversível com inversa $g$. Mostre que:
+\begin{enumerate}[label=\alph*)]
     \item $f(g(x)) = x$ para todo $x \in D_g$
     \item $g(f(x)) = x$ para todo $x \in D_f$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.}
+\begin{exercicio}[5]
 Prove que a função $f(x) = \operatorname{arcsen} x$, $x \in [-1, 1]$, é contínua. (Veja Exercício 12.)
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-Prove que a função $f(x) = \operatorname{arctg} x$, $x \in \mathbb{R}$, é contínua. (Veja Exercício 12.)
+\begin{exercicio}[6]
+Prove que a função $f(x) = \operatorname{arctg} x$, $x \in \R$, é contínua. (Veja Exercício 12.)
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.} Seja $f$ dada por $f(x) = x^3$.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item Mostre que $f$ é inversível e determine sua inversa $g$
-    \item Esboce os gráficos de $f$ e de $g$
+\begin{exercicio}[7]
+Seja $f$ dada por $f(x) = x^3$:
+\begin{enumerate}[label=\alph*)]
+    \item Mostre que $f$ é inversível e determine sua inversa $g$.
+    \item Esboce os gráficos de $f$ e de $g$.
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.}
+\begin{exercicio}[8]
 Qual a função inversa de $f(x) = \dfrac{1}{x}$?
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 9.}
+\begin{exercicio}[9]
 Qual a função inversa de $f(x) = \dfrac{x + 1}{x - 1}$?
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 10.} Seja $f(x) = \dfrac{e^x - e^{-x}}{2}$.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item Mostre que $f$ é inversível e determine sua inversa $g$
-    \item Esboce os gráficos de $f$ e de $g$
+\begin{exercicio}[10]
+Seja $f(x) = \dfrac{e^x - e^{-x}}{2}$:
+\begin{enumerate}[label=\alph*)]
+    \item Mostre que $f$ é inversível e determine sua inversa $g$.
+    \item Esboce os gráficos de $f$ e de $g$.
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 11.}
+\begin{exercicio}[11]
 Seja $f(x) = x + e^x$. Mostre que $f$ é inversível e esboce os gráficos de $f$ e de sua inversa.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 12.}
+\begin{exercicio}[12]
 Seja $f$ uma função cujo domínio e imagem são intervalos. Prove que se $f$ for estritamente crescente (ou estritamente decrescente), então $f$ será contínua.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 13.} Seja $f(x) = x + e^x$ e seja $g$ sua inversa.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+\begin{exercicio}[13]
+Seja $f(x) = x + e^x$ e seja $g$ sua inversa:
+\begin{enumerate}[label=\alph*)]
     \item Prove que o domínio e a imagem de $g$ são intervalos.
     \item Prove que $g$ é estritamente crescente.
     \item Prove que $g$ é contínua. (\textit{Sugestão:} Utilize o Exercício 12.)
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 14.}
+\begin{exercicio}[14]
 Prove que, se $f$ for definida, contínua e injetora no intervalo $I$, então $f$ será estritamente crescente ou estritamente decrescente.
+\end{exercicio}
 
+\clearpage
+
+% ==============================================================================
+% 8.2. DERIVADA DE FUNÇÃO INVERSA
+% ==============================================================================
 \subsection{Derivada de Função Inversa}
-\vspace{0.5cm}
-\noindent\textbf{Exercício 1.} Determine a derivada.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
+
+\begin{exercicio}[1]
+Determine a derivada:
+\begin{enumerate}[label=\alph*)]
     \item $y = x\operatorname{arctg} x$
     \item $f(x) = \operatorname{arcsen} 3x$
     \item $g(x) = \operatorname{arcsen} x^3$
@@ -162,67 +128,61 @@ Prove que, se $f$ for definida, contínua e injetora no intervalo $I$, então $f
     \item $y = 3\operatorname{arctg}(2x + 3)$
     \item $y = \operatorname{arcsen} e^x$
     \item $y = e^{3x}\operatorname{arcsen} 2x$
-    \item $y = \dfrac{\operatorname{sen} 3x}{\operatorname{arctg} 4x}$
+    \item $y = \dfrac{\sen 3x}{\operatorname{arctg} 4x}$
     \item $y = x^2 e^{\operatorname{arctg} 2x}$
     \item $y = \dfrac{x\operatorname{arctg} x}{\cos 2x}$
     \item $y = e^{-3x} + \ln(\operatorname{arctg} x)$
-    \item $f(x) = \dfrac{e^{-x}\operatorname{arctg} e^x}{\operatorname{tg} x}$
+    \item $f(x) = \dfrac{e^{-x}\operatorname{arctg} e^x}{\tg x}$
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 2.}
+\begin{exercicio}[2]
 Seja $f(x) = x + e^x$ e seja $g$ a inversa de $f$. Mostre que $g$ é derivável e que $g'(x) = \dfrac{1}{1 + e^{g(x)}}$. (Sugestão: Veja Exercício 13-8.1.)
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 3.}
+\begin{exercicio}[3]
 Seja $f(x) = x + e^x$ e seja $g$ a função inversa de $f$. Calcule $g'(1)$ e $g''(1)$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 4.} Seja $f(x) = x + \ln x$, $x > 0$.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item Mostre que $f$ admite função inversa $g$, que $g$ é derivável e que $g'(x) = \dfrac{g(x)}{1 + g(x)}$
-    \item Esboce os gráficos de $f$ e de $g$
-    \item Calcule $g(1)$, $g'(1)$ e $g''(1)$
+\begin{exercicio}[4]
+Seja $f(x) = x + \ln x$, $x > 0$:
+\begin{enumerate}[label=\alph*)]
+    \item Mostre que $f$ admite função inversa $g$, que $g$ é derivável e que $g'(x) = \dfrac{g(x)}{1 + g(x)}$.
+    \item Esboce os gráficos de $f$ e de $g$.
+    \item Calcule $g(1)$, $g'(1)$ e $g''(1)$.
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 5.} Seja $f(x) = x + x^3$.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item Mostre que $f$ admite função inversa $g$
-    \item Expresse $g'(x)$ em termos de $g(x)$
-    \item Calcule $g'(0)$
+\begin{exercicio}[5]
+Seja $f(x) = x + x^3$:
+\begin{enumerate}[label=\alph*)]
+    \item Mostre que $f$ admite função inversa $g$.
+    \item Expresse $g'(x)$ em termos de $g(x)$.
+    \item Calcule $g'(0)$.
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 6.}
-(Função arco-cosseno.) A função $f(x) = \cos x$, $0 \le x \le \pi$, é inversível e sua inversa é a função $g(x) = \arccos x$, $-1 < x < 1$.
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item Calcule $\arccos' x$
-    \item Esboce o gráfico de $g$
+\begin{exercicio}[6]
+(Função arco-cosseno.) A função $f(x) = \cos x$, $0 \le x \le \pi$, é inversível e sua inversa é a função $g(x) = \arccos x$, $-1 < x < 1$:
+\begin{enumerate}[label=\alph*)]
+    \item Calcule $\arccos' x$.
+    \item Esboce o gráfico de $g$.
 \end{enumerate}
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 7.}
-(Função arco-secante.) A função $f(x) = \sec x$, $0 \le x < \dfrac{\pi}{2}$ é inversível e sua inversa é a função $g(x) = \operatorname{arcsec} x$, $x \ge 1$. Calcule $\operatorname{arcsec}' x$.
+\begin{exercicio}[7]
+(Função arco-secante.) A função $f(x) = \sec x$, $0 \le x < \dfrac{\pi}{2}$, é inversível e sua inversa é a função $g(x) = \operatorname{arcsec} x$, $x \ge 1$. Calcule $\operatorname{arcsec}' x$.
+\end{exercicio}
 
-\vspace{0.5cm}
-\noindent\textbf{Exercício 8.} Verifique que
-\begin{enumerate}
-    \renewcommand{\theenumi}{\alph{enumi}}
-    \renewcommand{\labelenumi}{\theenumi)}
-    \item $\dfrac{d}{dx}\!\left[x\operatorname{arctg} x - \dfrac{1}{2}\ln(1 + x^2)\right] = \operatorname{arctg} x$
-    \item $\dfrac{d}{dx}\!\left[\dfrac{x^3}{3}\operatorname{arcsen} x + \dfrac{x^2 + 2}{9}\sqrt{1 - x^2}\right] = x^2 \operatorname{arcsen} x$
-    \item $\dfrac{d}{dx}\left[(x + 1)\operatorname{arctg}\sqrt{x} - \sqrt{x}\right] = \operatorname{arctg}\sqrt{x}$
-    \item $\dfrac{d}{dx}\left[\dfrac{1}{2}\operatorname{arcsen}\left(\dfrac{2 - x}{x\sqrt{2}}\right)\right] = -\dfrac{1}{x\sqrt{x^2 + 4x - 4}}$
-    \item $\dfrac{d}{dx}\left[\dfrac{\sqrt{27x^2 + 6x - 1}}{x} - 3\operatorname{arcsen}\left(\dfrac{1 - 3x}{6x}\right)\right] = \dfrac{1}{x^2 \sqrt{27x^2 + 6x - 1}}$
-    \item $\dfrac{d}{dx}\left[\sqrt{\dfrac{2}{3}}\operatorname{arctg}\sqrt{\dfrac{2(3 - x)}{3(x - 2)}}\right] = -\dfrac{1}{x\sqrt{5x - 6 - x^2}}$
-    \item $\dfrac{d}{dx}\left[\dfrac{1}{36}x(9x^2 - 2)\sqrt{4 - 9x^2} + \dfrac{2}{27}\operatorname{arcsen}\dfrac{3x}{2}\right] = x^2 \sqrt{4 - 9x^2}$
+\begin{exercicio}[8]
+Verifique que:
+\begin{enumerate}[label=\alph*)]
+    \item $\dfrac{\diff}{\diff x}\!\left[x\operatorname{arctg} x - \dfrac{1}{2}\ln(1 + x^2)\right] = \operatorname{arctg} x$
+    \item $\dfrac{\diff}{\diff x}\!\left[\dfrac{x^3}{3}\operatorname{arcsen} x + \dfrac{x^2 + 2}{9}\sqrt{1 - x^2}\right] = x^2 \operatorname{arcsen} x$
+    \item $\dfrac{\diff}{\diff x}\left[(x + 1)\operatorname{arctg}\sqrt{x} - \sqrt{x}\right] = \operatorname{arctg}\sqrt{x}$
+    \item $\dfrac{\diff}{\diff x}\left[\dfrac{1}{2}\operatorname{arcsen}\left(\dfrac{2 - x}{x\sqrt{2}}\right)\right] = -\dfrac{1}{x\sqrt{x^2 + 4x - 4}}$
+    \item $\dfrac{\diff}{\diff x}\left[\dfrac{\sqrt{27x^2 + 6x - 1}}{x} - 3\operatorname{arcsen}\left(\dfrac{1 - 3x}{6x}\right)\right] = \dfrac{1}{x^2 \sqrt{27x^2 + 6x - 1}}$
+    \item $\dfrac{\diff}{\diff x}\left[\sqrt{\dfrac{2}{3}}\operatorname{arctg}\sqrt{\dfrac{2(3 - x)}{3(x - 2)}}\right] = -\dfrac{1}{x\sqrt{5x - 6 - x^2}}$
+    \item $\dfrac{\diff}{\diff x}\left[\dfrac{1}{36}x(9x^2 - 2)\sqrt{4 - 9x^2} + \dfrac{2}{27}\operatorname{arcsen}\dfrac{3x}{2}\right] = x^2 \sqrt{4 - 9x^2}$
 \end{enumerate}
-
-\end{document}
+\end{exercicio}
