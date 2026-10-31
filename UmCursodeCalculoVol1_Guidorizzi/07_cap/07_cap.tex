@@ -28,9 +28,9 @@
 \label{ex:7.2.1}
 Seja $f(x) = x^2 + 1$. Calcule:
 \begin{enumerate}[label=\alph*)]
-    \item $f'(x)$
-    \item $f'(0)$
     \item $f'(1)$
+    \item $f'(0)$
+    \item $f'(x)$
 \end{enumerate}
 \linkresolucao{7.2.1}
 \end{exercicio}
@@ -2205,37 +2205,39 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 
 \begin{enumerate}[label=\alph*)]
 
-    \item $f'(x)$
+    \item $f'(1)$
+    \setcounter{equation}{0}
 
-    Sabemos pela definição formal que:
+    Pela definição formal de derivada no ponto $p = 1$, temos:
     \begin{equation}
-        \equdefderivadaI \label{eq:def_derivada}
+        f'(1) = \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1} \label{eq:def_derivada_ponto1}
     \end{equation}
 
-    Primeiro, manipulamos o quociente incremental:
+    Primeiro, manipulamos o quociente incremental para $x \neq 1$:
     \begin{equation}
-        \eququoefincreI \label{eq:quociente}
+        \frac{f(x) - f(1)}{x - 1} \label{eq:quociente_ponto1}
     \end{equation}
 
-    Como foi dado $f(x) = x^2 + 1$, temos:
+    Sendo $f(x) = x^2 + 1$, calculamos o valor da função em $p = 1$:
     \[
-    f(x + h) = (x + h)^2 + 1 = x^2 + 2hx + h^2 + 1
+    f(1) = 1^2 + 1 = 2
     \]
-    Substituindo $f(x + h)$ e $f(x)$ em \eqref{eq:quociente} para $h \neq 0$:
+
+    Substituindo $f(x)$ e $f(1)$ em \eqref{eq:quociente_ponto1}:
     \begin{align*}
-        \frac{f(x + h) - f(x)}{h} &= \frac{(x^2 + 2hx + h^2 + 1) - (x^2 + 1)}{h} \\[0.25cm]
-        &= \frac{2hx + h^2}{h} \\[0.25cm]
-        &= \frac{h(2x + h)}{h} \\[0.25cm]
-        &= 2x + h
+        \frac{f(x) - f(1)}{x - 1} &= \frac{(x^2 + 1) - 2}{x - 1} \\[0.25cm]
+        &= \frac{x^2 - 1}{x - 1} \\[0.25cm]
+        &= \frac{(x - 1)(x + 1)}{x - 1} \\[0.25cm]
+        &= x + 1
     \end{align*}
 
-    Daí, aplicando o limite em \eqref{eq:def_derivada} quando $h \to 0$:
+    Daí, aplicando o limite em \eqref{eq:def_derivada_ponto1} quando $x \to 1$:
     \[
-    f'(x) = \lim_{h \to 0} (2x + h) = 2x
+    f'(1) = \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1} = \lim_{x \to 1} (x + 1) = 1 + 1 = 2
     \]
     Portanto:
     \[
-    f'(x) = 2x \qedsymbolmath
+    f'(1) = 2 \qedsymbolmath
     \]
 
     \item $f'(0)$
@@ -2265,7 +2267,7 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 
     Daí, aplicando o limite em \eqref{eq:def_derivada_ponto0} quando $x \to 0$:
     \[
-    f'(0) = \lim_{x \to 0} x = 0
+    f'(0) = \lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0} x = 0
     \]
 
     Portanto:
@@ -2273,39 +2275,52 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
     f'(0) = 0 \qedsymbolmath
     \]
 
-    \item $f'(1)$
+    \item $f'(x)$
     \setcounter{equation}{0}
 
-    Pela definição formal de derivada no ponto $p = 1$, temos:
+    \begin{dicasbox}[title={Atenção: A Notação $f'(x)$ e a Mudança de Papel de $x$}]
+        Ao calcular a derivada geral $f'(x)$ por acréscimo, cuidado para não confundir os dois papéis da letra $x$:
+        \begin{itemize}[noitemsep, topsep=3pt]
+            \item Em $f(x) = x^2 + 1$, a letra $x$ representa a \textbf{variável} da regra de associação (um espaço reservado que recebe uma entrada).
+            \item No símbolo $f'(x)$, a letra $x$ atua como o \textbf{ponto fixo de avaliação} (desempenhando exatamente o papel de $p$ na definição $f'(p)$).
+        \end{itemize}
+        \vspace{0.15cm}
+        Para evitar confusões ao montar o limite, interprete a lei como $f(\Box) = (\Box)^2 + 1$. Assim, substituindo $p$ por $x$ na definição por acréscimo:
+        \[
+        f(x + h) = (x + h)^2 + 1 \quad \text{e} \quad f(x) = x^2 + 1
+        \]
+        Portanto, calcula-se a derivada \textbf{no ponto $x$}, e não substituindo a expressão da função dentro do argumento.
+    \end{dicasbox}
+
+    Dada a nota acima, vamos usar a definição abaixo:
     \begin{equation}
-        f'(1) = \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1} \label{eq:def_derivada_ponto1}
+        f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:def_derivada}
     \end{equation}
 
-    Primeiro, manipulamos o quociente incremental para $x \neq 1$:
+    Agora vamos manipular o quociente incremental para $h \neq 0$:
     \begin{equation}
-        \frac{f(x) - f(1)}{x - 1} \label{eq:quociente_ponto1}
+      \frac{f(x + h) - f(x)}{h} \label{eq:quociente}
     \end{equation}
 
-    Sendo $f(x) = x^2 + 1$, calculamos o valor da função em $p = 1$:
+    Como foi dado $f(x) = x^2 + 1$, temos:
     \[
-    f(1) = 1^2 + 1 = 2
+    f(x + h) = (x + h)^2 + 1 = x^2 + 2hx + h^2 + 1
     \]
-
-    Substituindo $f(x)$ e $f(1)$ em \eqref{eq:quociente_ponto1}:
+    Substituindo $f(x + h)$ e $f(x)$ em \eqref{eq:quociente} para $h \neq 0$:
     \begin{align*}
-        \frac{f(x) - f(1)}{x - 1} &= \frac{(x^2 + 1) - 2}{x - 1} \\[0.25cm]
-        &= \frac{x^2 - 1}{x - 1} \\[0.25cm]
-        &= \frac{(x - 1)(x + 1)}{x - 1} \\[0.25cm]
-        &= x + 1
+        \frac{f(x + h) - f(x)}{h} &= \frac{(x^2 + 2hx + h^2 + 1) - (x^2 + 1)}{h} \\[0.25cm]
+        &= \frac{2hx + h^2}{h} \\[0.25cm]
+        &= \frac{h(2x + h)}{h} \\[0.25cm]
+        &= 2x + h
     \end{align*}
 
-    Daí, aplicando o limite em \eqref{eq:def_derivada_ponto1} quando $x \to 1$:
+    Daí, aplicando o limite em \eqref{eq:def_derivada} quando $h \to 0$:
     \[
-    f'(1) = \lim_{x \to 1} (x + 1) = 1 + 1 = 2
+    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} (2x + h) = 2x
     \]
     Portanto:
     \[
-    f'(1) = 2 \qedsymbolmath
+    f'(x) = 2x \qedsymbolmath
     \]
 \end{enumerate}
 
@@ -2315,44 +2330,16 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 \linkenunciado{7.2.2}
 \setcounter{equation}{0}
 
-\begin{recursosbox}[title=Estratégias e Recursos Utilizados]
-
-    \estrategia{
-        \begin{itemize}[noitemsep, topsep=2pt]
-            \item Achar a derivada de $f$ no ponto $p$.
-            \item Achar a equação da reta tangente ao gráfico de $f$ no ponto $(p, f(p))$.
-        \end{itemize}
-    }
-
-    \definicao{Definição de derivada no ponto $p$}{
-        \[
-        f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-        \]
-    }
-
-    \definicao{Equação da reta tangente ao gráfico de $f$ no ponto de abscissa $p$}{
-        \[
-        y - f(p) = f'(p)(x - p)
-        \]
-    }
-
-    \begin{ferramentas}
-        \item Fatoração por termo comum: $2x - 2p = 2(x - p)$.
-        \item Interpretação geométrica: $f(x) = 2x$ representa uma reta com inclinação constante $m = 2$.
-    \end{ferramentas}
-
-\end{recursosbox}
-
 \textbf{Passo 1: Cálculo de $f'(p)$ pela definição formal.}
 
 Pela definição formal de derivada no ponto $p$:
 \begin{equation}
-    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p} \label{eq:def_derivada_ex2}
+    \equdefderivadaII \label{eq:def_derivada_ex2}
 \end{equation}
 
 Primeiro, manipulamos o quociente incremental para $x \neq p$:
 \begin{equation}
-    \frac{f(x) - f(p)}{x - p} \label{eq:quociente_ex2}
+    \eququoefincreII  \label{eq:quociente_ex2}
 \end{equation}
 
 Sendo $f(x) = 2x$, temos $f(p) = 2p$. Substituindo em \eqref{eq:quociente_ex2}:
@@ -2364,7 +2351,7 @@ Sendo $f(x) = 2x$, temos $f(p) = 2p$. Substituindo em \eqref{eq:quociente_ex2}:
 
 Aplicando o limite em \eqref{eq:def_derivada_ex2} quando $x \to p$:
 \[
-f'(p) = \lim_{x \to p} 2 = 2
+\equdefderivadaII = \lim_{x \to p} 2 = 2
 \]
 
 Portanto:
@@ -2431,23 +2418,6 @@ Graficamente, isso expressa uma propriedade fundamental das funções afins: a m
 \linkenunciado{7.2.3}
 \setcounter{equation}{0}
 
-\begin{recursosbox}[title=Estratégias e Recursos Utilizados]
-
-    \estrategia{Em vez de calcular o limite da definição separadamente para cada ponto numérico, determinaremos primeiramente a derivada $f'(p)$ em um ponto genérico $p \in D_f$ (ou a função derivada $f'(x)$). Em seguida, utilizaremos essa expressão geral para avaliar diretamente os itens pontuais por substituição simples.}
-
-    \definicao{Definição de derivada no ponto $p$}{
-        \[
-        f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-        \]
-    }
-
-    \begin{ferramentas}
-        \item Fatoração por termo comum: $3x - 3p = 3(x - p)$.
-        \item Cancelamento do fator indeterminante $(x - p)$ para $x \neq p$.
-    \end{ferramentas}
-
-\end{recursosbox}
-
 \textbf{Determinação da Derivada Geral em um Ponto $p \in \R$:}
 
 Pela definição formal de derivada num ponto arbitrário $p$:
@@ -2509,46 +2479,6 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
 \linkenunciado{7.2.4}
 \setcounter{equation}{0}
 
-\begin{recursosbox}[title=Estratégias e Recursos Algébricos]
-
-  \textbf{Estratégia Geral:}
-  \begin{itemize}[noitemsep, topsep=2pt]
-      \item Achar a derivada de $f$ no ponto $p$
-      \item   Como a avaliação direta em $x = p$ sempre conduz à forma indeterminada $\left[\frac{0}{0}\right]$, o objetivo central é manipular algebricamente o quociente incremental $\dfrac{f(x) - f(p)}{x - p}$ de modo a simplificar o fator $(x - p)$ para $x \neq p$
-  \end{itemize}
-
-  \vspace{0.2cm}
-  \textbf{Definição de derivada no ponto $p$:}
-  \[
-    f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-  \]
-
-  \vspace{0.2cm}
-  \textbf{Ferramentas Algébricas e Geométricas:}
-  \begin{itemize}[noitemsep, topsep=2pt]
-      \item \textbf{Polinômios:} Fatoração direta por agrupamento ou raízes para evidenciar o fator $(x - p)$.
-      \item \textbf{Funções Racionais:} Operação com frações (denominador comum) e simplificação direta de termos semelhantes.
-      \item \textbf{Raízes Quadradas:} Multiplicação pelo conjugado utilizando a diferença de quadrados:
-      \[
-      (\sqrt{A} - \sqrt{B})(\sqrt{A} + \sqrt{B}) = A - B
-      \]
-      \item \textbf{Raízes Cúbicas:} Utilização do produto notável da diferença de cubos:
-      \[
-      A - B = (\sqrt[3]{A} - \sqrt[3]{B})\left(\sqrt[3]{A^2} + \sqrt[3]{AB} + \sqrt[3]{B^2}\right)
-      \]
-      \item \textbf{Racionalização do Resultado Final (Radicais no Denominador):} Para simplificar respostas numéricas finais com frações irredutíveis:
-      \begin{itemize}[noitemsep, topsep=1pt]
-          \item \textit{Raiz quadrada:} Multiplica-se numerador e denominador por $\sqrt{a}$:
-          \[
-          \frac{1}{k\sqrt{a}} = \frac{\sqrt{a}}{k \cdot a} \quad \left(\text{ex.: } \frac{1}{2\sqrt{3}} = \frac{\sqrt{3}}{6}\right)
-          \]
-          \item \textit{Raiz de ordem $n$ ($\sqrt[n]{a^m}$ com $m < n$):} Multiplica-se por $\sqrt[n]{a^{n - m}}$ para completar a potência inteira $a^n$:
-          \[
-          \frac{1}{k\sqrt[n]{a^m}} = \frac{\sqrt[n]{a^{n - m}}}{k \cdot a} \quad \left(\text{ex.: } \frac{1}{3\sqrt[3]{4}} = \frac{1}{3\sqrt[3]{2^2}} = \frac{\sqrt[3]{2}}{3 \cdot 2} = \frac{\sqrt[3]{2}}{6}\right)
-          \]
-      \end{itemize}
-  \end{itemize}
-\end{recursosbox}
 
 \vspace{0.4cm}
 \textbf{Resoluções Passo a Passo:}
@@ -2742,23 +2672,13 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
 \linkenunciado{7.2.5}
 \setcounter{equation}{0}
 
-\begin{recursosbox}[title=Estratégia Geral e Recursos Algébricos]
-  \textbf{1. Definição Formal de Derivada no Ponto $p$:}
-  \[
-  f'(p) = \lim_{x \to p} \frac{f(x) - f(p)}{x - p}
-  \]
-  \textbf{2. Equação da Reta Tangente:}
-  O valor $f'(p)$ corresponde geometricamente ao coeficiente angular ($m$) da reta tangente à curva $y = f(x)$ no ponto de tangência $(p, f(p))$. A equação da reta tangente é dada por:
-  \[
-  y - f(p) = f'(p)(x - p)
-  \]
-  \textbf{3. Roteiro de Resolução para Cada Item:}
+\begin{estrategiabox}[title=Estratégia Geral]
   \begin{itemize}[noitemsep, topsep=2pt]
-      \item \textbf{Passo 1:} Determinar o ponto de tangência calculando $f(p)$.
-      \item \textbf{Passo 2:} Calcular o coeficiente angular $f'(p)$ pela definição de limite.
-      \item \textbf{Passo 3:} Substituir $(p, f(p))$ e $f'(p)$ na equação da reta e simplificar para a forma reduzida $y = mx + b$.
+    \item \textbf{Passo 1:} Determinar o ponto de tangência $(p, f(p))$.
+    \item \textbf{Passo 2:} Calcular o coeficiente angular $f'(p)$ pela definição \[\equdefderivadaII\]
+    \item \textbf{Passo 3:} Substituir $(p, f(p))$ e $f'(p)$ em \[\equdefretatangente\] e simplificar para a forma reduzida $y = mx + b$.
   \end{itemize}
-\end{recursosbox}
+\end{estrategiabox}
 
 \vspace{0.4cm}
 \begin{enumerate}[label=\alph*)]
