@@ -2823,6 +2823,246 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     \]
 \end{enumerate}
 
+\vspace{0.6cm}
+\noindent\textbf{Resolução do Exercício 6.}
+\label{res:7.2.6}
+\linkenunciado{7.2.6}
+\setcounter{equation}{0}
+
+\begin{estrategiabox}[title=Estratégia Geral]
+  \begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Passo 1:} Usar a definição \[\equdefderivadaI\]
+    \item \textbf{Passo 2:} Manipular o quociente incremental
+  \end{itemize}
+\end{estrategiabox}
+
+\paragraph{a) $f(x) = x^2 + x$}
+
+Pela definição por acréscimo no ponto $x$, temos:
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:res_6_a_def}
+\end{equation}
+
+Substituindo $f(x + h) = (x + h)^2 + (x + h)$ e $f(x) = x^2 + x$ no numerador:
+\begin{align*}
+f(x + h) - f(x) &= \left[(x + h)^2 + (x + h)\right] - (x^2 + x) \\
+&= \left(x^2 + 2xh + h^2 + x + h\right) - x^2 - x \\
+&= 2xh + h^2 + h
+\end{align*}
+
+Inserindo o numerador simplificado no quociente incremental da equação \eqref{eq:res_6_a_def}:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{2xh + h^2 + h}{h} \\
+      &= \lim_{h \to 0} \frac{h(2x + h + 1)}{h} \\
+      &= \lim_{h \to 0} (2x + h + 1) \\
+      &= 2x + 0 + 1 \\
+      &= 2x + 1
+\end{align*}
+
+Portanto:
+\[
+  f'(x) = 2x + 1 \qedsymbolmath
+\]
+
+\setcounter{equation}{0}
+\paragraph{b) $f(x) = 3x - 1$}
+
+Pela definição por acréscimo no ponto $x$, temos:
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:res_6_b_def}
+\end{equation}
+
+Substituindo $f(x + h) = 3(x + h) - 1$ e $f(x) = 3x - 1$ no numerador:
+\begin{align*}
+f(x + h) - f(x) &= [3(x + h) - 1] - (3x - 1) \\
+&= (3x + 3h - 1) - 3x + 1 \\
+&= 3h
+\end{align*}
+
+Inserindo o numerador simplificado no quociente incremental da equação \eqref{eq:res_6_b_def}:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{3h}{h} \\
+      &= \lim_{h \to 0} 3 \\
+      &= 3
+\end{align*}
+
+Portanto:
+\[
+  f'(x) = 3 \qedsymbolmath
+\]
+
+\setcounter{equation}{0}
+\paragraph{c) $f(x) = x^3$}
+
+Pela definição por acréscimo no ponto $x$, temos:
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:res_6_c_def}
+\end{equation}
+
+Substituindo $f(x + h) = (x + h)^3$ e $f(x) = x^3$ no numerador:
+\begin{align*}
+f(x + h) - f(x) &= (x + h)^3 - x^3 \\
+&= (x^3 + 3x^2h + 3xh^2 + h^3) - x^3 \\
+&= 3x^2h + 3xh^2 + h^3
+\end{align*}
+
+Inserindo o numerador simplificado no quociente incremental da equação \eqref{eq:res_6_c_def}:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{3x^2h + 3xh^2 + h^3}{h} \\
+      &= \lim_{h \to 0} \frac{h(3x^2 + 3xh + h^2)}{h} \\
+      &= \lim_{h \to 0} (3x^2 + 3xh + h^2) \\
+      &= 3x^2 + 3x(0) + 0^2 \\
+      &= 3x^2
+\end{align*}
+
+Portanto:
+\[
+  f'(x) = 3x^2 \qedsymbolmath
+\]
+
+\setcounter{equation}{0}
+\paragraph{d) $f(x) = \frac{1}{x}$}
+
+Pela definição por acréscimo no ponto $x$, temos:
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:res_6_d_def}
+\end{equation}
+
+Substituindo $f(x + h) = \frac{1}{x + h}$ e $f(x) = \frac{1}{x}$ no numerador:
+\begin{align*}
+f(x + h) - f(x) &= \frac{1}{x + h} - \frac{1}{x} \\
+&= \frac{x - (x + h)}{x(x + h)} \\
+&= \frac{-h}{x(x + h)}
+\end{align*}
+
+Inserindo o numerador simplificado no quociente incremental da equação \eqref{eq:res_6_d_def}:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{\frac{-h}{x(x + h)}}{h} \\
+      &= \lim_{h \to 0} \left[ \frac{-h}{x(x + h)} \cdot \frac{1}{h} \right] \\
+      &= \lim_{h \to 0} \frac{-1}{x(x + h)} \\
+      &= \frac{-1}{x(x + 0)} \\
+      &= -\frac{1}{x^2}
+\end{align*}
+
+Portanto:
+\[
+  f'(x) = -\frac{1}{x^2} \qedsymbolmath
+\]
+
+\setcounter{equation}{0}
+\paragraph{e) $f(x) = 5x$}
+
+Pela definição por acréscimo no ponto $x$, temos:
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:res_6_e_def}
+\end{equation}
+
+Substituindo $f(x + h) = 5(x + h)$ e $f(x) = 5x$ no numerador:
+\begin{align*}
+f(x + h) - f(x) &= 5(x + h) - 5x \\
+&= 5x + 5h - 5x \\
+&= 5h
+\end{align*}
+
+Inserindo o numerador simplificado no quociente incremental da equação \eqref{eq:res_6_e_def}:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{5h}{h} \\
+      &= \lim_{h \to 0} 5 \\
+      &= 5
+\end{align*}
+
+Portanto:
+\[
+  f'(x) = 5 \qedsymbolmath
+\]
+
+\setcounter{equation}{0}
+\paragraph{f) $f(x) = 10$}
+
+Pela definição por acréscimo no ponto $x$, temos:
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:res_6_f_def}
+\end{equation}
+
+Como $f$ é uma função constante, $f(x + h) = 10$ e $f(x) = 10$ para qualquer valor de entrada:
+\begin{align*}
+f(x + h) - f(x) &= 10 - 10 \\
+&= 0
+\end{align*}
+
+Inserindo no quociente incremental da equação \eqref{eq:res_6_f_def}:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{0}{h} \\
+      &= \lim_{h \to 0} 0 \\
+      &= 0
+\end{align*}
+
+Portanto:
+\[
+  f'(x) = 0 \qedsymbolmath
+\]
+
+\setcounter{equation}{0}
+\paragraph{g) $f(x) = \frac{x}{x + 1}$}
+
+Pela definição por acréscimo no ponto $x$, temos:
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:res_6_g_def}
+\end{equation}
+
+Substituindo $f(x + h) = \frac{x + h}{(x + h) + 1}$ e $f(x) = \frac{x}{x + 1}$ no numerador:
+\begin{align*}
+f(x + h) - f(x) &= \frac{x + h}{x + h + 1} - \frac{x}{x + 1} \\
+&= \frac{(x + h)(x + 1) - x(x + h + 1)}{(x + h + 1)(x + 1)} \\
+&= \frac{(x^2 + x + hx + h) - (x^2 + xh + x)}{(x + h + 1)(x + 1)} \\
+&= \frac{h}{(x + h + 1)(x + 1)}
+\end{align*}
+
+Inserindo o numerador simplificado no quociente incremental da equação \eqref{eq:res_6_g_def}:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{\frac{h}{(x + h + 1)(x + 1)}}{h} \\
+      &= \lim_{h \to 0} \left[ \frac{h}{(x + h + 1)(x + 1)} \cdot \frac{1}{h} \right] \\
+      &= \lim_{h \to 0} \frac{1}{(x + h + 1)(x + 1)} \\
+      &= \frac{1}{(x + 0 + 1)(x + 1)} \\
+      &= \frac{1}{(x + 1)^2}
+\end{align*}
+
+Portanto:
+\[
+  f'(x) = \frac{1}{(x + 1)^2} \qedsymbolmath
+\]
+
+\setcounter{equation}{0}
+\paragraph{h) $f(x) = \frac{1}{x^2}$}
+
+Pela definição por acréscimo no ponto $x$, temos:
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \label{eq:res_6_h_def}
+\end{equation}
+
+Substituindo $f(x + h) = \frac{1}{(x + h)^2}$ e $f(x) = \frac{1}{x^2}$ no numerador:
+\begin{align*}
+f(x + h) - f(x) &= \frac{1}{(x + h)^2} - \frac{1}{x^2} \\
+&= \frac{x^2 - (x + h)^2}{x^2(x + h)^2} \\
+&= \frac{x^2 - (x^2 + 2xh + h^2)}{x^2(x + h)^2} \\
+&= \frac{-2xh - h^2}{x^2(x + h)^2} \\
+&= \frac{-h(2x + h)}{x^2(x + h)^2}
+\end{align*}
+
+Inserindo o numerador simplificado no quociente incremental da equação \eqref{eq:res_6_h_def}:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{\frac{-h(2x + h)}{x^2(x + h)^2}}{h} \\
+      &= \lim_{h \to 0} \left[ \frac{-h(2x + h)}{x^2(x + h)^2} \cdot \frac{1}{h} \right] \\
+      &= \lim_{h \to 0} \frac{-(2x + h)}{x^2(x + h)^2} \\
+      &= \frac{-(2x + 0)}{x^2(x + 0)^2} \\
+      &= \frac{-2x}{x^4} \\
+      &= -\frac{2}{x^3}
+\end{align*}
+
+Portanto:
+\[
+  f'(x) = -\frac{2}{x^3} \qedsymbolmath
+\]
 % ------------------------------------------------------------------------------
 % 7.3 a 7.17 (ESTRUTURA DE ESPERA PARA PRÓXIMAS RESOLUÇÕES)
 % ------------------------------------------------------------------------------
