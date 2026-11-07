@@ -2829,7 +2829,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
 \linkenunciado{7.2.6}
 \setcounter{equation}{0}
 
-\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+\begin{estrategiabox}[title=Estratégia Geral]
   \begin{itemize}[noitemsep, topsep=2pt]
     \item \textbf{Passo 1:} Montar o quociente incremental usando a definição por acréscimo avaliada no ponto genérico $x$.
     \item \textbf{Passo 2:} Expandir os termos quadráticos e lineares de $f(x + h)$ e cancelar os termos correspondentes a $f(x)$.
@@ -3064,6 +3064,279 @@ Portanto:
 \[
   f'(x) = -\frac{2}{x^3} \qedsymbolmath
 \]
+
+\vspace{0.6cm}
+\noindent\textbf{Resolução do Exercício 7.}
+\label{res:7.2.7}
+\linkenunciado{7.2.7}
+\setcounter{equation}{0}
+
+\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+  \begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Passo 1:} Interpretar geometricamente a condição analítica $f'(1) = 0$: a reta tangente à curva no ponto de abscissa $x = 1$ deve ter inclinação nula (horizontal).
+    \item \textbf{Passo 2:} Partir da parábola fundamental $y = x^2$ (que possui reta tangente horizontal na origem) e aplicar uma translação horizontal de uma unidade para a direita, obtendo $g(x) = (x - 1)^2$.
+    \item \textbf{Passo 3:} Demonstrar analiticamente pela definição que $g'(1) = 0$ e generalizar para famílias de funções que compartilham essa mesma propriedade geométrica.
+  \end{itemize}
+\end{estrategiabox}
+
+\paragraph{Interpretação Geométrica.}
+
+O coeficiente angular da reta tangente ao gráfico de uma função diferenciável $f$ em $(p, f(p))$ é dado por $f'(p)$. A equação da reta tangente nesse ponto é:
+\[
+y - f(p) = f'(p)(x - p) \implies y = f(p) + f'(p)(x - p)
+\]
+A condição $f'(1) = 0$ estabelece que, no ponto $(1, f(1))$, o coeficiente angular é nulo, de modo que a reta tangente tem equação $y = f(1)$, sendo perfeitamente \textbf{horizontal}.
+
+\paragraph{Construção da Função via Translação.}
+
+Consideremos inicialmente a função elementar $f:\mathbb{R} \to \mathbb{R}$ dada por $f(x) = x^2$. No ponto $(0, f(0)) = (0, 0)$, a reta tangente é o próprio eixo das abscissas ($y = 0$). 
+
+Para transferir essa propriedade de inclinação nula para a abscissa $x = 1$, efetuamos uma translação horizontal de uma unidade para a direita, definindo:
+\[
+g(x) = f(x - 1) = (x - 1)^2
+\]
+
+\begin{center}
+\begin{tikzpicture}[>=latex, scale=1.05]
+    % Eixos cartesianos
+    \draw[->, thick, gray!70] (-2.2, 0) -- (3.5, 0) node[below, black] {\scriptsize $x$};
+    \draw[->, thick, gray!70] (0, -0.5) -- (0, 4.3) node[left, black] {\scriptsize $y$};
+
+    % Curva f(x) = x^2 (curva original)
+    \draw[thick, gray!60, dashed, smooth, domain=-1.95:1.95] 
+        plot (\x, {(\x)^2});
+    \node[above left, gray!70] at (-1.2, 1.8) {\scriptsize $f(x) = x^2$};
+
+    % Curva g(x) = (x - 1)^2 (curva transladada)
+    \draw[thick, teal!70!black, smooth, domain=-0.95:2.95] 
+        plot (\x, {(\x - 1)^2});
+    \node[above right, teal!70!black] at (2.2, 1.8) {\scriptsize $g(x) = (x - 1)^2$};
+
+    % Vértices
+    \fill[gray!70] (0, 0) circle (1.3pt);
+    \node[below left=2pt, black] at (0, 0) {\scriptsize $(0, 0)$};
+
+    \fill[teal!70!black] (1, 0) circle (1.3pt);
+    \node[below=3pt, black] at (1, 0) {\scriptsize $(1, 0)$};
+
+    % Vetor de translação horizontal nos vértices (y = 0)
+    \draw[->, line width=1pt, blue!75!black] (0, 0) -- (0.95, 0);
+    \node[above, blue!75!black] at (0.5, 0.05) {\scriptsize $+1$};
+
+    % Vetor de translação horizontal na altura y = 1
+    \draw[densely dotted, gray!50] (-1.5, 1) -- (2.5, 1);
+    \fill[gray!70] (1, 1) circle (1.2pt);
+    \fill[teal!70!black] (2, 1) circle (1.2pt);
+    \draw[->, line width=0.9pt, blue!75!black] (1, 1) -- (1.95, 1);
+    \node[above, blue!75!black] at (1.5, 1.05) {\scriptsize $+1$};
+
+    % Rótulo explicativo
+    \node[below, align=center] at (1.2, -0.6) {\scriptsize Translação horizontal: $g(x) = f(x - 1)$};
+\end{tikzpicture}
+\end{center}
+
+\paragraph{Verificação Analítica de $g'(1) = 0$.}
+
+Calculando a derivada de $g$ no ponto $p = 1$ pela definição pontual:
+\begin{align*}
+\frac{g(x) - g(1)}{x - 1} &= \frac{(x - 1)^2 - (1 - 1)^2}{x - 1} \\
+&= \frac{(x - 1)^2 - 0}{x - 1} \\
+&= \frac{(x - 1)(x - 1)}{x - 1} \\
+&= x - 1 \quad (\text{para } x \neq 1)
+\end{align*}
+
+Tomando o limite com $x \to 1$:
+\begin{equation}
+g'(1) = \lim_{x \to 1} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1}(x - 1) = 1 - 1 = 0 \qedsymbolmath
+\end{equation}
+
+\vspace{0.3cm}
+\paragraph{Generalização: Outras Famílias de Soluções.}
+
+A solução encontrada não é única. Geometricamente, qualquer função derivável com um ponto crítico (extremo local ou inflexão de inclinação nula) em $x = 1$ resolve o problema. Destacam-se:
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Família quadrática vertical e reflexões:} $h_1(x) = k(x - 1)^2 + c$, com $k \in \mathbb{R}^*$ e $c \in \mathbb{R}$.
+    \item \textbf{Família cúbica (ponto de inflexão horizontal):} $h_2(x) = (x - 1)^3 + c$, cuja derivada $h_2'(x) = 3(x - 1)^2$ também se anula em $x = 1$.
+    \item \textbf{Funções constantes:} $h_3(x) = c$, que possuem reta tangente horizontal coincidente em toda a sua extensão ($h_3'(x) = 0, \, \forall x$).
+\end{itemize}
+
+O gráfico a seguir ilustra a função $g(x) = (x - 1)^2$ acompanhada de sua reta tangente horizontal $y = 0$, em contraste com a curva cúbica $h_2(x) = (x - 1)^3 + 1$ (com reta tangente horizontal $y = 1$) e a parábola invertida $h_1(x) = -(x - 1)^2 + 2$ (com reta tangente horizontal $y = 2$):
+
+\begin{center}
+\begin{tikzpicture}[>=latex, scale=1.15]
+    % Eixos cartesianos
+    \draw[->, thick, gray!70] (-1.5, 0) -- (3.2, 0) node[below, black] {\scriptsize $x$};
+    \draw[->, thick, gray!70] (0, -1.2) -- (0, 3.6) node[left, black] {\scriptsize $y$};
+
+    % Reta x = 1 pontilhada de referência
+    \draw[densely dotted, gray!60] (1, -1.0) -- (1, 3.2);
+    \node[below, black] at (1, 0) {\scriptsize $x = 1$};
+
+    % 1. Parábola: g(x) = (x - 1)^2
+    \draw[thick, teal!80!black, smooth, domain=-0.5:2.5] 
+        plot (\x, {(\x - 1)^2});
+    \node[right, teal!80!black] at (2.2, 1.8) {\scriptsize $g(x) = (x - 1)^2$};
+    
+    % Reta tangente em (1, 0): y = 0
+    \draw[line width=1.1pt, blue!75!black, domain=-0.2:2.2] 
+        plot (\x, {0});
+    \fill[teal!80!black] (1, 0) circle (1.4pt);
+
+    % 2. Cúbica com inflexão: h2(x) = 0.5*(x - 1)^3 + 1
+    \draw[thick, purple!70!black, smooth, domain=-0.2:2.2] 
+        plot (\x, {0.6*(\x - 1)^3 + 1});
+    \node[right, purple!70!black] at (2.15, 2.5) {\scriptsize $h(x) = (x - 1)^3 + 1$};
+    
+    % Reta tangente em (1, 1): y = 1
+    \draw[line width=0.9pt, blue!75!black, densely dashed, domain=-0.2:2.2] 
+        plot (\x, {1});
+    \fill[purple!70!black] (1, 1) circle (1.4pt);
+    \node[left=2pt, purple!70!black] at (1, 1) {\scriptsize $(1, 1)$};
+
+    % 3. Parábola invertida: h1(x) = -(x - 1)^2 + 2
+    \draw[thick, orange!80!black, smooth, domain=-0.3:2.3] 
+        plot (\x, {-0.8*(\x - 1)^2 + 2});
+    \node[left, orange!80!black] at (-0.2, 0.7) {\scriptsize $k(x) = -(x - 1)^2 + 2$};
+    
+    % Reta tangente em (1, 2): y = 2
+    \draw[line width=0.9pt, blue!75!black, densely dashed, domain=-0.2:2.2] 
+        plot (\x, {2});
+    \fill[orange!80!black] (1, 2) circle (1.4pt);
+    \node[above=2pt, orange!80!black] at (1, 2) {\scriptsize $(1, 2)$};
+
+    % Rótulo de destaque para retas tangentes
+    \node[above, blue!75!black] at (2.4, 0.05) {\scriptsize $T_1: y = 0$};
+    \node[above, blue!75!black] at (2.4, 1.05) {\scriptsize $T_2: y = 1$};
+    \node[above, blue!75!black] at (2.4, 2.05) {\scriptsize $T_3: y = 2$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.6cm}
+\noindent\textbf{Resolução do Exercício 8.}
+\label{res:7.2.8}
+\linkenunciado{7.2.8}
+\setcounter{equation}{0}
+
+\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+  \begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Passo 1:} Interpretar geometricamente a condição $f'(x) > 0$: o coeficiente angular de cada reta tangente ao gráfico deve ser estritamente positivo em todos os pontos, o que significa que as retas tangentes são inclinadas para a direita e a função é \textbf{estritamente crescente} em todo o seu domínio.
+    \item \textbf{Passo 2:} Selecionar uma função modelo diferenciável em $\mathbb{R}$. A função afim $f(x) = x$  serve perfeitamente, pois sua derivada é constante e positiva.
+    \item \textbf{Passo 3:} Demonstrar analiticamente pela definição que $f'(x) > 0, \, \forall x \in \mathbb{R}$, apresentar a representação gráfica destacando as retas tangentes com inclinação positiva.
+  \end{itemize}
+\end{estrategiabox}
+
+\paragraph{Interpretação Geométrica.}
+
+Dada uma função $f:\mathbb{R} \to \mathbb{R}$ derivável, a condição $f'(x) > 0$ para todo $x \in \mathbb{R}$ exige que, em qualquer ponto $(x, f(x))$,
+a reta tangente tenha inclinação estritamente positiva. Consequentemente, o gráfico nunca apresenta pontos de tangente horizontal ($f'(x) = 0$),
+nunca decresce, e sobe continuamente da esquerda para a direita.
+
+\paragraph{Construção da Função Modelo e Verificação Analítica.}
+
+Consideremos a função identidade $f: \mathbb{R} \to \mathbb{R}$, dada por $f(x) = x$. Calculando $f'(x)$ pela definição por acréscimo:
+\begin{align*}
+f'(x) &= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \\
+      &= \lim_{h \to 0} \frac{(x + h) - x}{h} \\
+      &= \lim_{h \to 0} \frac{h}{h} \\
+      &= \lim_{h \to 0} 1 \\
+      &= 1
+\end{align*}
+
+Como $f'(x) = 1 > 0$ para qualquer $x \in \mathbb{R}$, a função satisfaz rigorosamente a hipótese.
+
+\paragraph{Representação Gráfica.}
+
+Abaixo representamos o gráfico da função identidade $f(x) = x$. Por ser uma função linear afim, a reta tangente em qualquer ponto $(p, f(p))$ coincide com o próprio gráfico da função, possuindo inclinação constante e estritamente positiva dada pelo coeficiente angular $m = f'(x) = 1 > 0$:
+
+\begin{center}
+\begin{tikzpicture}[>=latex, scale=1.1]
+    % Eixos cartesianos
+    \draw[->, thick, gray!70] (-2.6, 0) -- (2.8, 0) node[below, black] {\scriptsize $x$};
+    \draw[->, thick, gray!70] (0, -2.4) -- (0, 2.8) node[left, black] {\scriptsize $y$};
+
+    % Arco de inclinação theta = 45 graus (pi/4)
+    \draw[line width=0.6pt, teal!70!black] (0.6, 0) arc (0:45:0.6);
+    \node[teal!80!black] at (0.85, 0.25) {\scriptsize $\theta = 45^\circ$};
+
+    % Reta tangente coincidente / Curva f(x) = x
+    \draw[line width=1.1pt, teal!70!black, domain=-2.1:2.3] 
+        plot (\x, {\x});
+    \node[above right, teal!80!black] at (2.0, 2.0) {\scriptsize $f(x) = x$ \quad ($T: y = x$)};
+
+    % Ponto 1: x = -1 -> (-1, -1)
+    \coordinate (P1) at (-1, -1);
+    \draw[densely dashed, gray!50] (-1, 0) node[above, black] {\scriptsize $-1$} -- (P1) -- (0, -1) node[right, black] {\scriptsize $-1$};
+    \fill[teal!80!black] (P1) circle (1.3pt);
+    \node[below right=1pt, black] at (P1) {\scriptsize $(-1, -1)$};
+
+    % Ponto 2: x = 0 -> (0, 0)
+    \coordinate (P2) at (0, 0);
+    \fill[teal!80!black] (P2) circle (1.3pt);
+    \node[below left=2pt, black] at (P2) {\scriptsize $(0, 0)$};
+
+    % Ponto 3: x = 1.5 -> (1.5, 1.5)
+    \coordinate (P3) at (1.5, 1.5);
+    \draw[densely dashed, gray!50] (1.5, 0) node[below, black] {\scriptsize $1.5$} -- (P3) -- (0, 1.5) node[left, black] {\scriptsize $1.5$};
+    \fill[teal!80!black] (P3) circle (1.3pt);
+    \node[above left=1pt, black] at (P3) {\scriptsize $(1.5, 1.5)$};
+
+    % Rótulo de observação
+    \node[below, align=center] at (0.2, -2.5) {\scriptsize O coeficiente angular é constante em toda a reta: $m = \tg(45^\circ) = f'(x) = 1 > 0$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.3cm}
+\paragraph{Generalização: Outras Famílias de Soluções.}
+
+Qualquer função derivável em toda a reta real com crescimento estrito e sem pontos críticos satisfaz o problema:
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Retas com inclinação positiva:} $f_1(x) = mx + b$, com $m > 0$ (onde $f_1'(x) = m > 0$).
+    \item \textbf{Cúbica estritamente crescente sem derivada nula:} $f_3(x) = x^3 + x$, onde $f_3'(x) = 3x^2 + 1 \ge 1 > 0$ para qualquer $x \in \mathbb{R}$.
+\end{itemize}
+
+\vspace{0.3cm}
+O gráfico a seguir ilustra a família de retas paralelas $y = ax + b$ com $a = 1 > 0$, destacando a reta bissetriz $y = x$ ($b = 0$) e as translações verticais para cima ($b = 1.5$) e para baixo ($b = -1.5$), todas preservando a mesma inclinação estritamente positiva ($m = a = 1$):
+
+\begin{center}
+\begin{tikzpicture}[>=latex, scale=1.1]
+    % Eixos cartesianos
+    \draw[->, thick, gray!70] (-2.8, 0) -- (3.0, 0) node[below, black] {\scriptsize $x$};
+    \draw[->, thick, gray!70] (0, -2.8) -- (0, 3.2) node[left, black] {\scriptsize $y$};
+
+    % 1. Reta central (b = 0): y = x
+    \draw[thick, teal!80!black, domain=-2.2:2.4] 
+        plot (\x, {\x});
+    \node[above right, teal!80!black] at (2.1, 2.1) {\scriptsize $y = x$};
+    \fill[teal!80!black] (0, 0) circle (1.3pt);
+    \node[below right=1pt, black] at (0, 0) {\scriptsize $(0, 0)$};
+
+    % 2. Reta transladada para cima (b = 1.5): y = x + 1.5
+    \draw[thick, blue!75!black, dashed, domain=-2.5:1.3] 
+        plot (\x, {\x + 1.5});
+    \node[above left, blue!75!black] at (1.2, 2.7) {\scriptsize $y = x + 1.5$};
+    \fill[blue!75!black] (0, 1.5) circle (1.3pt);
+    \node[left=2pt, blue!75!black] at (0, 1.5) {\scriptsize $(0, b_1)$};
+
+    % 3. Reta transladada para baixo (b = -1.5): y = x - 1.5
+    \draw[thick, purple!75!black, dashdotted, domain=-1.0:2.6] 
+        plot (\x, {\x - 1.5});
+    \node[below right, purple!75!black] at (2.4, 0.9) {\scriptsize $y = x - 1.5$};
+    \fill[purple!75!black] (0, -1.5) circle (1.3pt);
+    \node[right=2pt, purple!75!black] at (0, -1.5) {\scriptsize $(0, b_2)$};
+
+    % Vetores de translação vertical no eixo y
+    \draw[->, line width=0.9pt, blue!75!black] (0, 0.1) -- (0, 1.4);
+    \node[left, blue!75!black] at (0, 0.75) {\scriptsize $+1.5$};
+
+    \draw[->, line width=0.9pt, purple!75!black] (0, -0.1) -- (0, -1.4);
+    \node[left, purple!75!black] at (0, -0.75) {\scriptsize $-1.5$};
+
+    % Rótulo de conclusão
+    \node[below, align=center] at (0.2, -2.9) {\scriptsize Translações verticais alteram o intercepto $b$, mas mantêm o coeficiente angular $f'(x) = a = 1 > 0$};
+\end{tikzpicture}
+\end{center}
+
+
 % ------------------------------------------------------------------------------
 % 7.3 a 7.17 (ESTRUTURA DE ESPERA PARA PRÓXIMAS RESOLUÇÕES)
 % ------------------------------------------------------------------------------
