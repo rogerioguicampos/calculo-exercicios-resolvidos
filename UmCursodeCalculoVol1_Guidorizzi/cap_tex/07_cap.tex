@@ -3325,12 +3325,12 @@ O gráfico a seguir ilustra a família de retas paralelas $y = ax + b$ com $a = 
   \end{itemize}
 \end{recursosbox}
 
-Interpretação Geométrica e Verificação Analítica.
+\paragraph{Interpretação Geométrica e Verificação Analítica}
 
 Consideremos a função quadrática $f: \mathbb{R} \to \mathbb{R}$ dada por $f(x) = (x - 1)^2$.
 Vamos calcular as derivadas nos pontos $p = 0$ e $p = 1$ pela definição.
 
-\begin{itemize}[leftmargin=*, label=$\bullet$]
+\begin{itemize}[noitemsep, topsep=2pt]
     \item Derivada em $p = 0$. Temos $f(0) = (0 - 1)^2 = 1$. Pela definição pontual:
     \begin{align*}
     f'(0) &= \lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} \\
@@ -3352,14 +3352,13 @@ Vamos calcular as derivadas nos pontos $p = 0$ e $p = 1$ pela definição.
     \end{align*}
     A reta tangente $T_1$ no vértice $(1, 0)$ tem coeficiente angular nulo ($m_1 = 0$), sendo perfeitamente horizontal ($y = 0$).
 \end{itemize}
-
-Comparando os dois coeficientes angulares:
+Comparando os dois coeficientes angulares, temos:
 \[
 f'(0) = -2 < 0 = f'(1)
 \]
-o que satisfaz com rigor a condição pedida.
+O que satisfaz com rigor a condição pedida.
 
-Representação Gráfica Comparativa.
+\paragraph{Representação Gráfica Comparativa}
 
 O gráfico abaixo ilustra a curva $f(x) = (x - 1)^2$ e evidencia o contraste de inclinação entre a reta tangente descendente $T_0$ em $(0, 1)$ e a reta tangente horizontal $T_1$ em $(1, 0)$:
 
@@ -3414,6 +3413,8 @@ Portanto, o gráfico de $f(x) = (x - 1)^2$ exemplifica geometricamente a condiç
   \end{itemize}
 \end{estrategiabox}
 
+\vspace{0.3cm}
+
 \begin{recursosbox}
   \begin{itemize}[noitemsep, topsep=2pt]
     \item Definição da função módulo: $|u| = \begin{cases} u, & \text{se } u \ge 0 \\ -u, & \text{se } u < 0 \end{cases}$.
@@ -3426,9 +3427,12 @@ Portanto, o gráfico de $f(x) = (x - 1)^2$ exemplifica geometricamente a condiç
   \end{itemize}
 \end{recursosbox}
 
-1. O Gráfico da Função Módulo $f(x) = |x|$.
+\vspace{0.4cm}
 
-A função módulo $f:\mathbb{R} \to \mathbb{R}$ dada por $f(x) = |x|$ é contínua em todo o conjunto dos números reais e pode ser decomposta em dois ramos lineares:
+\paragraph*{1. O Gráfico da Função Módulo $f(x) = |x|$}
+
+\noindent
+A função módulo $f\colon \mathbb{R} \to \mathbb{R}$ dada por $f(x) = |x|$ é contínua em todo o conjunto dos números reais e pode ser decomposta em dois ramos lineares:
 \[
 f(x) = \begin{cases}
 x, & \text{se } x \ge 0 \\
@@ -3459,19 +3463,28 @@ x, & \text{se } x \ge 0 \\
 \end{tikzpicture}
 \end{center}
 
-2. Interpretação Geométrica e Semirretas Tangentes em $x = 0$.
+\vspace{0.3cm}
 
+\paragraph*{2. Interpretação Geométrica e Semirretas Tangentes em $x = 0$}
+
+\noindent
 Ao observarmos a inclinação das retas secantes que unem $(0, 0)$ a pontos vizinhos $(x, f(x))$:
-\begin{itemize}[noitemsep, topsep=2pt]
+\begin{itemize}[noitemsep, topsep=3pt]
     \item Pela direita ($x > 0$), o gráfico coincide com a reta $y = x$, cujo coeficiente angular é estritamente $+1$. Portanto, a semirreta tangente à direita tem inclinação $m_+ = +1$.
     \item Pela esquerda ($x < 0$), o gráfico coincide com a reta $y = -x$, cujo coeficiente angular é estritamente $-1$. Logo, a semirreta tangente à esquerda tem inclinação $m_- = -1$.
 \end{itemize}
+
+\vspace{0.15cm}
+\noindent
 Como as duas inclinações laterais não coincidem na origem, não existe uma única reta tangente bem definida em $(0, 0)$, caracterizando geometricamente um \textbf{ponto anguloso} (ou bico).
 
-3. Demonstração Analítica da Não Existência de $f'(0)$.
+\vspace{0.4cm}
 
+\paragraph*{3. Demonstração Analítica da Não Existência de $f'(0)$}
+
+\noindent
 Calculamos as derivadas laterais em $p = 0$ aplicando a definição pontual:
-\begin{itemize}[leftmargin=*, label=$\bullet$]
+\begin{itemize}[noitemsep, topsep=3pt]
     \item Pela direita ($x \to 0^+ \implies x > 0$, logo $|x| = x$):
     \[
     f'_+(0) = \lim_{x \to 0^+} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^+} \frac{|x| - 0}{x} = \lim_{x \to 0^+} \frac{x}{x} = \lim_{x \to 0^+} 1 = 1
@@ -3482,35 +3495,50 @@ Calculamos as derivadas laterais em $p = 0$ aplicando a definição pontual:
     f'_-(0) = \lim_{x \to 0^-} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^-} \frac{|x| - 0}{x} = \lim_{x \to 0^-} \frac{-x}{x} = \lim_{x \to 0^-} (-1) = -1
     \]
 \end{itemize}
+
+\vspace{0.15cm}
+\noindent
 Como $f'_+(0) = 1 \neq -1 = f'_-(0)$, o limite bilateral não existe e, portanto:
 \[
 \text{Não existe } f'(0).
 \]
 
-4. Translação Horizontal e Construção da Função $g(x) = |x - 1|$.
+\vspace{0.4cm}
 
+\paragraph*{4. Translação Horizontal e Construção da Função $g(x) = |x - 1|$}
+
+\noindent
 O exercício requer que a derivada não exista na abscissa $p = 1$. Sabendo que o deslocamento rígido de uma unidade para a direita é obtido substituindo a variável $x$ por $x - 1$, definimos:
 \[
 g(x) = f(x - 1) = |x - 1|, \quad \forall x \in \mathbb{R}
 \]
-Por ser a composição de funções contínuas, $g$ é contínua em todo o $\mathbb{R}$. 
+Por ser a composição de funções contínuas, $g$ é contínua em todo o $\mathbb{R}$.
 
+\vspace{0.2cm}
+\noindent
 Vamos demonstrar analiticamente que $g'(1)$ não existe calculando suas derivadas laterais em $p = 1$:
 \begin{align*}
-g'_+(1) &= \lim_{x \to 1^+} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1^+} \frac{|x - 1| - 0}{x - 1} = \lim_{x \to 1^+} \frac{x - 1}{x - 1} = 1 \\
+g'_+(1) &= \lim_{x \to 1^+} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1^+} \frac{|x - 1| - 0}{x - 1} = \lim_{x \to 1^+} \frac{x - 1}{x - 1} = 1 \\[0.20cm]
 g'_-(1) &= \lim_{x \to 1^-} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1^-} \frac{|x - 1| - 0}{x - 1} = \lim_{x \to 1^-} \frac{-(x - 1)}{x - 1} = -1
 \end{align*}
+
+\noindent
 Visto que $g'_+(1) \neq g'_-(1)$, concluímos que $\text{não existe } g'(1)$.
 
-5. Família de Funções Modulares com Ponto Anguloso em $x = 1$.
+\vspace{0.4cm}
 
-Utilizando exclusivamente transformações sobre a função modular elementar, podemos compor outras funções contínuas em $\mathbb{R}$ cujo ponto anguloso ocorra exatamente em $x = 1$:
-\begin{itemize}[noitemsep, topsep=2pt]
+\paragraph*{5. Família de Funções Modulares com Ponto Anguloso em $x = 1$}
+
+\noindent
+Utilizando transformações rígidas sobre a função modular elementar, podemos compor outras funções contínuas em $\mathbb{R}$ cujo ponto anguloso ocorra exatamente em $x = 1$:
+\begin{itemize}[noitemsep, topsep=3pt]
     \item $g_1(x) = |x - 1|$: translação horizontal básica (com vértice em $(1, 0)$).
-    \item $g_2(x) = -|x - 1| + 2$: reflexão em relação ao eixo horizontal seguida de translação vertical (com vértice em $(1, 2)$).
-    \item $g_3(x) = 2|x - 1| - 1$: abertura mais estreita com translação vertical para baixo (com vértice em $(1, -1)$).
+    \item $g_2(x) = -|x - 1| + 2$: reflexão no eixo horizontal e translação vertical (com vértice em $(1, 2)$).
+    \item $g_3(x) = 2|x - 1| - 1$: alteração de abertura e translação vertical (com vértice em $(1, -1)$).
 \end{itemize}
 
+\vspace{0.2cm}
+\noindent
 O gráfico abaixo ilustra essas funções modulares, evidenciando que todas compartilham o mesmo bico na reta vertical $x = 1$, impossibilitando a existência da derivada nesse ponto:
 
 \begin{center}
@@ -3546,8 +3574,9 @@ O gráfico abaixo ilustra essas funções modulares, evidenciando que todas comp
 \end{tikzpicture}
 \end{center}
 
-Portanto, a função $g(x) = |x - 1|$ é um exemplo de função contínua em todo o $\mathbb{R}$ cuja derivada no ponto $p = 1$ não existe.
-
+\vspace{0.2cm}
+\noindent
+Portanto, a função $g(x) = |x - 1|$ é um exemplo de função contínua em todo o $\mathbb{R}$ cuja derivada no ponto $p = 1$ não existe. \qed
 % ------------------------------------------------------------------------------
 % 7.3 a 7.17 (ESTRUTURA DE ESPERA COMENTADA PARA NÃO POLUIR O SUMÁRIO)
 % ------------------------------------------------------------------------------
