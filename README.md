@@ -1,6 +1,6 @@
 # Olá
 
-O objetivo principal deste projeto é simples: que este conjunto de código, notas e exercícios ajude quem estiver travado em Cálculo I, II, III ou em disciplinas afins — e, de quebra, acalme a minha própria cabeça ao saber que o esforço acumulado nos rascunhos está sendo útil para alguém, mesmo que eu nunca saiba quem.
+O objetivo principal deste projeto é simples: que este conjunto de código, notas e exercícios ajude quem estiver travado em Cálculo I, II, III ou em disciplinas afins e, de quebra, acalme a minha própria mente ao saber que o esforço acumulado nos rascunhos está sendo útil para alguém, mesmo que eu nunca saiba quem.
 
 ## Diretrizes do material
 
