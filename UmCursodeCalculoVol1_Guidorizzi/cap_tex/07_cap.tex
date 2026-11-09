@@ -2179,27 +2179,28 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 \linkresolucao{7.17.49}
 \end{exercicio}
 
-
 % ==============================================================================
 % PARTE 2: RESOLUÇÕES DO CAPÍTULO
 % ==============================================================================
 \clearpage
-\section*{Resoluções do Capítulo 7}
-\addcontentsline{toc}{section}{Resoluções do Capítulo 7}
+\setcounter{section}{6}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\section{Resoluções do Capítulo 7 - Derivadas}
 
 % ==============================================================================
-% 7.1. INTRODUÇÃO
+% RESOLUCAO 7.1. INTRODUÇÃO
 % ==============================================================================
-\subsection*{7.1. Introdução}
+\subsection{Introdução}
 \textit{Esta subseção não possui exercícios.}
 
 % ==============================================================================
-% 7.2. DERIVADA DE UMA FUNÇÃO
+% RESOLUCAO 7.2. DERIVADA DE UMA FUNÇÃO
 % ==============================================================================
-\subsection*{7.2. Derivada de uma função}
+\subsection{Derivada de uma função}
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 1.}
+\subsubsection{Exercício 1}
 \label{res:7.2.1}
 \linkenunciado{7.2.1}
 
@@ -2225,9 +2226,9 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 
     Substituindo $f(x)$ e $f(1)$ em \eqref{eq:quociente_ponto1}:
     \begin{align*}
-        \frac{f(x) - f(1)}{x - 1} &= \frac{(x^2 + 1) - 2}{x - 1} \\[0.25cm]
-        &= \frac{x^2 - 1}{x - 1} \\[0.25cm]
-        &= \frac{(x - 1)(x + 1)}{x - 1} \\[0.25cm]
+        \frac{f(x) - f(1)}{x - 1} &= \frac{(x^2 + 1) - 2}{x - 1} \\[0.20cm]
+        &= \frac{x^2 - 1}{x - 1} \\[0.20cm]
+        &= \frac{(x - 1)(x + 1)}{x - 1} \\[0.20cm]
         &= x + 1
     \end{align*}
 
@@ -2237,7 +2238,7 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
     \]
     Portanto:
     \[
-    f'(1) = 2 \qedsymbolmath
+    f'(1) = 2 
     \]
 
     \item $f'(0)$
@@ -2260,8 +2261,8 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 
     Substituindo $f(x)$ e $f(0)$ em \eqref{eq:quociente_ponto0}:
     \begin{align*}
-        \frac{f(x) - f(0)}{x - 0} &= \frac{(x^2 + 1) - 1}{x} \\[0.25cm]
-        &= \frac{x^2}{x} \\[0.25cm]
+        \frac{f(x) - f(0)}{x - 0} &= \frac{(x^2 + 1) - 1}{x} \\[0.20cm]
+        &= \frac{x^2}{x} \\[0.20cm]
         &= x
     \end{align*}
 
@@ -2272,7 +2273,7 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
 
     Portanto:
     \[
-    f'(0) = 0 \qedsymbolmath
+    f'(0) = 0 
     \]
 
     \item $f'(x)$
@@ -2308,9 +2309,9 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
     \]
     Substituindo $f(x + h)$ e $f(x)$ em \eqref{eq:quociente} para $h \neq 0$:
     \begin{align*}
-        \frac{f(x + h) - f(x)}{h} &= \frac{(x^2 + 2hx + h^2 + 1) - (x^2 + 1)}{h} \\[0.25cm]
-        &= \frac{2hx + h^2}{h} \\[0.25cm]
-        &= \frac{h(2x + h)}{h} \\[0.25cm]
+        \frac{f(x + h) - f(x)}{h} &= \frac{(x^2 + 2hx + h^2 + 1) - (x^2 + 1)}{h} \\[0.20cm]
+        &= \frac{2hx + h^2}{h} \\[0.20cm]
+        &= \frac{h(2x + h)}{h} \\[0.20cm]
         &= 2x + h
     \end{align*}
 
@@ -2320,17 +2321,17 @@ Suponha $f$ definida em $\R$, derivável em 0 e $f(0) = 0$. Prove que existe $g$
     \]
     Portanto:
     \[
-    f'(x) = 2x \qedsymbolmath
+    f'(x) = 2x
     \]
 \end{enumerate}
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 2.}
+\subsubsection{Exercício 2}
 \label{res:7.2.2}
 \linkenunciado{7.2.2}
 \setcounter{equation}{0}
 
-\textbf{Passo 1: Cálculo de $f'(p)$ pela definição formal.}
+Passo 1: Cálculo de $f'(p)$ pela definição formal.
 
 Pela definição formal de derivada no ponto $p$:
 \begin{equation}
@@ -2344,8 +2345,8 @@ Primeiro, manipulamos o quociente incremental para $x \neq p$:
 
 Sendo $f(x) = 2x$, temos $f(p) = 2p$. Substituindo em \eqref{eq:quociente_ex2}:
 \begin{align*}
-    \frac{f(x) - f(p)}{x - p} &= \frac{2x - 2p}{x - p} \\[0.25cm]
-    &= \frac{2(x - p)}{x - p} \\[0.25cm]
+    \frac{f(x) - f(p)}{x - p} &= \frac{2x - 2p}{x - p} \\[0.20cm]
+    &= \frac{2(x - p)}{x - p} \\[0.20cm]
     &= 2
 \end{align*}
 
@@ -2356,11 +2357,11 @@ Aplicando o limite em \eqref{eq:def_derivada_ex2} quando $x \to p$:
 
 Portanto:
 \[
-f'(p) = 2 \qedsymbolmath
+f'(p) = 2 
 \]
 
 \vspace{0.3cm}
-\textbf{Passo 2: Discussão geométrica do resultado.}
+Passo 2: Discussão geométrica do resultado.
 
 Geometricamente, a derivada $f'(p)$ representa a taxa de variação instantânea de $f$ em relação a $x$, isto é, a inclinação (coeficiente angular) da reta tangente à curva no ponto $(p, f(p))$.
 
@@ -2370,7 +2371,7 @@ Como $f(x) = 2x$ já é uma função linear cujo gráfico é uma reta de equaç�
 \end{itemize}
 
 \vspace{0.3cm}
-\textbf{Passo 3: Determinação da equação da reta tangente em $(p, f(p))$.}
+Passo 3: Determinação da equação da reta tangente em $(p, f(p))$.
 
 A equação da reta tangente ao gráfico de $f$ no ponto $(p, f(p))$ é dada por:
 \begin{equation}
@@ -2379,13 +2380,13 @@ A equação da reta tangente ao gráfico de $f$ no ponto $(p, f(p))$ é dada por
 
 Sabendo que $f(p) = 2p$ e $f'(p) = 2$, substituímos esses valores em \eqref{eq:reta_tangente_ex2}:
 \begin{align*}
-    y - 2p &= 2(x - p) \\[0.25cm]
-    y - 2p &= 2x - 2p \\[0.25cm]
+    y - 2p &= 2(x - p) \\[0.20cm]
+    y - 2p &= 2x - 2p \\[0.20cm]
     y &= 2x
 \end{align*}
 
 \vspace{0.3cm}
-\textbf{Passo 4: Discussão gráfica da reta tangente.}
+Passo 4: Discussão gráfica da reta tangente.
 
 A reta tangente obtida tem por equação $y = 2x$, que coincide exatamente com a própria função $f(x) = 2x$.
 
@@ -2413,12 +2414,12 @@ Graficamente, isso expressa uma propriedade fundamental das funções afins: a m
 \end{center}
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 3.}
+\subsubsection{Exercício 3}
 \label{res:7.2.3}
 \linkenunciado{7.2.3}
 \setcounter{equation}{0}
 
-\textbf{Determinação da Derivada Geral em um Ponto $p \in \R$:}
+Determinação da Derivada Geral em um Ponto $p \in \R$:
 
 Pela definição formal de derivada num ponto arbitrário $p$:
 \begin{equation}
@@ -2432,9 +2433,9 @@ Para $x \neq p$, manipulamos algebricamente o quociente incremental:
 
 Como $f(x) = 3x + 2$, temos $f(p) = 3p + 2$. Substituindo em \eqref{eq:quociente_ex3}:
 \begin{align*}
-    \frac{f(x) - f(p)}{x - p} &= \frac{(3x + 2) - (3p + 2)}{x - p} \\[0.25cm]
-    &= \frac{3x - 3p}{x - p} \\[0.25cm]
-    &= \frac{3(x - p)}{x - p} \\[0.25cm]
+    \frac{f(x) - f(p)}{x - p} &= \frac{(3x + 2) - (3p + 2)}{x - p} \\[0.20cm]
+    &= \frac{3x - 3p}{x - p} \\[0.20cm]
+    &= \frac{3(x - p)}{x - p} \\[0.20cm]
     &= 3
 \end{align*}
 
@@ -2448,40 +2449,40 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
 \end{equation}
 
 \vspace{0.3cm}
-\textbf{Resolução dos Itens por Substituição Direta:}
+Resolução dos Itens por Substituição Direta:
 
 \begin{enumerate}[label=\alph*)]
     \item $f'(2)$
     
     Fazendo $p = 2$ no resultado geral \eqref{eq:resultado_geral_ex3}:
     \[
-    f'(2) = 3 \qedsymbolmath
+    f'(2) = 3 
     \]
 
     \item $f'(0)$
     
     Fazendo $p = 0$ no resultado geral \eqref{eq:resultado_geral_ex3}:
     \[
-    f'(0) = 3 \qedsymbolmath
+    f'(0) = 3 
     \]
 
     \item $f'(x)$
     
     Sendo a variável independente indicada por $x$, a função derivada associa a cada ponto $x \in \R$ o valor de sua derivada obtido em \eqref{eq:resultado_geral_ex3}:
     \[
-    f'(x) = 3 \qedsymbolmath
+    f'(x) = 3 
     \]
 \end{enumerate}
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 4.}
+\subsubsection{Exercício 4}
 \label{res:7.2.4}
 \linkenunciado{7.2.4}
 \setcounter{equation}{0}
 
 
 \vspace{0.4cm}
-\textbf{Resoluções Passo a Passo:}
+Resoluções Passo a Passo:
 
 \begin{enumerate}[label=\alph*)]
     % Item a
@@ -2493,8 +2494,8 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     \]
     Para $x \neq 1$, simplificamos o quociente incremental:
     \begin{align*}
-        \frac{f(x) - f(1)}{x - 1} &= \frac{x^2 + x - 2}{x - 1} \\[0.25cm]
-        &= \frac{(x - 1)(x + 2)}{x - 1} \\[0.25cm]
+        \frac{f(x) - f(1)}{x - 1} &= \frac{x^2 + x - 2}{x - 1} \\[0.20cm]
+        &= \frac{(x - 1)(x + 2)}{x - 1} \\[0.20cm]
         &= x + 2
     \end{align*}
     Calculando o limite pela definição:
@@ -2502,7 +2503,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(1) = \lim_{x \to 1} (x + 2) = 1 + 2 = 3
     \]
     \[
-    f'(1) = 3 \qedsymbolmath
+    f'(1) = 3 
     \]
 
     % Item b
@@ -2514,9 +2515,9 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     \]
     Para $x \neq 4$ com $x \ge 0$, multiplicamos numerador e denominador pelo conjugado $(\sqrt{x} + 2)$:
     \begin{align*}
-        \frac{f(x) - f(4)}{x - 4} &= \frac{\sqrt{x} - 2}{x - 4} \\[0.25cm]
-        &= \frac{(\sqrt{x} - 2)(\sqrt{x} + 2)}{(x - 4)(\sqrt{x} + 2)} \\[0.25cm]
-        &= \frac{x - 4}{(x - 4)(\sqrt{x} + 2)} \\[0.25cm]
+        \frac{f(x) - f(4)}{x - 4} &= \frac{\sqrt{x} - 2}{x - 4} \\[0.20cm]
+        &= \frac{(\sqrt{x} - 2)(\sqrt{x} + 2)}{(x - 4)(\sqrt{x} + 2)} \\[0.20cm]
+        &= \frac{x - 4}{(x - 4)(\sqrt{x} + 2)} \\[0.20cm]
         &= \frac{1}{\sqrt{x} + 2}
     \end{align*}
     Passando ao limite quando $x \to 4$:
@@ -2524,7 +2525,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(4) = \lim_{x \to 4} \frac{1}{\sqrt{x} + 2} = \frac{1}{\sqrt{4} + 2} = \frac{1}{4}
     \]
     \[
-    f'(4) = \frac{1}{4} \qedsymbolmath
+    f'(4) = \frac{1}{4} 
     \]
 
     % Item c
@@ -2536,8 +2537,8 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     \]
     Para $x \neq -3$:
     \begin{align*}
-        \frac{f(x) - f(-3)}{x - (-3)} &= \frac{(5x - 3) - (-18)}{x + 3} \\[0.25cm]
-        &= \frac{5x + 15}{x + 3} \\[0.25cm]
+        \frac{f(x) - f(-3)}{x - (-3)} &= \frac{(5x - 3) - (-18)}{x + 3} \\[0.20cm]
+        &= \frac{5x + 15}{x + 3} \\[0.20cm]
         &= \frac{5(x + 3)}{x + 3} = 5
     \end{align*}
     Passando ao limite quando $x \to -3$:
@@ -2545,7 +2546,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(-3) = \lim_{x \to -3} 5 = 5
     \]
     \[
-    f'(-3) = 5 \qedsymbolmath
+    f'(-3) = 5 
     \]
 
     % Item d
@@ -2557,9 +2558,9 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     \]
     Para $x \neq 1$ e $x \neq 0$:
     \begin{align*}
-        \frac{f(x) - f(1)}{x - 1} &= \frac{\dfrac{1}{x} - 1}{x - 1} \\[0.25cm]
-        &= \frac{\dfrac{1 - x}{x}}{x - 1} \\[0.25cm]
-        &= \frac{-(x - 1)}{x(x - 1)} \\[0.25cm]
+        \frac{f(x) - f(1)}{x - 1} &= \frac{\dfrac{1}{x} - 1}{x - 1} \\[0.20cm]
+        &= \frac{\dfrac{1 - x}{x}}{x - 1} \\[0.20cm]
+        &= \frac{-(x - 1)}{x(x - 1)} \\[0.20cm]
         &= -\frac{1}{x}
     \end{align*}
     Passando ao limite quando $x \to 1$:
@@ -2567,7 +2568,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(1) = \lim_{x \to 1} \left(-\frac{1}{x}\right) = -1
     \]
     \[
-    f'(1) = -1 \qedsymbolmath
+    f'(1) = -1 
     \]
 
     % Item e
@@ -2579,9 +2580,9 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     \]
     Para $x \neq 3$ e $x \ge 0$, multiplicamos pelo conjugado $(\sqrt{x} + \sqrt{3})$:
     \begin{align*}
-        \frac{f(x) - f(3)}{x - 3} &= \frac{\sqrt{x} - \sqrt{3}}{x - 3} \\[0.25cm]
-        &= \frac{(\sqrt{x} - \sqrt{3})(\sqrt{x} + \sqrt{3})}{(x - 3)(\sqrt{x} + \sqrt{3})} \\[0.25cm]
-        &= \frac{x - 3}{(x - 3)(\sqrt{x} + \sqrt{3})} \\[0.25cm]
+        \frac{f(x) - f(3)}{x - 3} &= \frac{\sqrt{x} - \sqrt{3}}{x - 3} \\[0.20cm]
+        &= \frac{(\sqrt{x} - \sqrt{3})(\sqrt{x} + \sqrt{3})}{(x - 3)(\sqrt{x} + \sqrt{3})} \\[0.20cm]
+        &= \frac{x - 3}{(x - 3)(\sqrt{x} + \sqrt{3})} \\[0.20cm]
         &= \frac{1}{\sqrt{x} + \sqrt{3}}
     \end{align*}
     Passando ao limite quando $x \to 3$:
@@ -2589,7 +2590,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(3) = \lim_{x \to 3} \frac{1}{\sqrt{x} + \sqrt{3}} = \frac{1}{\sqrt{3} + \sqrt{3}} = \frac{1}{2\sqrt{3}} = \frac{\sqrt{3}}{6}
     \]
     \[
-    f'(3) = \frac{\sqrt{3}}{6} \qedsymbolmath
+    f'(3) = \frac{\sqrt{3}}{6} 
     \]
 
     % Item f
@@ -2601,9 +2602,9 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     \]
     Para $x \neq 2$ e $x \neq 0$:
     \begin{align*}
-        \frac{f(x) - f(2)}{x - 2} &= \frac{\dfrac{1}{x^2} - \dfrac{1}{4}}{x - 2} \\[0.25cm]
-        &= \frac{\dfrac{4 - x^2}{4x^2}}{x - 2} \\[0.25cm]
-        &= \frac{-(x - 2)(x + 2)}{4x^2(x - 2)} \\[0.25cm]
+        \frac{f(x) - f(2)}{x - 2} &= \frac{\dfrac{1}{x^2} - \dfrac{1}{4}}{x - 2} \\[0.20cm]
+        &= \frac{\dfrac{4 - x^2}{4x^2}}{x - 2} \\[0.20cm]
+        &= \frac{-(x - 2)(x + 2)}{4x^2(x - 2)} \\[0.20cm]
         &= -\frac{x + 2}{4x^2}
     \end{align*}
     Passando ao limite quando $x \to 2$:
@@ -2611,7 +2612,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(2) = \lim_{x \to 2} \left(-\frac{x + 2}{4x^2}\right) = -\frac{2 + 2}{4(2^2)} = -\frac{4}{16} = -\frac{1}{4}
     \]
     \[
-    f'(2) = -\frac{1}{4} \qedsymbolmath
+    f'(2) = -\frac{1}{4} 
     \]
 
     % Item g
@@ -2638,7 +2639,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(1) = \lim_{x \to 1} (2x^2 + x + 1) = 2(1)^2 + 1 + 1 = 4
     \]
     \[
-    f'(1) = 4 \qedsymbolmath
+    f'(1) = 4 
     \]
 
     % Item h
@@ -2654,7 +2655,7 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     \]
     Utilizando a identidade algébrica da diferença de cubos $A - B = (\sqrt[3]{A} - \sqrt[3]{B})\left(\sqrt[3]{A^2} + \sqrt[3]{AB} + \sqrt[3]{B^2}\right)$ no denominador para simplificar o fator $(\sqrt[3]{x} - \sqrt[3]{2})$:
     \begin{align*}
-        \frac{f(x) - f(2)}{x - 2} &= \frac{\sqrt[3]{x} - \sqrt[3]{2}}{(\sqrt[3]{x} - \sqrt[3]{2})\left(\sqrt[3]{x^2} + \sqrt[3]{2x} + \sqrt[3]{4}\right)} \\[0.25cm]
+        \frac{f(x) - f(2)}{x - 2} &= \frac{\sqrt[3]{x} - \sqrt[3]{2}}{(\sqrt[3]{x} - \sqrt[3]{2})\left(\sqrt[3]{x^2} + \sqrt[3]{2x} + \sqrt[3]{4}\right)} \\[0.20cm]
         &= \frac{1}{\sqrt[3]{x^2} + \sqrt[3]{2x} + \sqrt[3]{4}}
     \end{align*}
     Passando ao limite quando $x \to 2$:
@@ -2662,21 +2663,21 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(2) = \lim_{x \to 2} \frac{1}{\sqrt[3]{x^2} + \sqrt[3]{2x} + \sqrt[3]{4}} = \frac{1}{\sqrt[3]{4} + \sqrt[3]{4} + \sqrt[3]{4}} = \frac{1}{3\sqrt[3]{4}} = \frac{\sqrt[3]{2}}{6}
     \]
     \[
-    f'(2) = \frac{\sqrt[3]{2}}{6} \qedsymbolmath
+    f'(2) = \frac{\sqrt[3]{2}}{6} 
     \]
 \end{enumerate}
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 5.}
+\subsubsection{Exercício 5}
 \label{res:7.2.5}
 \linkenunciado{7.2.5}
 \setcounter{equation}{0}
 
-\begin{estrategiabox}[title=Estratégia Geral]
+\begin{estrategiabox}
   \begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Passo 1:} Determinar o ponto de tangência $(p, f(p))$.
-    \item \textbf{Passo 2:} Calcular o coeficiente angular $f'(p)$ pela definição \[\equdefderivadaII\]
-    \item \textbf{Passo 3:} Substituir $(p, f(p))$ e $f'(p)$ em \[\equdefretatangente\] e simplificar para a forma reduzida $y = mx + b$.
+    \item Passo 1: Determinar o ponto de tangência $(p, f(p))$.
+    \item Passo 2: Calcular o coeficiente angular $f'(p)$ pela definição \[\equdefderivadaII\]
+    \item Passo 3: Substituir $(p, f(p))$ e $f'(p)$ em \[\equdefretatangente\] e simplificar para a forma reduzida $y = mx + b$.
   \end{itemize}
 \end{estrategiabox}
 
@@ -2685,16 +2686,15 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     % Item a
     \item $f(x) = x^2$ e $p = 2$
     
-    \textbf{Passo 1: Determinar o ponto de tangência.}
+    Passo 1: Determinar o ponto de tangência.
     \[
     f(2) = 2^2 = 4 \implies (p, f(p)) = (2, 4)
     \]
 
-    \textbf{Passo 2: Calcular o coeficiente angular $f'(2)$ pela definição.}
-    Para $x \neq 2$:
+    Passo 2: Calcular o coeficiente angular $f'(2)$ pela definição. Para $x \neq 2$:
     \begin{align*}
-        \frac{f(x) - f(2)}{x - 2} &= \frac{x^2 - 4}{x - 2} \\[0.25cm]
-        &= \frac{(x - 2)(x + 2)}{x - 2} \\[0.25cm]
+        \frac{f(x) - f(2)}{x - 2} &= \frac{x^2 - 4}{x - 2} \\[0.20cm]
+        &= \frac{(x - 2)(x + 2)}{x - 2} \\[0.20cm]
         &= x + 2
     \end{align*}
     Passando ao limite quando $x \to 2$:
@@ -2702,35 +2702,33 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(2) = \lim_{x \to 2} (x + 2) = 2 + 2 = 4
     \]
 
-    \textbf{Passo 3: Equação da reta tangente.}
-
-    Substituindo $(p, f(p)) = (2, 4)$ e $f'(2) = 4$:
+    Passo 3: Equação da reta tangente. Substituindo $(p, f(p)) = (2, 4)$ e $f'(2) = 4$:
     \begin{align*}
-        y - 4 &= 4(x - 2) \\[0.25cm]
-        y - 4 &= 4x - 8 \\[0.25cm]
+        y - 4 &= 4(x - 2) \\[0.20cm]
+        y - 4 &= 4x - 8 \\[0.20cm]
         y &= 4x - 4
     \end{align*}
 
     Portanto:
     \[
-    y = 4x - 4 \qedsymbolmath
+    y = 4x - 4 
     \]
 
     % Item b
     \item $f(x) = \dfrac{1}{x}$ e $p = 2$
     
-    \textbf{Passo 1: Determinar o ponto de tangência.}
+    Passo 1: Determinar o ponto de tangência.
     \[
     f(2) = \frac{1}{2} \implies (p, f(p)) = \left(2, \frac{1}{2}\right)
     \]
 
-    \textbf{Passo 2: Calcular o coeficiente angular $f'(2)$ pela definição.}
+    Passo 2: Calcular o coeficiente angular $f'(2)$ pela definição.
 
     Para $x \neq 2$ e $x \neq 0$:
     \begin{align*}
-        \frac{f(x) - f(2)}{x - 2} &= \frac{\dfrac{1}{x} - \dfrac{1}{2}}{x - 2} \\[0.25cm]
-        &= \frac{\dfrac{2 - x}{2x}}{x - 2} \\[0.25cm]
-        &= \frac{-(x - 2)}{2x(x - 2)} \\[0.25cm]
+        \frac{f(x) - f(2)}{x - 2} &= \frac{\dfrac{1}{x} - \dfrac{1}{2}}{x - 2} \\[0.20cm]
+        &= \frac{\dfrac{2 - x}{2x}}{x - 2} \\[0.20cm]
+        &= \frac{-(x - 2)}{2x(x - 2)} \\[0.20cm]
         &= -\frac{1}{2x}
     \end{align*}
     Passando ao limite quando $x \to 2$:
@@ -2738,35 +2736,35 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(2) = \lim_{x \to 2} \left(-\frac{1}{2x}\right) = -\frac{1}{2(2)} = -\frac{1}{4}
     \]
 
-    \textbf{Passo 3: Equação da reta tangente.}
+    Passo 3: Equação da reta tangente.
 
     Substituindo $(p, f(p)) = \left(2, \dfrac{1}{2}\right)$ e $f'(2) = -\dfrac{1}{4}$:
     \begin{align*}
-        y - \frac{1}{2} &= -\frac{1}{4}(x - 2) \\[0.25cm]
-        y - \frac{1}{2} &= -\frac{1}{4}x + \frac{1}{2} \\[0.25cm]
+        y - \frac{1}{2} &= -\frac{1}{4}(x - 2) \\[0.20cm]
+        y - \frac{1}{2} &= -\frac{1}{4}x + \frac{1}{2} \\[0.20cm]
         y &= -\frac{1}{4}x + 1
     \end{align*}
 
     Portanto:
     \[
-    y = -\frac{1}{4}x + 1 \qedsymbolmath
+    y = -\frac{1}{4}x + 1 
     \]
 
     % Item c
     \item $f(x) = \sqrt{x}$ e $p = 9$
     
-    \textbf{Passo 1: Determinar o ponto de tangência.}
+    Passo 1: Determinar o ponto de tangência.
     \[
     f(9) = \sqrt{9} = 3 \implies (p, f(p)) = (9, 3)
     \]
 
-    \textbf{Passo 2: Calcular o coeficiente angular $f'(9)$ pela definição.}
+    Passo 2: Calcular o coeficiente angular $f'(9)$ pela definição.
 
     Para $x \neq 9$ com $x \ge 0$, multiplicamos pelo conjugado $(\sqrt{x} + 3)$:
     \begin{align*}
-        \frac{f(x) - f(9)}{x - 9} &= \frac{\sqrt{x} - 3}{x - 9} \\[0.25cm]
-        &= \frac{(\sqrt{x} - 3)(\sqrt{x} + 3)}{(x - 9)(\sqrt{x} + 3)} \\[0.25cm]
-        &= \frac{x - 9}{(x - 9)(\sqrt{x} + 3)} \\[0.25cm]
+        \frac{f(x) - f(9)}{x - 9} &= \frac{\sqrt{x} - 3}{x - 9} \\[0.20cm]
+        &= \frac{(\sqrt{x} - 3)(\sqrt{x} + 3)}{(x - 9)(\sqrt{x} + 3)} \\[0.20cm]
+        &= \frac{x - 9}{(x - 9)(\sqrt{x} + 3)} \\[0.20cm]
         &= \frac{1}{\sqrt{x} + 3}
     \end{align*}
     Passando ao limite quando $x \to 9$:
@@ -2774,34 +2772,34 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(9) = \lim_{x \to 9} \frac{1}{\sqrt{x} + 3} = \frac{1}{\sqrt{9} + 3} = \frac{1}{6}
     \]
 
-    \textbf{Passo 3: Equação da reta tangente.}
+    Passo 3: Equação da reta tangente.
 
     Substituindo $(p, f(p)) = (9, 3)$ e $f'(9) = \dfrac{1}{6}$:
     \begin{align*}
-        y - 3 &= \frac{1}{6}(x - 9) \\[0.25cm]
-        y - 3 &= \frac{1}{6}x - \frac{3}{2} \\[0.25cm]
+        y - 3 &= \frac{1}{6}(x - 9) \\[0.20cm]
+        y - 3 &= \frac{1}{6}x - \frac{3}{2} \\[0.20cm]
         y &= \frac{1}{6}x + \frac{3}{2}
     \end{align*}
 
     Portanto:
     \[
-    y = \frac{1}{6}x + \frac{3}{2} \qedsymbolmath
+    y = \frac{1}{6}x + \frac{3}{2} 
     \]
 
     % Item d
     \item $f(x) = x^2 - x$ e $p = 1$
     
-    \textbf{Passo 1: Determinar o ponto de tangência.}
+    Passo 1: Determinar o ponto de tangência.
     \[
     f(1) = 1^2 - 1 = 0 \implies (p, f(p)) = (1, 0)
     \]
 
-    \textbf{Passo 2: Calcular o coeficiente angular $f'(1)$ pela definição.}
+    Passo 2: Calcular o coeficiente angular $f'(1)$ pela definição.
 
     Para $x \neq 1$:
     \begin{align*}
-        \frac{f(x) - f(1)}{x - 1} &= \frac{(x^2 - x) - 0}{x - 1} \\[0.25cm]
-        &= \frac{x(x - 1)}{x - 1} \\[0.25cm]
+        \frac{f(x) - f(1)}{x - 1} &= \frac{(x^2 - x) - 0}{x - 1} \\[0.20cm]
+        &= \frac{x(x - 1)}{x - 1} \\[0.20cm]
         &= x
     \end{align*}
     Passando ao limite quando $x \to 1$:
@@ -2809,31 +2807,31 @@ Como $p$ é um elemento arbitrário do domínio $\R$, concluímos que a derivada
     f'(1) = \lim_{x \to 1} x = 1
     \]
 
-    \textbf{Passo 3: Equação da reta tangente.}
+    Passo 3: Equação da reta tangente.
 
     Substituindo $(p, f(p)) = (1, 0)$ e $f'(1) = 1$:
     \begin{align*}
-        y - 0 &= 1(x - 1) \\[0.25cm]
+        y - 0 &= 1(x - 1) \\[0.20cm]
         y &= x - 1
     \end{align*}
 
     Portanto:
     \[
-    y = x - 1 \qedsymbolmath
+    y = x - 1 
     \]
 \end{enumerate}
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 6.}
+\subsubsection{Exercício 6}
 \label{res:7.2.6}
 \linkenunciado{7.2.6}
 \setcounter{equation}{0}
 
-\begin{estrategiabox}[title=Estratégia Geral]
+\begin{estrategiabox}
   \begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Passo 1:} Montar o quociente incremental usando a definição por acréscimo avaliada no ponto genérico $x$.
-    \item \textbf{Passo 2:} Expandir os termos quadráticos e lineares de $f(x + h)$ e cancelar os termos correspondentes a $f(x)$.
-    \item \textbf{Passo 3:} Fatorar o acréscimo $h$ do numerador para cancelar a indeterminação $\left[\frac{0}{0}\right]$ e aplicar a passagem direta ao limite quando $h \to 0$.
+    \item Passo 1: Montar o quociente incremental usando a definição por acréscimo avaliada no ponto genérico $x$.
+    \item Passo 2: Expandir os termos quadráticos e lineares de $f(x + h)$ e cancelar os termos correspondentes a $f(x)$.
+    \item Passo 3: Fatorar o acréscimo $h$ do numerador para cancelar a indeterminação $\left[\frac{0}{0}\right]$ e aplicar a passagem direta ao limite quando $h \to 0$.
   \end{itemize}
 \end{estrategiabox}
 
@@ -2862,7 +2860,7 @@ f'(x) &= \lim_{h \to 0} \frac{2xh + h^2 + h}{h} \\
 
 Portanto:
 \[
-  f'(x) = 2x + 1 \qedsymbolmath
+  f'(x) = 2x + 1 
 \]
 
 \setcounter{equation}{0}
@@ -2889,7 +2887,7 @@ f'(x) &= \lim_{h \to 0} \frac{3h}{h} \\
 
 Portanto:
 \[
-  f'(x) = 3 \qedsymbolmath
+  f'(x) = 3 
 \]
 
 \setcounter{equation}{0}
@@ -2918,7 +2916,7 @@ f'(x) &= \lim_{h \to 0} \frac{3x^2h + 3xh^2 + h^3}{h} \\
 
 Portanto:
 \[
-  f'(x) = 3x^2 \qedsymbolmath
+  f'(x) = 3x^2 
 \]
 
 \setcounter{equation}{0}
@@ -2947,7 +2945,7 @@ f'(x) &= \lim_{h \to 0} \frac{\frac{-h}{x(x + h)}}{h} \\
 
 Portanto:
 \[
-  f'(x) = -\frac{1}{x^2} \qedsymbolmath
+  f'(x) = -\frac{1}{x^2} 
 \]
 
 \setcounter{equation}{0}
@@ -2974,7 +2972,7 @@ f'(x) &= \lim_{h \to 0} \frac{5h}{h} \\
 
 Portanto:
 \[
-  f'(x) = 5 \qedsymbolmath
+  f'(x) = 5 
 \]
 
 \setcounter{equation}{0}
@@ -3000,7 +2998,7 @@ f'(x) &= \lim_{h \to 0} \frac{0}{h} \\
 
 Portanto:
 \[
-  f'(x) = 0 \qedsymbolmath
+  f'(x) = 0 
 \]
 
 \setcounter{equation}{0}
@@ -3030,7 +3028,7 @@ f'(x) &= \lim_{h \to 0} \frac{\frac{h}{(x + h + 1)(x + 1)}}{h} \\
 
 Portanto:
 \[
-  f'(x) = \frac{1}{(x + 1)^2} \qedsymbolmath
+  f'(x) = \frac{1}{(x + 1)^2} 
 \]
 
 \setcounter{equation}{0}
@@ -3062,24 +3060,25 @@ f'(x) &= \lim_{h \to 0} \frac{\frac{-h(2x + h)}{x^2(x + h)^2}}{h} \\
 
 Portanto:
 \[
-  f'(x) = -\frac{2}{x^3} \qedsymbolmath
+  f'(x) = -\frac{2}{x^3}
 \]
+\qed
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 7.}
+\subsection*{Resolução do Exercício 7.}
 \label{res:7.2.7}
 \linkenunciado{7.2.7}
 \setcounter{equation}{0}
 
-\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+\begin{estrategiabox}
   \begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Passo 1:} Interpretar geometricamente a condição analítica $f'(1) = 0$: a reta tangente à curva no ponto de abscissa $x = 1$ deve ter inclinação nula (horizontal).
-    \item \textbf{Passo 2:} Partir da parábola fundamental $y = x^2$ (que possui reta tangente horizontal na origem) e aplicar uma translação horizontal de uma unidade para a direita, obtendo $g(x) = (x - 1)^2$.
-    \item \textbf{Passo 3:} Demonstrar analiticamente pela definição que $g'(1) = 0$ e generalizar para famílias de funções que compartilham essa mesma propriedade geométrica.
+    \item Passo 1: Interpretar geometricamente a condição analítica $f'(1) = 0$: a reta tangente à curva no ponto de abscissa $x = 1$ deve ter inclinação nula (horizontal).
+    \item Passo 2: Partir da parábola fundamental $y = x^2$ (que possui reta tangente horizontal na origem) e aplicar uma translação horizontal de uma unidade para a direita, obtendo $g(x) = (x - 1)^2$.
+    \item Passo 3: Demonstrar analiticamente pela definição que $g'(1) = 0$ e generalizar para famílias de funções que compartilham essa mesma propriedade geométrica.
   \end{itemize}
 \end{estrategiabox}
 
-\paragraph{Interpretação Geométrica.}
+Interpretação Geométrica.
 
 O coeficiente angular da reta tangente ao gráfico de uma função diferenciável $f$ em $(p, f(p))$ é dado por $f'(p)$. A equação da reta tangente nesse ponto é:
 \[
@@ -3087,7 +3086,7 @@ y - f(p) = f'(p)(x - p) \implies y = f(p) + f'(p)(x - p)
 \]
 A condição $f'(1) = 0$ estabelece que, no ponto $(1, f(1))$, o coeficiente angular é nulo, de modo que a reta tangente tem equação $y = f(1)$, sendo perfeitamente \textbf{horizontal}.
 
-\paragraph{Construção da Função via Translação.}
+Construção da Função via Translação.
 
 Consideremos inicialmente a função elementar $f:\mathbb{R} \to \mathbb{R}$ dada por $f(x) = x^2$. No ponto $(0, f(0)) = (0, 0)$, a reta tangente é o próprio eixo das abscissas ($y = 0$). 
 
@@ -3135,7 +3134,7 @@ g(x) = f(x - 1) = (x - 1)^2
 \end{tikzpicture}
 \end{center}
 
-\paragraph{Verificação Analítica de $g'(1) = 0$.}
+Verificação Analítica de $g'(1) = 0$.
 
 Calculando a derivada de $g$ no ponto $p = 1$ pela definição pontual:
 \begin{align*}
@@ -3147,17 +3146,17 @@ Calculando a derivada de $g$ no ponto $p = 1$ pela definição pontual:
 
 Tomando o limite com $x \to 1$:
 \begin{equation}
-g'(1) = \lim_{x \to 1} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1}(x - 1) = 1 - 1 = 0 \qedsymbolmath
+g'(1) = \lim_{x \to 1} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1}(x - 1) = 1 - 1 = 0 
 \end{equation}
 
 \vspace{0.3cm}
-\paragraph{Generalização: Outras Famílias de Soluções.}
+Generalização: Outras Famílias de Soluções.
 
 A solução encontrada não é única. Geometricamente, qualquer função derivável com um ponto crítico (extremo local ou inflexão de inclinação nula) em $x = 1$ resolve o problema. Destacam-se:
 \begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Família quadrática vertical e reflexões:} $h_1(x) = k(x - 1)^2 + c$, com $k \in \mathbb{R}^*$ e $c \in \mathbb{R}$.
-    \item \textbf{Família cúbica (ponto de inflexão horizontal):} $h_2(x) = (x - 1)^3 + c$, cuja derivada $h_2'(x) = 3(x - 1)^2$ também se anula em $x = 1$.
-    \item \textbf{Funções constantes:} $h_3(x) = c$, que possuem reta tangente horizontal coincidente em toda a sua extensão ($h_3'(x) = 0, \, \forall x$).
+    \item Família quadrática vertical e reflexões: $h_1(x) = k(x - 1)^2 + c$, com $k \in \mathbb{R}^*$ e $c \in \mathbb{R}$.
+    \item Família cúbica (ponto de inflexão horizontal): $h_2(x) = (x - 1)^3 + c$, cuja derivada $h_2'(x) = 3(x - 1)^2$ também se anula em $x = 1$.
+    \item Funções constantes: $h_3(x) = c$, que possuem reta tangente horizontal coincidente em toda a sua extensão ($h_3'(x) = 0, \, \forall x$).
 \end{itemize}
 
 O gráfico a seguir ilustra a função $g(x) = (x - 1)^2$ acompanhada de sua reta tangente horizontal $y = 0$, em contraste com a curva cúbica $h_2(x) = (x - 1)^3 + 1$ (com reta tangente horizontal $y = 1$) e a parábola invertida $h_1(x) = -(x - 1)^2 + 2$ (com reta tangente horizontal $y = 2$):
@@ -3212,26 +3211,26 @@ O gráfico a seguir ilustra a função $g(x) = (x - 1)^2$ acompanhada de sua ret
 \end{center}
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 8.}
+\subsubsection{Exercício 8}
 \label{res:7.2.8}
 \linkenunciado{7.2.8}
 \setcounter{equation}{0}
 
-\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+\begin{estrategiabox}
   \begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Passo 1:} Interpretar geometricamente a condição $f'(x) > 0$: o coeficiente angular de cada reta tangente ao gráfico deve ser estritamente positivo em todos os pontos, o que significa que as retas tangentes são inclinadas para a direita e a função é \textbf{estritamente crescente} em todo o seu domínio.
-    \item \textbf{Passo 2:} Selecionar uma função modelo diferenciável em $\mathbb{R}$. A função afim $f(x) = x$  serve perfeitamente, pois sua derivada é constante e positiva.
-    \item \textbf{Passo 3:} Demonstrar analiticamente pela definição que $f'(x) > 0, \, \forall x \in \mathbb{R}$, apresentar a representação gráfica destacando as retas tangentes com inclinação positiva.
+    \item Passo 1: Interpretar geometricamente a condição $f'(x) > 0$: o coeficiente angular de cada reta tangente ao gráfico deve ser estritamente positivo em todos os pontos, o que significa que as retas tangentes são inclinadas para a direita e a função é \textbf{estritamente crescente} em todo o seu domínio.
+    \item Passo 2: Selecionar uma função modelo diferenciável em $\mathbb{R}$. A função afim $f(x) = x$  serve perfeitamente, pois sua derivada é constante e positiva.
+    \item Passo 3: Demonstrar analiticamente pela definição que $f'(x) > 0, \, \forall x \in \mathbb{R}$, apresentar a representação gráfica destacando as retas tangentes com inclinação positiva.
   \end{itemize}
 \end{estrategiabox}
 
-\paragraph{Interpretação Geométrica.}
+Interpretação Geométrica.
 
 Dada uma função $f:\mathbb{R} \to \mathbb{R}$ derivável, a condição $f'(x) > 0$ para todo $x \in \mathbb{R}$ exige que, em qualquer ponto $(x, f(x))$,
 a reta tangente tenha inclinação estritamente positiva. Consequentemente, o gráfico nunca apresenta pontos de tangente horizontal ($f'(x) = 0$),
 nunca decresce, e sobe continuamente da esquerda para a direita.
 
-\paragraph{Construção da Função Modelo e Verificação Analítica.}
+Construção da Função Modelo e Verificação Analítica.
 
 Consideremos a função identidade $f: \mathbb{R} \to \mathbb{R}$, dada por $f(x) = x$. Calculando $f'(x)$ pela definição por acréscimo:
 \begin{align*}
@@ -3244,7 +3243,7 @@ f'(x) &= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \\
 
 Como $f'(x) = 1 > 0$ para qualquer $x \in \mathbb{R}$, a função satisfaz rigorosamente a hipótese.
 
-\paragraph{Representação Gráfica.}
+Representação Gráfica.
 
 Abaixo representamos o gráfico da função identidade $f(x) = x$. Por ser uma função linear afim, a reta tangente em qualquer ponto $(p, f(p))$ coincide com o próprio gráfico da função, possuindo inclinação constante e estritamente positiva dada pelo coeficiente angular $m = f'(x) = 1 > 0$:
 
@@ -3286,12 +3285,12 @@ Abaixo representamos o gráfico da função identidade $f(x) = x$. Por ser uma f
 \end{center}
 
 \vspace{0.3cm}
-\paragraph{Generalização: Outras Famílias de Soluções.}
+Generalização: Outras Famílias de Soluções.
 
 Qualquer função derivável em toda a reta real com crescimento estrito e sem pontos críticos satisfaz o problema:
 \begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Retas com inclinação positiva:} $f_1(x) = mx + b$, com $m > 0$ (onde $f_1'(x) = m > 0$).
-    \item \textbf{Cúbica estritamente crescente sem derivada nula:} $f_3(x) = x^3 + x$, onde $f_3'(x) = 3x^2 + 1 \ge 1 > 0$ para qualquer $x \in \mathbb{R}$.
+    \item Retas com inclinação positiva: $f_1(x) = mx + b$, com $m > 0$ (onde $f_1'(x) = m > 0$).
+    \item Cúbica estritamente crescente sem derivada nula: $f_3(x) = x^3 + x$, onde $f_3'(x) = 3x^2 + 1 \ge 1 > 0$ para qualquer $x \in \mathbb{R}$.
 \end{itemize}
 
 \vspace{0.3cm}
@@ -3337,20 +3336,20 @@ O gráfico a seguir ilustra a família de retas paralelas $y = ax + b$ com $a = 
 \end{center}
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 9.}
+\subsubsection{Exercício 9}
 \label{res:7.2.9}
 \linkenunciado{7.2.9}
 \setcounter{equation}{0}
 
-\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+\begin{estrategiabox}
   \begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Passo 1:} Interpretar geometricamente a desigualdade $f'(0) < f'(1)$: a inclinação (coeficiente angular) da reta tangente ao gráfico no ponto de abscissa $x = 0$ deve ser estritamente menor do que a inclinação da reta tangente no ponto de abscissa $x = 1$.
-    \item \textbf{Passo 2:} Utilizar a parábola $f(x) = (x - 1)^2$, que já conhecemos dos exercícios anteriores, calculando as derivadas pontuais $f'(0)$ e $f'(1)$ pela definição.
-    \item \textbf{Passo 3:} Construir a representação gráfica destacando as retas tangentes $T_0$ e $T_1$ nos pontos $(0, f(0))$ e $(1, f(1))$ respectivamente para contrastar visualmente os seus coeficientes angulares.
+    \item Passo 1: Interpretar geometricamente a desigualdade $f'(0) < f'(1)$: a inclinação (coeficiente angular) da reta tangente ao gráfico no ponto de abscissa $x = 0$ deve ser estritamente menor do que a inclinação da reta tangente no ponto de abscissa $x = 1$.
+    \item Passo 2: Utilizar a parábola $f(x) = (x - 1)^2$, que já conhecemos dos exercícios anteriores, calculando as derivadas pontuais $f'(0)$ e $f'(1)$ pela definição.
+    \item Passo 3: Construir a representação gráfica destacando as retas tangentes $T_0$ e $T_1$ nos pontos $(0, f(0))$ e $(1, f(1))$ respectivamente para contrastar visualmente os seus coeficientes angulares.
   \end{itemize}
 \end{estrategiabox}
 
-\begin{recursosbox}[title=Ferramentas Algébricas e Geométricas]
+\begin{recursosbox}
   \begin{itemize}[noitemsep, topsep=2pt]
     \item Interpretação geométrica: $f'(p)$ representa a inclinação da reta tangente em $(p, f(p))$.
     \item Comparação de coeficientes angulares: se uma reta é decrescente ($m < 0$) e a outra é horizontal ($m = 0$), segue diretamente que $m_0 < m_1$.
@@ -3358,7 +3357,7 @@ O gráfico a seguir ilustra a família de retas paralelas $y = ax + b$ com $a = 
   \end{itemize}
 \end{recursosbox}
 
-\paragraph{Interpretação Geométrica e Verificação Analítica.}
+Interpretação Geométrica e Verificação Analítica.
 
 Consideremos a função quadrática $f: \mathbb{R} \to \mathbb{R}$ dada por $f(x) = (x - 1)^2$.
 Vamos calcular as derivadas nos pontos $p = 0$ e $p = 1$ pela definição.
@@ -3392,7 +3391,7 @@ f'(0) = -2 < 0 = f'(1)
 \]
 o que satisfaz com rigor a condição pedida.
 
-\paragraph{Representação Gráfica Comparativa.}
+Representação Gráfica Comparativa.
 
 O gráfico abaixo ilustra a curva $f(x) = (x - 1)^2$ e evidencia o contraste de inclinação entre a reta tangente descendente $T_0$ em $(0, 1)$ e a reta tangente horizontal $T_1$ em $(1, 0)$:
 
@@ -3431,22 +3430,22 @@ O gráfico abaixo ilustra a curva $f(x) = (x - 1)^2$ e evidencia o contraste de 
 Portanto, o gráfico de $f(x) = (x - 1)^2$ exemplifica geometricamente a condição $f'(0) < f'(1)$.
 
 \vspace{0.6cm}
-\noindent\textbf{Resolução do Exercício 10.}
+\subsubsection{Exercício 10}
 \label{res:7.2.10}
 \linkenunciado{7.2.10}
 \setcounter{equation}{0}
 
-\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+\begin{estrategiabox}
   \begin{itemize}[noitemsep, topsep=2pt]
-    \item \textbf{Passo 1:} Analisar a função valor absoluto canônica $f(x) = |x|$, contínua em toda a reta, observando geometricamente a formação de um ponto anguloso (bico) na origem.
-    \item \textbf{Passo 2:} Avaliar intuitivamente as inclinações das semirretas tangentes laterais quando nos aproximamos de zero pela esquerda e pela direita.
-    \item \textbf{Passo 3:} Demonstrar formalmente por meio dos limites laterais do quociente incremental que $f'(0)$ não existe.
-    \item \textbf{Passo 4:} Aplicar uma translação horizontal de uma unidade para a direita, obtendo $g(x) = f(x - 1) = |x - 1|$, e provar analiticamente que $g'(1)$ não existe.
-    \item \textbf{Passo 5:} Apresentar uma família de funções modulares transladadas e refletidas que também não são deriváveis em $x = 1$.
+    \item Passo 1: Analisar a função valor absoluto canônica $f(x) = |x|$, contínua em toda a reta, observando geometricamente a formação de um ponto anguloso (bico) na origem.
+    \item Passo 2: Avaliar intuitivamente as inclinações das semirretas tangentes laterais quando nos aproximamos de zero pela esquerda e pela direita.
+    \item Passo 3: Demonstrar formalmente por meio dos limites laterais do quociente incremental que $f'(0)$ não existe.
+    \item Passo 4: Aplicar uma translação horizontal de uma unidade para a direita, obtendo $g(x) = f(x - 1) = |x - 1|$, e provar analiticamente que $g'(1)$ não existe.
+    \item Passo 5: Apresentar uma família de funções modulares transladadas e refletidas que também não são deriváveis em $x = 1$.
   \end{itemize}
 \end{estrategiabox}
 
-\begin{recursosbox}[title=Ferramentas Algébricas e Teóricas]
+\begin{recursosbox}
   \begin{itemize}[noitemsep, topsep=2pt]
     \item Definição da função módulo: $|u| = \begin{cases} u, & \text{se } u \ge 0 \\ -u, & \text{se } u < 0 \end{cases}$.
     \item Derivadas laterais no ponto $p$:
@@ -3458,7 +3457,7 @@ Portanto, o gráfico de $f(x) = (x - 1)^2$ exemplifica geometricamente a condiç
   \end{itemize}
 \end{recursosbox}
 
-\paragraph{1. O Gráfico da Função Módulo $f(x) = |x|$.}
+1. O Gráfico da Função Módulo $f(x) = |x|$.
 
 A função módulo $f:\mathbb{R} \to \mathbb{R}$ dada por $f(x) = |x|$ é contínua em todo o conjunto dos números reais e pode ser decomposta em dois ramos lineares:
 \[
@@ -3491,7 +3490,7 @@ x, & \text{se } x \ge 0 \\
 \end{tikzpicture}
 \end{center}
 
-\paragraph{2. Interpretação Geométrica e Semirretas Tangentes em $x = 0$.}
+2. Interpretação Geométrica e Semirretas Tangentes em $x = 0$.
 
 Ao observarmos a inclinação das retas secantes que unem $(0, 0)$ a pontos vizinhos $(x, f(x))$:
 \begin{itemize}[noitemsep, topsep=2pt]
@@ -3500,7 +3499,7 @@ Ao observarmos a inclinação das retas secantes que unem $(0, 0)$ a pontos vizi
 \end{itemize}
 Como as duas inclinações laterais não coincidem na origem, não existe uma única reta tangente bem definida em $(0, 0)$, caracterizando geometricamente um \textbf{ponto anguloso} (ou bico).
 
-\paragraph{3. Demonstração Analítica da Não Existência de $f'(0)$.}
+3. Demonstração Analítica da Não Existência de $f'(0)$.
 
 Calculamos as derivadas laterais em $p = 0$ aplicando a definição pontual:
 \begin{itemize}[leftmargin=*, label=$\bullet$]
@@ -3519,7 +3518,7 @@ Como $f'_+(0) = 1 \neq -1 = f'_-(0)$, o limite bilateral não existe e, portanto
 \nexists \, f'(0)
 \]
 
-\paragraph{4. Translação Horizontal e Construção da Função $g(x) = |x - 1|$.}
+4. Translação Horizontal e Construção da Função $g(x) = |x - 1|$.
 
 O exercício requer que a derivada não exista na abscissa $p = 1$. Sabendo que o deslocamento rígido de uma unidade para a direita é obtido substituindo a variável $x$ por $x - 1$, definimos:
 \[
@@ -3534,7 +3533,7 @@ g'_-(1) &= \lim_{x \to 1^-} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1^-} \frac{|
 \end{align*}
 Visto que $g'_+(1) \neq g'_-(1)$, concluímos que $\nexists \, g'(1)$.
 
-\paragraph{5. Família de Funções Modulares com Ponto Anguloso em $x = 1$.}
+5. Família de Funções Modulares com Ponto Anguloso em $x = 1$.
 
 Utilizando exclusivamente transformações sobre a função modular elementar, podemos compor outras funções contínuas em $\mathbb{R}$ cujo ponto anguloso ocorra exatamente em $x = 1$:
 \begin{itemize}[noitemsep, topsep=2pt]
@@ -3582,19 +3581,19 @@ Portanto, a função $g(x) = |x - 1|$ é um exemplo de função contínua em tod
 % ------------------------------------------------------------------------------
 % 7.3 a 7.17 (ESTRUTURA DE ESPERA PARA PRÓXIMAS RESOLUÇÕES)
 % ------------------------------------------------------------------------------
-\subsection*{7.3. Derivadas de $x^n$ e $\sqrt[n]{x}$}
-\subsection*{7.4. Derivadas de $e^x$ e $\ln(x)$}
-\subsection*{7.5. Derivadas de Funções Trigonométricas}
-\subsection*{7.6. Derivabilidade e Continuidade}
-\subsection*{7.7. Regras de Derivação}
-\subsection*{7.8. Função Derivada e Derivadas de Ordem Superior}
-\subsection*{7.9. Notações para a Derivada}
-\subsection*{7.10. Regra da Cadeia para Derivação de Função Composta}
+\subsection{Derivadas de $x^n$ e $\sqrt[n]{x}$}
+\subsection{Derivadas de $e^x$ e $\ln(x)$}
+\subsection{Derivadas de Funções Trigonométricas}
+\subsection{Derivabilidade e Continuidade}
+\subsection{Regras de Derivação}
+\subsection{Função Derivada e Derivadas de Ordem Superior}
+\subsection{Notações para a Derivada}
+\subsection{Regra da Cadeia para Derivação de Função Composta}
 \textit{Esta subseção não possui exercícios.}
-\subsection*{7.11. Aplicações da Regra da Cadeia}
-\subsection*{7.12. Derivada de $f(x)^{g(x)}$}
-\subsection*{7.13. Derivação da Função Dada Implicitamente}
-\subsection*{7.14. Interpretação de $\frac{\diff y}{\diff x}$ como um Quociente Diferencial}
-\subsection*{7.15. Velocidade e Aceleração. Taxa de Variação}
-\subsection*{7.16. Problemas Reta Tangente e Normal ao Gráfico de uma Função}
-\subsection*{7.17. Exercícios do Capítulo}
+\subsection{Aplicações da Regra da Cadeia}
+\subsection{Derivada de $f(x)^{g(x)}$}
+\subsection{Derivação da Função Dada Implicitamente}
+\subsection{Interpretação de $\frac{\diff y}{\diff x}$ como um Quociente Diferencial}
+\subsection{Velocidade e Aceleração. Taxa de Variação}
+\subsection{Problemas Reta Tangente e Normal ao Gráfico de uma Função}
+\subsection{Exercícios do Capítulo}
