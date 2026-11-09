@@ -11,9 +11,6 @@
 \DeclareMathOperator{\cossec}{cossec}
 \DeclareMathOperator{\cotg}{cotg}
 
-% Caixas de destaque para resposta final
-\newcommand{\resposta}[1]{\begin{center}\fbox{\large\(\displaystyle #1\)}\end{center}}
-
 % Derivada comum: \deriv{y}{x} -> dy/dx
 \newcommand{\deriv}[2]{\frac{\diff #1}{\diff #2}}
 
@@ -24,37 +21,21 @@
 \newcommand{\linkresolucao}[1]{%
     \tcblower
     \begin{flushright}
-        \hyperref[res:#1]{\small\sffamily\color{blue!70!black} Ver resolução $\rightarrow$}
+        \hyperref[res:#1]{\scriptsize\sffamily\color{gray!70!black} Resolução $\rightarrow$}
     \end{flushright}
 }
 
 % Link da Resolução apontando de volta para o Enunciado
 \newcommand{\linkenunciado}[1]{%
-    \vspace{-0.2cm}
     \begin{flushright}
-        \hyperref[ex:#1]{\small\sffamily\color{gray} $\leftarrow$ Voltar ao enunciado}
+        \hyperref[ex:#1]{\scriptsize\sffamily\color{gray!70!black} $\leftarrow$ Enunciado}
     \end{flushright}
-    \vspace{0.2cm}
-}
-
-% 1. Estratégia Geral
-\newcommand{\estrategia}[1]{%
-    \noindent\textbf{Estratégia Geral:} #1\par\vspace{0.2cm}%
 }
 
 % 2. Definições (Aceita qualquer título e qualquer fórmula)
 % Uso: \definicao{Título da Definição}{Fórmula ou Texto}
 \newcommand{\definicao}[2]{%
     \noindent\textbf{#1:} #2\par\vspace{0.2cm}%
-}
-
-% 3. Ambiente para as Ferramentas Algébricas
-\newenvironment{ferramentas}{%
-  \noindent\textbf{Ferramentas Algébricas e Geométricas:}
-    \vspace{-0.1cm}
-    \begin{itemize}[noitemsep, topsep=2pt]
-}{%
-    \end{itemize}
 }
 
 % ==============================================================================
