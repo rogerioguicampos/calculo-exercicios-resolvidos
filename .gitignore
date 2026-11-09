@@ -1,0 +1,6 @@
+# Arquivos auxiliares do LaTeX
+*.aux
+*.log
+*.toc
+*.out
+UmCursodeCalculoVol1_Guidorizzi/utils.txt
