@@ -3336,7 +3336,249 @@ O gráfico a seguir ilustra a família de retas paralelas $y = ax + b$ com $a = 
 \end{tikzpicture}
 \end{center}
 
+\vspace{0.6cm}
+\noindent\textbf{Resolução do Exercício 9.}
+\label{res:7.2.9}
+\linkenunciado{7.2.9}
+\setcounter{equation}{0}
 
+\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+  \begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Passo 1:} Interpretar geometricamente a desigualdade $f'(0) < f'(1)$: a inclinação (coeficiente angular) da reta tangente ao gráfico no ponto de abscissa $x = 0$ deve ser estritamente menor do que a inclinação da reta tangente no ponto de abscissa $x = 1$.
+    \item \textbf{Passo 2:} Utilizar a parábola $f(x) = (x - 1)^2$, que já conhecemos dos exercícios anteriores, calculando as derivadas pontuais $f'(0)$ e $f'(1)$ pela definição.
+    \item \textbf{Passo 3:} Construir a representação gráfica destacando as retas tangentes $T_0$ e $T_1$ nos pontos $(0, f(0))$ e $(1, f(1))$ respectivamente para contrastar visualmente os seus coeficientes angulares.
+  \end{itemize}
+\end{estrategiabox}
+
+\begin{recursosbox}[title=Ferramentas Algébricas e Geométricas]
+  \begin{itemize}[noitemsep, topsep=2pt]
+    \item Interpretação geométrica: $f'(p)$ representa a inclinação da reta tangente em $(p, f(p))$.
+    \item Comparação de coeficientes angulares: se uma reta é decrescente ($m < 0$) e a outra é horizontal ($m = 0$), segue diretamente que $m_0 < m_1$.
+    \item Definição de derivada pontual: $f'(p) = \lim_{x \to p} \dfrac{f(x) - f(p)}{x - p}$.
+  \end{itemize}
+\end{recursosbox}
+
+\paragraph{Interpretação Geométrica e Verificação Analítica.}
+
+Consideremos a função quadrática $f: \mathbb{R} \to \mathbb{R}$ dada por $f(x) = (x - 1)^2$.
+Vamos calcular as derivadas nos pontos $p = 0$ e $p = 1$ pela definição.
+
+\begin{itemize}[leftmargin=*, label=$\bullet$]
+    \item Derivada em $p = 0$. Temos $f(0) = (0 - 1)^2 = 1$. Pela definição pontual:
+    \begin{align*}
+    f'(0) &= \lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} \\
+          &= \lim_{x \to 0} \frac{(x - 1)^2 - 1}{x} \\
+          &= \lim_{x \to 0} \frac{(x^2 - 2x + 1) - 1}{x} \\
+          &= \lim_{x \to 0} \frac{x^2 - 2x}{x} \\
+          &= \lim_{x \to 0} (x - 2) = -2
+    \end{align*}
+    A reta tangente $T_0$ no ponto $(0, 1)$ tem coeficiente angular negativo ($m_0 = -2$), sendo decrescente:
+    \[
+    y - 1 = -2(x - 0) \implies y = -2x + 1
+    \]
+
+    \item Derivada em $p = 1$. Temos $f(1) = (1 - 1)^2 = 0$. Como o ponto $(1, 0)$ é o vértice da parábola:
+    \begin{align*}
+    f'(1) &= \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1} \\
+          &= \lim_{x \to 1} \frac{(x - 1)^2 - 0}{x - 1} \\
+          &= \lim_{x \to 1} (x - 1) = 0
+    \end{align*}
+    A reta tangente $T_1$ no vértice $(1, 0)$ tem coeficiente angular nulo ($m_1 = 0$), sendo perfeitamente horizontal ($y = 0$).
+\end{itemize}
+
+Comparando os dois coeficientes angulares:
+\[
+f'(0) = -2 < 0 = f'(1)
+\]
+o que satisfaz com rigor a condição pedida.
+
+\paragraph{Representação Gráfica Comparativa.}
+
+O gráfico abaixo ilustra a curva $f(x) = (x - 1)^2$ e evidencia o contraste de inclinação entre a reta tangente descendente $T_0$ em $(0, 1)$ e a reta tangente horizontal $T_1$ em $(1, 0)$:
+
+\begin{center}
+\begin{tikzpicture}[>=latex, scale=1.15]
+    % Eixos cartesianos
+    \draw[->, thick, gray!70] (-1.2, 0) -- (3.2, 0) node[below, black] {\scriptsize $x$};
+    \draw[->, thick, gray!70] (0, -0.6) -- (0, 3.6) node[left, black] {\scriptsize $y$};
+
+    % Curva f(x) = (x - 1)^2
+    \draw[thick, teal!70!black, smooth, domain=-0.6:2.6] 
+        plot (\x, {(\x - 1)^2});
+    \node[above right, teal!70!black] at (2.2, 1.8) {\scriptsize $f(x) = (x - 1)^2$};
+
+    % Ponto 1: P0 = (0, 1) com reta tangente T0: y = -2x + 1
+    \coordinate (P0) at (0, 1);
+    \draw[line width=1.1pt, purple!75!black, domain=-0.5:1.1] 
+        plot (\x, {-2*\x + 1});
+    \fill[purple!75!black] (P0) circle (1.4pt);
+    \node[above right=1pt, purple!75!black] at (P0) {\scriptsize $(0, 1)$};
+    \node[above left, purple!75!black] at (-0.4, 1.8) {\scriptsize $T_0: y = -2x + 1$ \ ($m_0 = -2$)};
+
+    % Ponto 2: P1 = (1, 0) com reta tangente T1: y = 0
+    \coordinate (P1) at (1, 0);
+    \draw[line width=1.2pt, blue!75!black, domain=-0.2:2.4] 
+        plot (\x, {0});
+    \fill[blue!75!black] (P1) circle (1.4pt);
+    \node[below=3pt, black] at (P1) {\scriptsize $(1, 0)$};
+    \node[below, blue!75!black] at (2.1, -0.05) {\scriptsize $T_1: y = 0$ \ ($m_1 = 0$)};
+
+    % Rótulo de conclusão
+    \node[below, align=center] at (1.0, -0.7) {\scriptsize Comparação das inclinações: $f'(0) = -2 < 0 = f'(1)$};
+\end{tikzpicture}
+\end{center}
+
+Portanto, o gráfico de $f(x) = (x - 1)^2$ exemplifica geometricamente a condição $f'(0) < f'(1)$.
+
+\vspace{0.6cm}
+\noindent\textbf{Resolução do Exercício 10.}
+\label{res:7.2.10}
+\linkenunciado{7.2.10}
+\setcounter{equation}{0}
+
+\begin{estrategiabox}[title=Estratégia Geral de Resolução]
+  \begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Passo 1:} Analisar a função valor absoluto canônica $f(x) = |x|$, contínua em toda a reta, observando geometricamente a formação de um ponto anguloso (bico) na origem.
+    \item \textbf{Passo 2:} Avaliar intuitivamente as inclinações das semirretas tangentes laterais quando nos aproximamos de zero pela esquerda e pela direita.
+    \item \textbf{Passo 3:} Demonstrar formalmente por meio dos limites laterais do quociente incremental que $f'(0)$ não existe.
+    \item \textbf{Passo 4:} Aplicar uma translação horizontal de uma unidade para a direita, obtendo $g(x) = f(x - 1) = |x - 1|$, e provar analiticamente que $g'(1)$ não existe.
+    \item \textbf{Passo 5:} Apresentar uma família de funções modulares transladadas e refletidas que também não são deriváveis em $x = 1$.
+  \end{itemize}
+\end{estrategiabox}
+
+\begin{recursosbox}[title=Ferramentas Algébricas e Teóricas]
+  \begin{itemize}[noitemsep, topsep=2pt]
+    \item Definição da função módulo: $|u| = \begin{cases} u, & \text{se } u \ge 0 \\ -u, & \text{se } u < 0 \end{cases}$.
+    \item Derivadas laterais no ponto $p$:
+    \[
+    f'_+(p) = \lim_{x \to p^+} \frac{f(x) - f(p)}{x - p} \quad \text{e} \quad f'_-(p) = \lim_{x \to p^-} \frac{f(x) - f(p)}{x - p}
+    \]
+    \item Critério de existência da derivada: $f'(p)$ existe $\iff f'_+(p) = f'_-(p)$ e ambos são finitos.
+    \item Translação horizontal de gráficos: dada $y = f(x)$, a curva $y = f(x - c)$ corresponde ao deslocamento rígido de $c$ unidades para a direita (quando $c > 0$).
+  \end{itemize}
+\end{recursosbox}
+
+\paragraph{1. O Gráfico da Função Módulo $f(x) = |x|$.}
+
+A função módulo $f:\mathbb{R} \to \mathbb{R}$ dada por $f(x) = |x|$ é contínua em todo o conjunto dos números reais e pode ser decomposta em dois ramos lineares:
+\[
+f(x) = \begin{cases}
+x, & \text{se } x \ge 0 \\
+-x, & \text{se } x < 0
+\end{cases}
+\]
+
+\begin{center}
+\begin{tikzpicture}[>=latex, scale=1.1]
+    % Eixos cartesianos
+    \draw[->, thick, gray!70] (-2.6, 0) -- (2.6, 0) node[below, black] {\scriptsize $x$};
+    \draw[->, thick, gray!70] (0, -0.4) -- (0, 2.6) node[left, black] {\scriptsize $y$};
+
+    % Curva f(x) = |x|
+    \draw[line width=1.1pt, teal!70!black] (-2.2, 2.2) -- (0, 0) -- (2.2, 2.2);
+    \node[above right, teal!70!black] at (1.6, 1.8) {\scriptsize $f(x) = |x|$};
+
+    % Vértice na origem
+    \fill[teal!70!black] (0, 0) circle (1.4pt);
+    \node[below=3pt, black] at (0, 0) {\scriptsize $(0, 0)$};
+
+    % Pontos de apoio e tracejados
+    \draw[densely dashed, gray!50] (1, 0) node[below, black] {\scriptsize $1$} -- (1, 1) -- (0, 1) node[left, black] {\scriptsize $1$};
+    \fill[teal!70!black] (1, 1) circle (1.2pt);
+
+    \draw[densely dashed, gray!50] (-1, 0) node[below, black] {\scriptsize $-1$} -- (-1, 1) -- (0, 1);
+    \fill[teal!70!black] (-1, 1) circle (1.2pt);
+\end{tikzpicture}
+\end{center}
+
+\paragraph{2. Interpretação Geométrica e Semirretas Tangentes em $x = 0$.}
+
+Ao observarmos a inclinação das retas secantes que unem $(0, 0)$ a pontos vizinhos $(x, f(x))$:
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Pela direita ($x > 0$), o gráfico coincide com a reta $y = x$, cujo coeficiente angular é estritamente $+1$. Portanto, a semirreta tangente à direita tem inclinação $m_+ = +1$.
+    \item Pela esquerda ($x < 0$), o gráfico coincide com a reta $y = -x$, cujo coeficiente angular é estritamente $-1$. Logo, a semirreta tangente à esquerda tem inclinação $m_- = -1$.
+\end{itemize}
+Como as duas inclinações laterais não coincidem na origem, não existe uma única reta tangente bem definida em $(0, 0)$, caracterizando geometricamente um \textbf{ponto anguloso} (ou bico).
+
+\paragraph{3. Demonstração Analítica da Não Existência de $f'(0)$.}
+
+Calculamos as derivadas laterais em $p = 0$ aplicando a definição pontual:
+\begin{itemize}[leftmargin=*, label=$\bullet$]
+    \item Pela direita ($x \to 0^+ \implies x > 0$, logo $|x| = x$):
+    \[
+    f'_+(0) = \lim_{x \to 0^+} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^+} \frac{|x| - 0}{x} = \lim_{x \to 0^+} \frac{x}{x} = \lim_{x \to 0^+} 1 = 1
+    \]
+
+    \item Pela esquerda ($x \to 0^- \implies x < 0$, logo $|x| = -x$):
+    \[
+    f'_-(0) = \lim_{x \to 0^-} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0^-} \frac{|x| - 0}{x} = \lim_{x \to 0^-} \frac{-x}{x} = \lim_{x \to 0^-} (-1) = -1
+    \]
+\end{itemize}
+Como $f'_+(0) = 1 \neq -1 = f'_-(0)$, o limite bilateral não existe e, portanto:
+\[
+\nexists \, f'(0)
+\]
+
+\paragraph{4. Translação Horizontal e Construção da Função $g(x) = |x - 1|$.}
+
+O exercício requer que a derivada não exista na abscissa $p = 1$. Sabendo que o deslocamento rígido de uma unidade para a direita é obtido substituindo a variável $x$ por $x - 1$, definimos:
+\[
+g(x) = f(x - 1) = |x - 1|, \quad \forall x \in \mathbb{R}
+\]
+Por ser a composição de funções contínuas, $g$ é contínua em todo o $\mathbb{R}$. 
+
+Vamos demonstrar analiticamente que $g'(1)$ não existe calculando suas derivadas laterais em $p = 1$:
+\begin{align*}
+g'_+(1) &= \lim_{x \to 1^+} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1^+} \frac{|x - 1| - 0}{x - 1} = \lim_{x \to 1^+} \frac{x - 1}{x - 1} = 1 \\
+g'_-(1) &= \lim_{x \to 1^-} \frac{g(x) - g(1)}{x - 1} = \lim_{x \to 1^-} \frac{|x - 1| - 0}{x - 1} = \lim_{x \to 1^-} \frac{-(x - 1)}{x - 1} = -1
+\end{align*}
+Visto que $g'_+(1) \neq g'_-(1)$, concluímos que $\nexists \, g'(1)$.
+
+\paragraph{5. Família de Funções Modulares com Ponto Anguloso em $x = 1$.}
+
+Utilizando exclusivamente transformações sobre a função modular elementar, podemos compor outras funções contínuas em $\mathbb{R}$ cujo ponto anguloso ocorra exatamente em $x = 1$:
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item $g_1(x) = |x - 1|$: translação horizontal básica (com vértice em $(1, 0)$).
+    \item $g_2(x) = -|x - 1| + 2$: reflexão em relação ao eixo horizontal seguida de translação vertical (com vértice em $(1, 2)$).
+    \item $g_3(x) = 2|x - 1| - 1$: abertura mais estreita com translação vertical para baixo (com vértice em $(1, -1)$).
+\end{itemize}
+
+O gráfico abaixo ilustra essas funções modulares, evidenciando que todas compartilham o mesmo bico na reta vertical $x = 1$, impossibilitando a existência da derivada nesse ponto:
+
+\begin{center}
+\begin{tikzpicture}[>=latex, scale=1.15]
+    % Eixos cartesianos
+    \draw[->, thick, gray!70] (-1.5, 0) -- (3.5, 0) node[below, black] {\scriptsize $x$};
+    \draw[->, thick, gray!70] (0, -2.0) -- (0, 3.2) node[left, black] {\scriptsize $y$};
+
+    % Reta vertical de referência em x = 1
+    \draw[densely dotted, gray!60, line width=0.8pt] (1, -1.8) -- (1, 3.0);
+    \node[above, gray!70] at (1, 3.0) {\scriptsize $x = 1$};
+
+    % 1. g1(x) = |x - 1|
+    \draw[line width=1.1pt, teal!80!black] (-0.8, 1.8) -- (1, 0) -- (2.8, 1.8);
+    \node[right, teal!80!black] at (2.4, 1.6) {\scriptsize $g_1(x) = |x - 1|$};
+    \fill[teal!80!black] (1, 0) circle (1.4pt);
+    \node[below right=1pt, black] at (1, 0) {\scriptsize $(1, 0)$};
+
+    % 2. g2(x) = -|x - 1| + 2
+    \draw[line width=1.1pt, purple!75!black, dashed] (-0.8, 0.2) -- (1, 2) -- (2.8, 0.2);
+    \node[right, purple!75!black] at (2.2, 0.4) {\scriptsize $g_2(x) = -|x - 1| + 2$};
+    \fill[purple!75!black] (1, 2) circle (1.4pt);
+    \node[above=2pt, purple!75!black] at (1, 2) {\scriptsize $(1, 2)$};
+
+    % 3. g3(x) = 2|x - 1| - 1
+    \draw[line width=1.1pt, orange!85!black, dashdotted] (-0.3, 1.6) -- (1, -1) -- (2.3, 1.6);
+    \node[left, orange!85!black] at (-0.2, 1.2) {\scriptsize $g_3(x) = 2|x - 1| - 1$};
+    \fill[orange!85!black] (1, -1) circle (1.4pt);
+    \node[below=2pt, orange!85!black] at (1, -1) {\scriptsize $(1, -1)$};
+
+    % Rótulo explicativo
+    \node[below, align=center] at (1.0, -2.1) {\scriptsize Todas as curvas apresentam ponto anguloso na reta $x = 1$ ($\nexists \, g'_i(1)$)};
+\end{tikzpicture}
+\end{center}
+
+Portanto, a função $g(x) = |x - 1|$ é um exemplo de função contínua em todo o $\mathbb{R}$ cuja derivada no ponto $p = 1$ não existe.
 % ------------------------------------------------------------------------------
 % 7.3 a 7.17 (ESTRUTURA DE ESPERA PARA PRÓXIMAS RESOLUÇÕES)
 % ------------------------------------------------------------------------------
