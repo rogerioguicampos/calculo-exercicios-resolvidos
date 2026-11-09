@@ -11,7 +11,7 @@ O objetivo principal deste projeto é simples: que este conjunto de código, not
 5. **Contribuições e comunidade:** sugestões, correções de digitação e apontamentos de erros matemáticos são muito bem-vindos. O único pré-requisito é a cordialidade. Educação é fundamental, até porque tenho baixíssima tolerância a gente babaca.
 
 ## Por onde iniciarei
-Hoje, dia 23 de outubro de 2026, começarei pelo Guidorizzi Volume 1, mas pelo capítulo 7, que aborda derivadas.
+Hoje, dia 23 de outubro de 2026, iniciei o **Capítulo 7 (Derivadas)** do livro _**Um Curso de Cálculo – Vol. 1 - 6ª edição**_, de Hamilton Luiz Guidorizzi.
 
 ## Objetivos
 - **Curto Prazo:** iniciar um repositório de referência para estudantes de ensino superior que tenham matérias de matemática
