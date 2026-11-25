@@ -32,6 +32,41 @@
     \end{flushright}
 }
 
+% Cabeçalho padronizado para Resoluções (texto solto, sem caixa)
+% Uso:
+%   \subsubsection*{Exercício 1}
+%   \addcontentsline{toc}{subsubsection}{Exercício 1}
+%   \inicioresolucao[1]{7.2.1}
+\newcommand{\inicioresolucao}[2][]{%
+    \phantomsection%
+    \label{res:#2}%
+    \linkenunciado{#2}%
+    \setcounter{equation}{0}%
+}
+
+% Item interno dentro de resolução com link de volta ao enunciado e reset de equação
+% Uso: \itemres{$f'(0)$}{7.2.1}
+\newcommand{\itemres}[2]{%
+    \item #1%
+    \linkenunciado{#2}%
+    \setcounter{equation}{0}%
+}
+
+% Ocultar/Restaurar \subsubsection* apenas visualmente na Parte 1 (mantendo no outline do Neovim)
+\makeatletter
+\let\@origsubsubsection\subsubsection
+\newcommand{\ocultarsubsub}{%
+    \renewcommand{\subsubsection}{\@ifstar{\@gobble}{\@origsubsubsection}}%
+}
+\newcommand{\restaurarsubsub}{%
+    \let\subsubsection\@origsubsubsection
+}
+\makeatother
+
+% Atalhos para quocientes incrementais
+\newcommand{\quociente}[2]{\frac{#1(x) - #1(#2)}{x - #2}}
+\newcommand{\quocienteh}[2]{\frac{#1(#2 + h) - #1(#2)}{h}}
+
 % 2. Definições (Aceita qualquer título e qualquer fórmula)
 % Uso: \definicao{Título da Definição}{Fórmula ou Texto}
 \newcommand{\definicao}[2]{%

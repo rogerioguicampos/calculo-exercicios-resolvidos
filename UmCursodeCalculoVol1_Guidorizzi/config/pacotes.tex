@@ -32,6 +32,28 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
+% Estilos globais TikZ / PGFPlots
+\pgfplotsset{
+    guidorizzi axis/.style={
+        axis lines=middle,
+        axis line style={thick, gray!70, -latex},
+        xlabel={$x$},
+        ylabel={$y$},
+        xlabel style={below, black},
+        ylabel style={left, black},
+        ticks=none,
+        axis equal image,
+        width=8.5cm,
+        clip=false
+    }
+}
+
+\tikzset{
+    curva principal/.style={line width=1.2pt, teal!75!black},
+    reta tangente/.style={line width=1.1pt, blue!75!black},
+    projecao/.style={densely dashed, gray!60}
+}
+
 % Links e Referências Cruzadas (sempre ao final do preâmbulo)
 \usepackage{hyperref}
 \hypersetup{
