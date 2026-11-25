@@ -2190,27 +2190,6 @@ A reta tangente obtida tem por equação $y = 2x$, que coincide exatamente com a
 Graficamente, isso expressa uma propriedade fundamental das funções afins: a melhor aproximação linear local para uma reta em qualquer um de seus pontos é a própria reta. Assim, em qualquer ponto $(p, 2p)$, a reta tangente é coincidente com o gráfico da função em toda a sua extensão.
 
 \begin{center}
-\begin{tikzpicture}[>=latex, scale=0.95]
-    \draw[->, thick, gray!70] (-2.2, 0) -- (3.2, 0) node[below, black] {$x$};
-    \draw[->, thick, gray!70] (0, -2.5) -- (0, 4.2) node[left, black] {$y$};
-    \node[below left=2pt] at (0, 0) {$0$};
-
-    \draw[line width=3pt, blue!20] (-1.2, -2.4) -- (2.0, 4.0);
-    \draw[line width=1.2pt, blue!70!black] (-1.2, -2.4) -- (2.0, 4.0);
-
-    \coordinate (P) at (1.2, 2.4);
-    \draw[dashed, gray!80] (1.2, 0) node[below, black] {$p$} -- (P);
-    \draw[dashed, gray!80] (0, 2.4) node[left, black] {$f(p) = 2p$} -- (P);
-
-    \fill[blue!70!black] (P) circle (2.2pt);
-    \node[above left=3pt] at (P) {$(p, 2p)$};
-
-    \node[right, blue!70!black] at (1.8, 3.6) {$f(x) = 2x$};
-    \node[right, blue!50!black] at (1.8, 3.1) {\footnotesize Reta Tangente: $y = 2x$};
-\end{tikzpicture}
-\end{center}
-
-\begin{center}
 \begin{tikzpicture}
     \begin{axis}[
         % Configuração dos eixos cartesianos no centro
